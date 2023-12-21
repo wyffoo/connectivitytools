@@ -1,0 +1,17 @@
+[
+  {
+	"id": 1,
+	"name": "WiFi+Ethernet_c+Ethernet_f",
+	"isComplete": true
+  },
+  {
+	"id": 2,
+	"name": "WiFi+WiFi+WiFi",
+	"isComplete": false
+  },
+  {
+	"id": 3,
+	"name": "WiFi+WiFi+Ethernet_f",
+	"isComplete": true
+  }
+]

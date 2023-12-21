@@ -1,0 +1,60 @@
+{
+  "sysadmin-objects": {
+    "descr": "Description",
+    "notreq": "Optional",
+    "value": "Value"
+  },
+  "sysadmin-technology": {
+    "paramsoftech": "Technology parameters",
+    "title": "Name",
+    "desc": "Description",
+    "notreq": "Optional",
+    "value": "Value",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "sysadmin-events": {
+    "table": "Table ",
+    "events": "Of events",
+    "choose": "Choose",
+    "date": "Date",
+    "user": "User",
+    "event": "Event"
+  },
+  "sysadmin-objects-settings": {
+    "settings": "Settings ",
+    "objectsofdesign": "Of design objects",
+    "geogparams": "Geographic parameters",
+    "buildparams": "Building parameters",
+    "infrparams": "Infrastructure parameters",
+    "poweparams": "Power supply parameters",
+    "populparams": "Population parameters",
+    "accesslevparams": "Competition parameters",
+    "demandparams": "Demand parameters",
+    "typeofobject": "Type of design object",
+    "save": "Save"
+  },
+  "sysadmin-projectss-settings": {
+    "table": "Table ",
+    "technologies": "Of access networks building technologies",
+    "title": "Name",
+    "descr": "Description",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addnew": "Add new technology"
+  },
+  "sysadmin-users": {
+    "table": "Table ",
+    "users": "Of users",
+    "firstname": "Name",
+    "lastname": "Surname",
+    "find": "Search",
+    "dateofreg": "Registration date",
+    "dateoflastactive": "Date of last activity",
+    "countofactiveprojects": "Number of active projects",
+    "block": "Block",
+    "unblock": "Unlock",
+    "delete": "delete",
+    "show": "Show "
+  }
+}

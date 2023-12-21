@@ -1,0 +1,34 @@
+<div class="admin-project-status">
+	<span ng-if="status == 'calculated'">
+		<span class="glyphicon glyphicon-ok" style="color:green" uib-tooltip="{{'admin-project-status.completed'|translate}}"></span>
+		<span ng-if="showtext">{{'admin-project-status.completed'|translate}}</span>
+	</span>
+	<span ng-if="status == 'partially-calculated'">
+		<span class="glyphicon glyphicon-warning-sign" style="color:darkorange" uib-tooltip="{{'admin-project-status.partially-calculated'|translate}}"></span>
+		<span ng-if="showtext">{{'admin-project-status.partially-calculated'|translate}}</span>
+	</span>
+	<span ng-if="status == 'data-ready'">
+		<span class="glyphicon glyphicon-check" uib-tooltip="{{'admin-project-status.data-ready'|translate}}"></span>
+		<span ng-if="showtext">{{'admin-project-status.data-ready'|translate}}</span>
+	</span>
+	<span ng-if="status == 'waiting'">
+		<span class="glyphicon glyphicon-time" uib-tooltip="{{'admin-project-status.waiting'|translate}}"></span>
+		<span ng-if="showtext">{{'admin-project-status.waiting'|translate}}</span>
+	</span>
+	<span ng-if="status == 'stop'">
+		<span class="glyphicon glyphicon-remove-circle" style="color: orangered" uib-tooltip="{{'admin-project-status.stop'|translate}}"></span>
+		<span ng-if="showtext">{{'admin-project-status.stop'|translate}}</span>
+	</span>
+	<span ng-if="status == 'not-calculated'">
+		<span class="glyphicon glyphicon-minus" style="color: darkorange" uib-tooltip="{{'admin-project-status.not-calculated'|translate}}"></span>
+		<span ng-if="showtext">{{'admin-project-status.not-calculated	'|translate}}</span>
+	</span>
+	<div ng-if="status == 'in-progress'"
+		uib-tooltip="{{'admin-project-status.in-progress'|translate}}">
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+				{{progress}}% {{'complete'|translate}}
+			</div>
+		</div>
+	</div>
+</div>

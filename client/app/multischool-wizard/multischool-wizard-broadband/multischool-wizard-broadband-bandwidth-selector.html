@@ -1,0 +1,62 @@
+<div class="body-content">
+	<div class="col-sm-12">
+		<wizard-header step="'mbroadband2'" progressbar="$ctrl.model.progress"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<table>
+					<tr>
+						<td class="col-sm-2 align-middle">
+							<img src="/assets/icons/pencil-square.svg" alt="" width="64px" height="64px">
+						</td>
+						<td class="col-sm-8 align-middle">
+							<span class="h3 btn-link" ng-click="$ctrl.knowBandwidth()" translate>multi-bandwidth-selector.i-know-bandwidth</span>
+							<span class="help-block" translate>multi-bandwidth-selector.modal1_body</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="panel panel-default ">
+			<div class="panel-body">
+				<table>
+					<tr>
+						<td class="col-sm-2 align-middle">
+							<img src="/assets/icons/calculator.svg" alt="" width="64px" height="64px">
+						</td>
+						<td class="col-sm-8 align-middle">
+							<span class="h3 btn-link" ng-click="$ctrl.calculateBandwidth()" translate>multi-bandwidth-selector.calculate-bandwidth</span>
+							<span class="help-block" translate>multi-bandwidth-selector.modal2_body</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="panel panel-default ">
+			<div class="panel-body">
+				<table>
+					<tr>
+						<td class="col-sm-2 align-middle">
+							<img src="/assets/icons/calculator-fill.svg" alt="" width="64px" height="64px">
+						</td>
+						<td class="col-sm-8 align-middle">
+							<span class="h3 btn-link" ng-click="$ctrl.calculateOnlyBandwidth()" translate>multi-bandwidth-selector.calculate-req</span>
+							<span class="help-block" translate>multi-bandwidth-selector.modal3_body</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<bottom-buttons hide-right="yes" btn-left="$ctrl.back()"></bottom-buttons>
+	</div>
+</div>

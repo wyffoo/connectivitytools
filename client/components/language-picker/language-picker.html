@@ -1,0 +1,9 @@
+<span ng-if="type === 'navbar'" ng-repeat="lang in ['ru', 'en']" ng-show="currentLanguage !== lang">
+	<a href="" ng-click="switchLanguage(lang)">{{'languages.'+lang | translate}}</a>
+</span>
+
+<div ng-if="type === 'settings'" class="btn-group">
+	<button class="btn btn-default" ng-repeat="lang in ['ru', 'en']" ng-if="currentLanguage !== lang" ng-click="switchLanguage(lang)">{{'languages.'+lang | translate}}</button>
+</div>
+
+

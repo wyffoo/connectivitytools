@@ -1,0 +1,12 @@
+[
+  {
+	"id": 1,
+	"name": "WiFi+Ethernet_c+Ethernet_f",
+	"description": "WiFi - на уровне доступа\nEthernet на медных кабелях - на уровне распределения\nEthernet оптика  - на восстановительном сегменте"
+  },
+  {
+	"id": 2,
+	"name": "WiFi+WiFi+WiFi",
+	"description": "WiFi на всех уровнях"
+  }
+]

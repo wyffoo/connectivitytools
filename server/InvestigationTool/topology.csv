@@ -1,0 +1,253 @@
+METHODOLOGY;ALGORITHM;FORMULA;PNAME;PDESC;UNIT;RSTART;REND;STEP;DVALUE;TYPE;TYPE2;SORTA;SORTM;CONT
+METHOD4;ALL;;;;;;;;;;;;;
+METHOD4;ALGORITHM4_1;ALL;;;;;;;;;;;;
+METHOD4;ALGORITHM4_1;FORMULA_4_1_1;Coordinates.LonFirst;Longitude of the first object;radians;-180.0000000;180.0000000;0.0000001;35.8008955;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_1;FORMULA_4_1_1;Coordinates.LatFirst;Latitude of the first object;radians;-90.0000000;90.0000000;0.0000001;0.4400018;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_1;FORMULA_4_1_1;Coordinates.LonSecond;Longitude of the second object;radians;-180.0000000;180.0000000;0.0000001;35.8055039;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_1;FORMULA_4_1_1;Coordinates.LatSecond;Latitude of the second object;radians;-90.0000000;90.0000000;0.0000001;0.4263895;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_1;FORMULA_4_1_2;Files.ListOfObjects;Filename with list of objects and their coordinates;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_1;FORMULA_4_1_3;Files.ListOfObjects;Filename with list of objects and their coordinates;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_2;ALL;;;;;;;;;;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;IM;1;1;INPUT
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;Files.DistanceMatrix;Filename with matrix of distances between objects;filename;0.0000000;100.0000000;1.0000000;distances.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;TopologySettings.MakePreClastering;Make pre-clasterisation of objects based on administrative region;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;TopologySettings.MaxClastersNumber;Maximum possible clasters number in the network (for the pre-clasterisation process);records;0.0000000;1000.0000000;1.0000000;400.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;TopologySettings.MaxItemsPerClaster;Maximum possible records per claster;records;0.0000000;100.0000000;1.0000000;50.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;TopologySettings.MakeClastering;Make network clasterisation if there are more than two nodes connected to the fiber;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;TopologySettings.RemoveInterclasterLinks;Remove interclaster links;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.TopographyCoeff;Road length deviation coefficient (relation of the road length to line of sight distance);coeff;0.0000000;1.0000000;0.0100000;0.0200000;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.HorDrillCoeff;Coefficient of extra FOCL sections length of horizontal directional drilling, located at the crossings of roads;coeff;0.0000000;0.1000000;0.0050000;0.0100000;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CableDuctCoeff;Coefficient of FOCL sections length requiring the construction of cable ducts;coeff;0.0000000;1.0000000;0.0100000;0.1000000;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CableLayingMachineCoeff;Coefficient of FOCL sections length requiring cable-laying machine;coeff;0.0000000;1.0000000;0.0100000;0.9000000;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.NumberOfManholesPerKM;Number of cable manholes per one kilometer;manholes;0.0000000;100.0000000;0.1000000;2.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.NumberOfCableCouplingsPerKM;Number of cable couplings per one kilometer;couplings;0.0000000;50.0000000;0.1000000;0.50;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.MarginCoeff;Coefficient of extra FOCL lenth taking into account the margin for laying and unpacking the cable;coeff;0;0.2;0.01;0.10;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.DesignCoeff;Coefficient of design cost work from the overall cost of FOCL;coeff;0;0.5;0.01;0.05;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialData.UseFOCL;Use FOCL for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialData.UseRTS;Use RTS for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialData.UseSatellite;Use Satellite for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialData.UseCellular;Use Cellular for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialData.UseNPV;Use NPV for find the best technology;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormGeo;Labor cost norms for geodetic work along FOCL route between localities (communities);hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormGeo;Cost norms for  geodetic work along object route;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormFOCLinst;Cost of one km FOCL installation;currency unit/km;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormHDD;Labor cost norms for roads crossings construction by horizontal directional drilling;hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormHDD;Cost norms for roads crossings construction by horizontal directional drilling;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;Intermediate.FOCLSectionLengthCD;The average FOCL sections length requiring the construction of cable ducts;km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormCDC;Labor cost norms for cable duct construction;hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormCDC;Cost norms for cable duct construction;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormMaterialsCD;Cost of basic materials for one km cable duct (pipe) construction;currency unit/km;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;Intermediate.FOCLSectionLengthCLM;The average FOCL sections length requiring cable-laying machine;km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormLC;Labor cost norms for FOCL laying by cable layer ;hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormLC;Cost norms for FOCL laying by cable layer;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormMaterialsCMh;Cost of basic materials for one km cable manhole;current unit/unit;0;10000;10;200;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormCMh;Labor cost norms for cable manhole construction including FOC installation;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormCMh;Cost norms for cable manhole construction;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormCC1km;Cost of cable coupling;current unit/unit;0;10000;10;200;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormCCI;Labor cost norms for cable couplings installation;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormCCI;Cost norms for cable couplings installation;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormST;Labor cost norms for signaling test along the route ;hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormST;Cost norms for signaling test along the route;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormTS;Labor cost norms for technical specifications design;hours;0;100;1;10;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormTS;Cost norms for technical specifications design;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormSC;Labor cost norms for design solutions coordination;hours;0;100;1;10;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormSC;Cost norms for design solutions coordination;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostMatCableGlands;Cost of ODF including materials for the organization of cable glands;currency unit per piece;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostTramsEquipment;Cost of data transmission equipment for organizing L2 channel;currency unit/unit;0;1000;10;179;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.LaborCostNormODF;Labor cost norms ODF installation, including materials for the organization of cable glands;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormODFinst;Cost norms ODF installation, including   organization of cable glands;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.AnnualLaborNormFOCLm;Typical annual labor cost for FOCL maintenance along route ;hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormFOCLm;Typical cost for FOCL maintenance;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.AnnualLaborNormCDm;Typical annual labor cost for cable duct maintenance;hour/km;0;1000;1;20;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormCDm;Typical cost for cable duct maintenance;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.NumberBEF;Number of building entrance facilities;unit (pcs);1;10;1;2;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.AnnualLaborNormBEFm;Typical annual labor cost for maintenance of building entrance facilities ;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormBEFm;Typical cost for maintenance of building entrance facilities ;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.NumberODF;Number of Fiber optic patch panels  (ODF);unit (pcs);1;10;1;2;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.AnnualLaborNormODFm;Typical annual labor cost for ODF maintenance;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.CostNormODFm;Typical cost for ODF maintenance;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.ReliefCoef;Evolution coefficient of retransmission path length depending on the relief ;-;0;1;0.1;0.6;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.RetransmissionLength;Retransmission path length by selected technology;km;0;1000;1;15;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.RTSDevicesCost;Internal RTS devices subassembly cost ;currency unit/unit;0;10000;100;1000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0;10;1;2;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.AFDCost;Internal RTS antenna feeder devices subassembly cost;currency unit/unit;0;10000;100;1000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.PylonCost;Main material cost for one RTS pylon construction ;currency unit/unit;0;10000;100;1000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.GeoPylonCost;Cost norms for geodetic work at RTS pylon location;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.LaborNormsGeoPylon;Labor cost norms for geodetic work at RTS pylon location ;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.PylonConstractionCost;Cost norms for one pylon construction of RTS antenna feeder devices;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.LaborNormsPylon;Labor cost norms for pylon construction of RTS antenna feeder devices;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostNormsAFD;Cost norms for antenna feeder devices installation and commissioning for one RTS;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.LaborNormsAFDinst;Labor cost norms for antenna feeder devices installation and commissioning ;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostAFDinst;Cost norms for internal devices installation and commissioning for one RTS;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.LaborNormsInternalRTS;Labor cost norms for internal RTS devices installation and commissioning ;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostDesing;Cost norms for design solutions coordination on one RTS construction;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.LaborNormsDesign;Labor cost norms for design solutions coordination on RTS construction;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostOfSpectrumLicence;Cost of spectrum license for whole RTS;currency unit;0;100000;10;0.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.BandwidthToFrequencyCoeff;Coefficient of conversion required bandwidth of RTS channel to the width of frequency channel required to its implementation considering frequency band, modulation used, estimated power of transmitter, sensitivity of receiver etc. (allows to convert Mbps of throughput to MHz of frequency channel);coeff;0;1;0.01;0.20;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.BasicSpectrumFee;Basic unit spectrum fee for 1MHz band that paid once (in the process of RTS commissioning);currency unit;0;100000;10;1000.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.AnnualSpectrumFee;Annual unit spectrum fee for 1MHz band that paid every year for the spectrum;currency unit/year;0;100000;10;1000.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.AnnualLaborPylon;Typical annual labor cost for RTS pylon maintenance;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostLaborPylonm;Typical cost for one RTS pylon maintenance;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0;10;1;2;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.AnnualLaborAFD;Typical annual labor cost for antenna feeder devices maintenance ;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostLaborAFDm;Typical cost for antenna feeder devices maintenance for one RTS ;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.AnnualLaborRTS;Typical annual labor cost for internal RTS devices maintenance;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.CostLaborRTSm;Typical cost for internal RTS devices maintenance;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRadio.DesignCoeff;Coefficient of design cost work from the overall cost of RTS;coeff;0;0.5;0.01;0.05;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;PVOptionSet.ProfitTax;Corporate tax rate;%;0;100;1;17;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;AccessTechnologyOptionSet.AvrLifeTimeOfEqAndMat;Average lifetime of the equipment and materials;year;1;50;1;5;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;PVOptionSet.DiscountRate;Discount Rate;%;1;100;1;11;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;PVOptionSet.PaybackPeriod;Period of Investment Payback;year;1;50;1;2;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.ChannelCapacity;Communication channel capacity per single fiber;Mbit/s;0;10000;1;1000.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.TotalFibersInTheCable;Total fibers in the fiber-optical cable line;fibers;0;24;1;8.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.TotalNumberOfCablesInDuct;Total number of cables in cable ducts;cables;0;10;1;5.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.RentalCostForFibers;Rental cost for fibers;currency unit per km of fiber per year;0;1000;1;100.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.RentalCostForDuct;Rental cost for cable duct;currency unit per km of cable in duct per year;0;1000;1;100.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.DemandForFibers;Demand for fibers (as part of available capacity);coeff;0;1;0.01;0.10;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.DemandForDuct;Demand for cable duct (as part of available capacity);coeff;0;1;0.01;0.10;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.ChannelCapacity;Communication channel capacity per single fiber;Mbit/s;0;10000;1;1000.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataRTS.ChannelCapacity;Communication channel capacity per one microwave link;Mbit/s;0;10000;1;1000.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.AnnualRentChannelCost;Annual rent cost of 1 Mbit/s channel per km (without Internet);currency unit/year;0;100;0.01;0.01;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_1;InitialDataFOCL.DemandForChannel;Demand for extra bandwidth (as part of available capacity);coeff;0;1;0.01;0.20;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;Files.NPVMatrix;Filename with matrix of NPV between objects;filename;0.0000000;100.0000000;1.0000000;npv.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.ChannelCapacity;Communication channel capacity per single satellite Internet channel;Mbps;0;100;1;5;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.CostOfOneVSAT;Cost of VSAT set;currency unit/unit;0;10000;100;1000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.CostOfOneVSATmat;Cost of basic materials for VSAT installation;currency unit/unit;0;10000;100;1000;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.CostOfInstallVSAT;Typical cost of installation and configuration of one VSAT set;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.LaborOfInstallVSAT;Labor cost for installation and configuration of VSAT sets;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.AnnualLaborOfServiceVSAT;Typical annual labor costs for the service of antenna-feeder devices;hour/unit;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.CostOfServiceVSAT;Typical cost of one VSAT set maintenance;currency unit/hour;0;1000;10;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.AnnualRentBand;Annual rent cost of 1 Mbps channel ;currency unit/year;0;1000;1;100;ID;ID;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.CostOfEqCoeff;Coefficient of equipment and materials cost that taken into account for design cost calculation ;coeff;0;1;0.01;0.40;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataSatelite.DesignCoeff;Coefficient of design cost work from the partial cost of VSAT sets and cost of installation;coeff;0;0.5;0.01;0.05;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.CostOfEqCoeff;Coefficient of equipment and materials cost that taken into account for design cost calculation ;coeff;0;1;0.01;0.40;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.DesignCoeff;Coefficient of design cost work from the partial cost of cellular sets and cost of installation;coeff;0;0.5;0.01;0.05;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.ChannelCapacity;Communication channel capacity per single cellular channel;Mbit/s;0;100;1;10.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.CostOfOneCellular;Cost of cellular set (3G/4G modem);currency unit/unit;0;1000;10;100.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.CostOfOneCellularmat;Cost of basic materials for cellular equipment installation;currency unit/unit;0;2000;10;10.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.CostOfInstallCellular;Typical cost of installation and configuration of one cellular set;currency unit/hour;0;20;0.1;5.20;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.LaborOfInstallCellular;Labor cost for installation and configuration of cellular sets;hour/unit;0;100;1;5.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.AnnualLaborOfServiceCellular;Typical annual labor costs for the service of antenna-feeder devices;hour/unit;0;1000;10;16.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.CostOfServiceCellular;Typical cost of one cellular set maintenance;currency unit/hour;0;20;0.1;5.20;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataCellular.AnnualRentBand;Annual rent cost of 1 Mbit/s cellular channel ;currency unit/year;0;100;1;20.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataFOCL.AnnualRentBand;Annual rent cost of 1 Mbit/s channel ;currency unit/year;0;100;1;1.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;InitialDataRadio.AnnualRentBand;Annual rent cost of 1 Mbit/s channel ;currency unit/year;0;100;1;1.00;ID;ID;;;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;PVOptionSet.DiscountRate;Discount Rate;%;1;100;1;11;IM;IM;1;1;
+METHOD4;ALGORITHM4_2;FORMULA_4_2_2;PVOptionSet.PaybackPeriod;Period of Investment Payback;year;1;50;1;2;IM;IM;1;1;SLIDER
+METHOD4;ALGORITHM4_3;ALL;;;;;;;;;;1;1;
+METHOD4;ALGORITHM4_3;FORMULA_4_3_1;Files.NPVFilteredMatrix;Filename with filtered matrix of NPV between objects;filename;0.0000000;100.0000000;1.0000000;npv_f.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_4;ALL;;;;;;;;;;;;
+METHOD4;ALGORITHM4_4;FORMULA_4_4_1;Files.ListOfObjects;Filename with list of objects and their coordinates;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_1;TopologySettings.MaximumNodeNumber;Maximum number of nodes per cluster;nodes;0;10000;1;100;IM;IM;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_1;TopologySettings.MaxRB;Maximum required summarized bandwidth for all objects in the cluster;Mbps;0.0000000;10000.0000000;1.0000000;1000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_1;TopologySettings.MaxDist;Maximum distance between two objects in the cluster;meters;0.0000000;100000.0000000;1.0000000;10000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;Intermediate.TotalBandwidth;Total required bandwidth for all objects;Mbps;0.0000000;1000000.0000000;1.0000000;10000.0000000;IM;IM;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;Intermediate.WestLon;Westernmost longitude of lattice or cell;radians;-180.0000000;180.0000000;0.0000001;43.5730000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;Intermediate.EastLon;Easternmost longitude of lattice or cell;radians;-180.0000000;180.0000000;0.0000001;46.5120000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;Intermediate.NorthLat;Northernmost latitude of lattice or cell;radians;-90.0000000;90.0000000;0.0000001;41.2609264;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;Intermediate.SouthLat;Southernmost latitude of lattice or cell;radians;-90.0000000;90.0000000;0.0000001;38.8527110;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;TopologySettings.MaximumDistanceBetweenObjects;Maximum distance between two objects in the cluster;meters;0.0000000;100000.0000000;1.0000000;10000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_2;TopologySettings.MaximumCumulativeBandwidth;Maximum cumulative required bandwidth for all objects in the cluster;Mbps;0.0000000;10000.0000000;1.0000000;1000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.WestLon;Westernmost longitude of lattice or cell;radians;-180.0000000;180.0000000;0.0000001;43.5730000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.EastLon;Easternmost longitude of lattice or cell;radians;-180.0000000;180.0000000;0.0000001;46.5120000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.NorthLat;Northernmost latitude of lattice or cell;radians;-90.0000000;90.0000000;0.0000001;41.2609264;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.SouthLat;Southernmost latitude of lattice or cell;radians;-90.0000000;90.0000000;0.0000001;38.8527110;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.MaxLeftToRightCells;Maximum number of cells between left and right borders of lattice;cells;0.0000000;10000.0000000;1.0000000;100.0000000;IM;IM;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.MaxTopToBottomCells;Maximum number of cells between top and bottom borders of lattice;cells;0.0000000;10000.0000000;1.0000000;100.0000000;IM;IM;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.max_between_left_and_right;Maximum distance between left and right borders  of lattice;meters;0.0000000;10000000.0000000;1.0000000;100000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_3;Intermediate.max_between_top_and_bottom;Maximum distance between top and bottom borders of lattice;meters;0.0000000;10000000.0000000;1.0000000;100000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_4;FORMULA_4_4_4;Files.ListOfObjects;Filename with list of objects and their coordinates;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_4;Intermediate.WestLon;Westernmost longitude of lattice or cell;radians;-180.0000000;180.0000000;0.0000001;43.5730000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_4;Intermediate.EastLon;Easternmost longitude of lattice or cell;radians;-180.0000000;180.0000000;0.0000001;46.5120000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_4;Intermediate.NorthLat;Northernmost latitude of lattice or cell;radians;-90.0000000;90.0000000;0.0000001;41.2609264;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_4;FORMULA_4_4_4;Intermediate.SouthLat;Southernmost latitude of lattice or cell;radians;-90.0000000;90.0000000;0.0000001;38.8527110;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_1;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_1;TopologySettings.SNDTFThreshold;Maximum DTF to treat a node as SN;meters;0.0000000;5000.0000000;1.0000000;0.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_2;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_2;Intermediate.BNIndex;Base node index;index;0;1000;1;1;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_3;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_3;Intermediate.BNLon;Basenode longitude;radians;-180.0000000;180.0000000;0.0000001;44.7300000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_3;Intermediate.BNLat;Basenode latitude;radians;-90.0000000;90.0000000;0.0000001;40.3300000;IM;IM;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_4;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0.0000000;100.0000000;1.0000000;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_4;Files.NPVCalculationParameters;Filename with list of parameters for calculating NPV;filename;0.0000000;100.0000000;1.0000000;npv_params.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_4;TopologySettings.UsePreviousLayer;Flag for possibility of connection to the 2nd layer nodes;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_4;TopologySettings.FOCLBottleTrh;Bottleneck threshold for FOCL;Mbit/s;0;1000000;1;50000.00;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_4;TopologySettings.RTSBottleTrh;Bottleneck threshold for RTS;Mbit/s;0;10000;1;500.00;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_5;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0;100;1;coordinates.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.SNDTFThreshold;Maximum DTF to treat a node as SN;meters;0;5000;1;0;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0;100;1;KEN_5M.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.UseMetric;Use simplified metrics calculations ;logical;0;2;1;2;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.LastMile;Enable calculations for last mile's costs;logical;0;1;1;0;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.LMTech;Technology for the last mile implementation (FOCL, WiFi, Cell, Auto);logical;1;4;1;1;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.AdminBN;Use the priority field for administrative setting of BN;logical;0;1;1;0;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.FOCLBased;Preliminary FOCL topology optimization   ;logical;0;1;1;1;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.RTSBased;Preliminary RTS topology optimization;logical;0;1;1;0;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.EnablePostopt;Enabling post-optimization of choosed technologies by cumulative NPV/COWN;logical;0;1;1;1;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialDataRadio.MaximumLinkCapacity;Bandwidth limit for RTS;Mbit/s;0.000;1000000.000;0.001;10000.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialDataSatellite.MaximumLinkCapacity;Bandwidth limit for SAT;Mbit/s;0.000;10000.000;0.001;3500.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialDataCellular.MaximumLinkCapacity;Bandwidth limit for CELL;Mbit/s;0.000;10000.000;0.001;30.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessCapacity;Costless metric, bandwidth limit for FOCL;Mbit/s;0;1000000;1;10000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessBwExtracharge;Costless metric, bandwidth extracharge;%;0.0;100.0;0.5;2.0;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessUnitPrice;Costless metric, Price of the unit for conversion from costless to cost-based (CAPEX);currency unit;0.00;1000000.00;0.01;13636.30;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessUnitPriceMnt;Costless metric, Price of the unit for conversion from costless to cost-based (OPEX);currency unit;0.00;1000000.00;0.01;163.64;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessCapacityRTS;Costless metric, bandwidth limit for RTS;Mbit/s;0;1000000;1;750;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessDistRTS;Costless metric, One hop distance for RTS;km;0.0;10000.0;1.0;20.0;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessCapacitySAT;Costless metric, bandwidth limit for SAT;Mbit/s;0;1000000;0.1;100;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessCapacityCELL;Costless metric, bandwidth limit for CELL;Mbit/s;0;1000000;0.1;50;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessRTSBaseMetr;Costless metric, base metric for RTS;unit;0.00;1000000.00;0.01;1.06;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessSATBaseMetr;Costless metric, base metric for SAT;unit;0.00;1000000.00;0.01;0.31;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.CostlessCELLBaseMetr;Costless metric, base metric for CELL;unit;0.00;1000000.00;0.01;0.08;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;Files.NPVSettings;Filename with settings required for NPV calculation;filename;0;100;1;ivars.json;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;Files.IntParamsSmpl;Filename with settings required for simplified calculations;filename;0;100;1;s_i_vars.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;Files.ExtParamsSmpl;Filename with settings required for simplified calculations;filename;0;100;1;s_e_vars.csv;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.PaybackPeriod;Period of Investment Payback;year;1;50;1;5;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.FOCL_SPD_LIM;Default value for maximum applicable FOCL link speed for excess bandwidth calculations;Mbps;10.0000000;100000.0000000;1.0000000;1000.0000000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.BW_DM_C;Bandwidth demand coefficient;Mbps;1.0000000;20.0000000;1.0000000;3.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.AMRT_C;Ammortization coefficient (in % of CAPEX);percents;1;50;1;5;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.OVS_C;Oversubscription (overselling) coefficient;times;1;20;1;10;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.AFFORD_C;Affordability threshold;percents;1;10;0.5;2;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.K_DISC;Discount rate;percents;0;100;1;5;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.TAX_VAT;VAT;percents;0;100;1;20;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;IntParam.TAX_PROF;Corporate tax rate;percents;0;100;1;10;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.EnableClustering;Enabling clustering for step-by-step approach;logical;0;1;1;1;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialData.UseFOCL;Use FOCL for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialData.UseRTS;Use RTS for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialData.UseSatellite;Use Satellite for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;InitialData.UseCellular;Use Cellular for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.ExcludeCellular;Exclude 4G enabled nodes from step-by-step process;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.UseCOWN;Use Cost of Ownership as optimization metric;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.LogToFile;Enable logging adhoc data to files;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.EnableGL;Enable logging to global env;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.MaximumNodeNumber;Maximum allowed number of nodes per cluster;nodes;5;3000;5;250;IM;IM;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.MaxRB;Maximum summarized bandwidth requirement allowed for all objects in the cluster;Mbps;10.0000000;1000000.0000000;10.0000000;50000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.MaxDist;Maximum allowed distance between two objects in the cluster;meters;1000.0000000;10000000.0000000;1000.0000000;50000.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.DCNodes;Nodes with 0-DTF should use own FOCL connectivity;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;;
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.FOCLBottleTrh;Bottleneck threshold for FOCL;Mbit/s;0;1000000;1;50000.00;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.RTSBottleTrh;Bottleneck threshold for RTS;Mbit/s;0;10000;1;500.00;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.SaveTopologyPics;Enable saving of topology picture as png-file;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.SaveToFile;Enable saving topology results into csv-files (topology-results.csv, topology-nodes.csv, topology-links.csv);logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_6;TopologySettings.DataFileFormat;Swithes a format of initial datafile (0-old style, 1-new style);logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialData.UseFOCL;Use FOCL for optimisation;logical;0.0000000;1.0000000;1.0000000;1.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialData.UseRTS;Use RTS for optimisation;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialData.UseSatellite;Use Satellite for optimisation;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialData.UseCellular;Use Cellular for optimisation;logical;0.0000000;1.0000000;1.0000000;0.0000000;ID;ID;1;1;CHECKBOX
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialDataRadio.MaximumLinkCapacity;Bandwidth limit for RTS;Mbit/s;0.000;1000000.000;0.001;750.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialDataSatelite.MaximumLinkCapacity;Bandwidth limit for SAT;Mbit/s;0.000;10000.000;0.001;50.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_7;InitialDataCellular.MaximumLinkCapacity;Bandwidth limit for CELL;Mbit/s;0.000;10000.000;0.001;30.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.FOCL_SPD_LIM;Default value for maximum applicable FOCL link speed for excess bandwidth calculations;Mbps;10.0000000;100000.0000000;1.0000000;1000.0000000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;InitialDataRadio.MaximumLinkCapacity;Bandwidth limit for RTS;Mbit/s;0.000;1000000.000;0.001;750.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;InitialDataSatelite.MaximumLinkCapacity;Bandwidth limit for SAT;Mbit/s;0.000;10000.000;0.001;50.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;InitialDataCellular.MaximumLinkCapacity;Bandwidth limit for CELL;Mbit/s;0.000;10000.000;0.001;30.000;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.BW_DM_C;Bandwidth demand coefficient;Mbps;1.0000000;20.0000000;1.0000000;3.0000000;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.AMRT_C;Ammortization coefficient (in % of CAPEX);percents;1;50;1;5;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.OVS_C;Oversubscription (overselling) coefficient;percents;1;20;1;10;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.AFFORD_C;Affordability threshold;percents;1;10;0.5;2;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.K_DISC;Discount rate;percents;0;100;1;5;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.TAX_VAT;VAT;percents;0;100;1;20;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.TAX_PROF;Corporate tax rate;percents;0;100;1;10;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.PaybackPeriod;Period of Investment Payback;year;1;50;1;5;ID;ID;1;1;
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;InitialData.NodeFrom;The node to connect from;node_index;1;1000;1;2;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;InitialData.NodeTo;The node to connect to;node_index;1;1000;1;3;ID;ID;1;1;INPUT
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;IntParam.HexRes;Hexagon resolution h5/h6/h7 0/1/2;value;1;3;1;1;ID;ID;1;1;SLIDER
+METHOD4;ALGORITHM4_5;FORMULA_4_5_8;Files.ListOfObjects;Filename with list of objects and their coordinates and required bandwidth ;filename;0;100;1;c_simple.csv;ID;ID;1;1;INPUT

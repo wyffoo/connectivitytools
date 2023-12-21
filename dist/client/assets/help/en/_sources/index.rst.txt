@@ -1,0 +1,27 @@
+.. Broadband Calculation Tool: Schools documentation documentation master file, created by
+   sphinx-quickstart on Mon Jun 14 17:17:38 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+   giga documentation master file
+
+Welcome to Broadband Calculation Tool: Schools documentation!
+===========================================================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
+
+   general
+   signup
+   signin
+   oneschool
+   multipleschools
+   manageproject
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

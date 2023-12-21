@@ -1,0 +1,108 @@
+<!-- PROJECT INFO -->
+<div class="panel panel-default">
+	<div class="panel-heading" translate>review.project_info</div>
+	<div class="panel-body">
+		<div class="form-group row">
+			<label class="col-sm-3 col-form-label" translate>location.country</label>
+			<div class="col-sm-9">
+				<span>{{countries_index[project.country_id]}}</span>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-3 col-form-label" translate>admin-project.projectname</label>
+			<div class="col-sm-9">
+				<span>{{project.name}}</span>
+			</div>
+		</div>
+		<div class="form-group row" ng-if="project.description !== ''">
+			<label class="col-sm-3 col-form-label" translate>admin-project.projectdesc</label>
+			<div class="col-sm-9">
+				<span>{{project.description}}</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- BROADBAND -->
+<div ng-if="settings.is_broadband_required || settings.is_bandwidth_calc_required"
+	 class="panel panel-default">
+	<div class="panel-heading" translate>review.broadband</div>
+	<div class="panel-body">
+		<div ng-if="settings.net_in_output_techs && settings.net_in_output_techs.length>0"
+			 class="form-group row">
+			<div class="col-sm-12">
+				<span class="glyphicon glyphicon-check"></span>
+				<span translate>review.bw_calculate_with_tech</span>
+			</div>
+			<div class="col-sm-11 col-sm-offset-1">
+				<span translate>review.bw_techs</span>:
+				<span ng:repeat="tech in settings.net_in_output_techs">
+							<span class="glyphicon glyphicon-check"></span>
+							<span>{{'review.bw_tech_' + tech | translate}}</span>
+						</span>
+			</div>
+			<div class="col-sm-11 col-sm-offset-1" ng-if="settings.is_net_in_output">
+				<span translate>review.bw_techs_optimization</span>:
+				<span ng-show="settings.net_in_output_optimization=='npv'">
+							<span class="glyphicon glyphicon-check"></span>
+							<span translate>review.bw_techs_optimization_npv</span>
+						</span>
+				<span ng-show="settings.net_in_output_optimization=='cost'">
+							<span class="glyphicon glyphicon-check"></span>
+							<span translate>review.bw_techs_optimization_cost</span>
+						</span>
+			</div>
+		</div>
+
+<!--		<div ng-if="settings.is_bandwidth_calc_required === 'calculate_with_tech'" class="form-group row">-->
+<!--			<div class="col-sm-12">-->
+<!--				<span class="glyphicon glyphicon-check"></span>-->
+<!--				<span translate>review.bw_calculate_with_tech</span>-->
+<!--			</div>-->
+<!--		</div>-->
+		<div ng-if="settings.is_bandwidth_calc_required === 'provided'" class="form-group row">
+			<div class="col-sm-12">
+				<span class="glyphicon glyphicon-check"></span>
+				<span translate>review.bw_provided</span>
+			</div>
+		</div>
+		<div ng-if="settings.is_bandwidth_calc_required === 'calculate'" class="form-group row">
+			<div class="col-sm-12">
+				<span class="glyphicon glyphicon-check"></span>
+				<span translate>review.bw_calculate</span>
+			</div>
+		</div>
+		<div ng-if="settings.is_net_in_output" class="form-group row">
+			<div class="col-sm-12">
+				<span class="glyphicon glyphicon-check"></span>
+				<span translate>review.is_net_in_output</span>
+			</div>
+		</div>
+
+		<div ng-if="settings.tp_id" class="form-group row">
+			<div class="col-sm-12">
+				<span class="glyphicon glyphicon-check"></span>
+				<span translate>review.tp</span>:
+				<span>{{settings.tp_name ? settings.tp_name : 'review.bw_tp_' + settings.tp_id | translate}}</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- LAN -->
+<div ng-if="settings.is_lan_required" class="panel panel-default">
+	<div class="panel-heading" translate>review.lan</div>
+	<div class="panel-body">
+		<div class="form-group row">
+			<div class="col-sm-12 padding-sm">
+				<span translate>review.lan_config</span>:
+			</div>
+			<div class="col-sm-12">
+						<span ng:repeat="(key,val) in settings.lan_config">
+							<span ng-if="val===true" class="glyphicon glyphicon-check"></span>
+							<span ng-if="val===true">{{'review.lan_' + key | translate}}</span>
+						</span>
+			</div>
+		</div>
+	</div>
+</div>

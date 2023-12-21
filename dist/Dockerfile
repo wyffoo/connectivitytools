@@ -1,0 +1,5 @@
+FROM nginx:alpine
+
+COPY default.conf /etc/nginx/conf.d/default.conf
+COPY client /var/www/html/public
+EXPOSE 8000/tcp

@@ -1,0 +1,46 @@
+{
+  "disclaimer_button": "I Agree",
+  "navbar": {
+	"switch_navigation": "Switch navigation",
+	"home": "Home",
+    "users": "Users",
+    "about": "About the project",
+    "help": "Help",
+    "authors": "Authors",
+    "enter": "Sign in",
+    "welcome": "Welcome, ",
+    "exit": "Exit",
+    "projects": "Projects",
+    "profile": "Profile",
+	"locations": "Locations"
+  },
+  "footer": {
+    "itu": "International telecommunication union",
+    "onat": "O.S. Popov Odessa national academy of telecommunications, 2017"
+  },
+  "errors": {
+    "connerror": "Unable to connect to the server. Check the connection settings and try again.",
+    "serverror": "An error occurred in the server response. Wait five seconds and try again."
+  },
+  "languages": {
+	"ru": "Русский",
+	"en": "English",
+	"ua": "Українською"
+  },
+  "components": {
+    "projectadmin": "Project adminstrator",
+    "designer": "Designer",
+    "provider": "Provider of information",
+	"modal": {
+	  "confirm_delete_title": "Confirm Deletion",
+	  "confirm_delete_question": "Delete ",
+	  "confirm_delete_del_button": "Delete",
+	  "confirm_delete_cancel_button": "Cancel",
+	  "confirm_simple_title": "Confirm Action",
+	  "confirm_simple_question": "Please confirm action for ",
+	  "confirm_simple_confirm_button": "Confirm",
+	  "confirm_simple_cancel_button": "Cancel",
+	  "info_close": "Close"
+	}
+  }
+}

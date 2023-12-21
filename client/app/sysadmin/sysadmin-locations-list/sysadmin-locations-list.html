@@ -1,0 +1,70 @@
+<div class="form-inline">
+	<div class="form-inline">
+		<select class="form-control" ng-model="country_id">
+			<option value="" disabled selected translate>sysadmin-locations.choose_country</option>
+			<option ng-repeat="c in $ctrl.countries" value="{{c.val}}">{{c.name}}</option>
+		</select>
+		<select class="form-control" ng-model="location_type">
+			<option value="city">{{'sysadmin-locations.city'|translate}}</option>
+			<option value="social_point">{{'sysadmin-locations.social_point'|translate}}</option>
+			<option value="hexagon_6">{{'sysadmin-locations.hexagon'|translate}} 6</option>
+			<option value="hexagon_7">{{'sysadmin-locations.hexagon'|translate}} 7</option>
+			<option value="hexagon_8">{{'sysadmin-locations.hexagon'|translate}} 8</option>
+			<option value="hexagon_9">{{'sysadmin-locations.hexagon'|translate}} 9</option>
+		</select>
+		<input ng-if="$ctrl.locations.length>0" class="form-control input-sm" type="email" ng-model="$ctrl.filter" placeholder="{{'sysadmin-locations.search_keyword'|translate}}">
+		<button ng-if="$ctrl.locations.length>0" class="btn btn-default btn-sm" type="button" ng-click="search()" translate>sysadmin-locations.search</button>
+		<a ng-if="$ctrl.locations.length>0" class="btn btn-info btn-sm" target="_blank" href="/api/locations/dataset/{{country_id}}/{{location_type}}" translate="sysadmin-locations.download_dataset"></a>
+		<button ng-if="country_id" class="btn btn-warning btn-sm" type="file" ngf-select="$ctrl.uploadDatasetFile($file, $invalidFiles)"
+				ngf-max-height="1000" ngf-max-size="100MB" translate="sysadmin-locations.upload_dataset">
+		</button>
+		<div>{{$ctrl.file.name}} {{$ctrl.errFile.name}} {{$ctrl.errFile.$error}} {{$ctrl.errFile.$errorParam}}
+			<span class="progress" ng-show="$ctrl.file.progress >= 0">
+								  <div class="progress-bar" style="width:{{$ctrl.file.progress}}%"
+									   ng-bind="$ctrl.file.progress + '%'"></div>
+							  </span>
+		</div>
+	</div>
+</div>
+<table class="table table-condensed" si-table sorting="params.sortBy">
+	<thead>
+	<tr>
+		<th sort-by="identifier">{{'sysadmin-locations.identifier'|translate}}</th>
+		<th sort-by="name" ng-if="location_type === 'city'" translate>sysadmin-locations.name</th>
+		<th ng-if="location_type === 'city'" translate>sysadmin-locations.alt_name</th>
+		<th translate>sysadmin-locations.lat</th>
+		<th translate>sysadmin-locations.long</th>
+		<th sort-by="population">{{'sysadmin-locations.population'|translate}}</th>
+		<th ng-if="location_type === 'city'" translate>sysadmin-locations.admin_name</th>
+		<th ng-if="location_type === 'city'" translate>sysadmin-locations.admin_code</th>
+		<th ng-if="location_type.indexOf('hexagon') !== -1" translate>sysadmin-locations.parent</th>
+		<th ng-if="location_type.indexOf('hexagon') !== -1" translate>sysadmin-locations.rb</th>
+		<th ng-if="location_type === 'city'" translate>sysadmin-locations.area</th>
+		<th translate>sysadmin-locations.flag</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="loc in $ctrl.locations">
+		<td>{{loc.identifier}}</td>
+		<td ng-if="location_type === 'city'">{{loc.name}}</td>
+		<td ng-if="location_type === 'city'">{{loc.alt_name}}</td>
+		<td>{{loc.lat}}</td>
+		<td>{{loc.long}}</td>
+		<td>{{loc.population}}</td>
+		<td ng-if="location_type === 'city'">{{loc.admin_name}}</td>
+		<td ng-if="location_type === 'city'">{{loc.admin_code}}</td>
+		<td ng-if="location_type.indexOf('hexagon') !== -1">{{loc.parent}}</td>
+		<td ng-if="location_type.indexOf('hexagon') !== -1">{{loc.rb}}</td>
+		<td ng-if="location_type === 'city'">{{loc.area}}</td>
+		<td>{{loc.flag}}</td>
+	</tr>
+	</tbody>
+	<tfoot>
+	<tr>
+		<td colspan="5">
+			<si-table-pagination offset="params.offset"  limit="{{limit}}" total="{{params.total}}" />
+		</td>
+	</tr>
+	</tfoot>
+</table>

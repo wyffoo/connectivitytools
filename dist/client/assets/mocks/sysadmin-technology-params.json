@@ -1,0 +1,664 @@
+[
+  {
+	"id": 112,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.EnvironmentTransmissionSubscribersLines",
+	"description": "Тип  среды  передачи  для организации абонентских линий",
+	"type": "select",
+	"default_value": "1",
+	"unit": "",
+	"tech_level": 1,
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Беспроводная связь"
+	  },
+	  {
+		"value": "2",
+		"name": "Использование медных кабелей"
+	  },
+	  {
+		"value": "3",
+		"name": "Использование волоконно-оптических"
+	  }
+	]
+  },
+  {
+	"id": 117,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.RadiusEOA",
+	"description": "Радиус охвата территории одной единицей ООД (максимальная протяженность абонентских линий. дальность распространения сигнала в условиях отсутствия застройки и т.д.)",
+	"type": "input",
+	"default_value": "0.3",
+	"unit": "км.",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 118,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.NumberSubscribersEOA",
+	"description": "Количество абонентов. которые могут обслуживаться  одной единицей  ООД  (количество абонентских портов. Количество абонентов. которые  образуют максимальное  количество одновременных подключений и т.д.)",
+	"type": "input",
+	"default_value": "30",
+	"unit": "чел.",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 119,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.QuantityFloorsEOA",
+	"description": "Количество этажей. охватываемые одной единицей ООД (количество абонентских портов. количество абонентов. образуют максимальное количество одновременных подключений и т.д.)",
+	"type": "input",
+	"default_value": "1",
+	"unit": "этажей",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 123,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostEOA",
+	"description": "Стоимость одной единицы ООД",
+	"type": "input",
+	"default_value": "100",
+	"unit": "у.е.",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 127,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.ReduceRadius",
+	"description": "Коэффициент уменьшения радиуса охвата за счет застройки (от 0.01 до 1)",
+	"type": "input",
+	"default_value": "0.5",
+	"unit": "",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 128,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.MaximumLengthInhouseLines",
+	"description": "Максимальная протяженность внутридомовых линий",
+	"type": "input",
+	"default_value": "0.05",
+	"unit": "км.",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 129,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.AggregationExternalLines",
+	"description": "Коэффициент агрегации линий к кабелю для внешних линий",
+	"type": "input",
+	"default_value": "0.03",
+	"unit": "",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 130,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.AggregationInternalLines",
+	"description": "Коэффициент агрегации линий к кабелю для внутренних линий (от 0.01 до 1)",
+	"type": "input",
+	"default_value": "0.03",
+	"unit": "",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 134,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostMaterialsEOA",
+	"description": "Стоимость материалов для обустройства одного места размещения ООД",
+	"type": "input",
+	"default_value": "100",
+	"unit": "у.е.",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 137,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostSubscribersLines",
+	"description": "Стоимость кабеля АЛ",
+	"type": "input",
+	"default_value": "0",
+	"unit": "у.е./км.",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 151,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsEOA",
+	"description": "Норматив трудозатрат на обустройство места под ООД",
+	"type": "input",
+	"default_value": "4",
+	"unit": "чел*час",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 158,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.PowerConsumptionEOA",
+	"description": "Объем ежегодного потребления электропитания одной единицей ООД",
+	"type": "input",
+	"default_value": "400",
+	"unit": "кВт*час",
+	"tech_level": 1,
+	"required": 0
+  },
+  {
+	"id": 113,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.EnvironmentTransmissionConnectingLines",
+	"description": "Тип среды передачи для организации соединительных линий распределительной сети",
+	"type": "select",
+	"default_value": "2",
+	"unit": "",
+	"tech_level": 2,
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Беспроводная связь"
+	  },
+	  {
+		"value": "2",
+		"name": "Использование медных кабелей"
+	  },
+	  {
+		"value": "3",
+		"name": "Использование волоконно-оптических"
+	  }
+	]
+  },
+  {
+	"id": 116,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.ReservationsEOAtoTEOA",
+	"description": "Тип резервирования при подключении ООД к ТООД ",
+	"type": "select",
+	"default_value": "1",
+	"unit": "",
+	"tech_level": 2,
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Не предполагается"
+	  },
+	  {
+		"value": "2",
+		"name": "Предполагается двойное подключение ООД к распределительным ТООД"
+	  }
+	]
+  },
+  {
+	"id": 120,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.QuantityEOAToTEOA",
+	"description": "Количество ООД. которые могут быть подключены к одному ТООД",
+	"type": "input",
+	"default_value": "16",
+	"unit": "ед.",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 121,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.MaximumLengthCommunicationChannelDistributing",
+	"description": "Максимальная протяженность канала связи для распределительного сегмента",
+	"type": "input",
+	"default_value": "0.09",
+	"unit": "км.",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 124,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostTEOADistributing",
+	"description": "Стоимость одной единицы ТООД распределительного сегмента",
+	"type": "input",
+	"default_value": "100",
+	"unit": "у.е.",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 131,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.AggregationExternalLinesDistributing",
+	"description": "Коэффициент агрегации линий к кабелю для внешних линий распределительного сегмента (от 0.01 до 1)",
+	"type": "input",
+	"default_value": "0.03",
+	"unit": "",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 135,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostMaterialsTEOA",
+	"description": "Стоимость материалов для обустройства одного места размещения распределительного ТООД",
+	"type": "input",
+	"default_value": "100",
+	"unit": "у.е.",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 138,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostConnectingLines",
+	"description": "Стоимость распределительного  кабеля сегмента",
+	"type": "input",
+	"default_value": "600",
+	"unit": "у.е./км.",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 150,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsTEOA",
+	"description": "Норматив трудозатрат на обустройство места под ТООД",
+	"type": "input",
+	"default_value": "6",
+	"unit": "чел*час",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 159,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.PowerConsumptionTEOA",
+	"description": "Объем ежегодного потребления электропитания одной единицей ТООД",
+	"type": "input",
+	"default_value": "400",
+	"unit": "кВт*час",
+	"tech_level": 2,
+	"required": 0
+  },
+  {
+	"id": 114,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.EnvironmentTransmissionConnectingLinesAggregateSegment",
+	"description": "Тип среды передачи для организации соединительных линий агрегативного сегмента распределительной сети",
+	"type": "select",
+	"default_value": "3",
+	"unit": "",
+	"tech_level": 3,
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Беспроводная связь"
+	  },
+	  {
+		"value": "2",
+		"name": "Использование медных кабелей"
+	  },
+	  {
+		"value": "3",
+		"name": "Использование волоконно-оптических"
+	  }
+	]
+  },
+  {
+	"id": 122,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.MaximumLengthCommunicationChannelIntermediateEOA",
+	"description": "Максимальная протяженность канала связи без использования промежуточних ТООД",
+	"type": "input",
+	"default_value": "5",
+	"unit": "км.",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 125,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostTEOADistributingInterim",
+	"description": "Стоимость одной единицы ТООД промежуточного назначения",
+	"type": "input",
+	"default_value": "100",
+	"unit": "у.е.",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 126,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostSwitchingNode",
+	"description": "Стоимость специального оборудования коммутационного узла",
+	"type": "input",
+	"default_value": "1000",
+	"unit": "у.е.",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 132,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.AggregationExternalLinesAggregative",
+	"description": "Коэффициент агрегации линий в кабеле для внешних линий агрегативного сегмента (от 0.01 до 1)",
+	"type": "input",
+	"default_value": "0.03",
+	"unit": "",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 133,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.MaximumCommunicationChannelAggregative",
+	"description": "Максимальная  протяженность канала связи для агрегативного сегмента",
+	"type": "input",
+	"default_value": "0.1",
+	"unit": "км.",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 136,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostMaterialsRenewableTEOA",
+	"description": "Стоимость материалов для обустройства одного места возобновляемого распределительного ТООД",
+	"type": "input",
+	"default_value": "100",
+	"unit": "у.е.",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 139,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostConnectingLinesAggregateSegment",
+	"description": "Стоимость кабеля агрегативного сегмента",
+	"type": "input",
+	"default_value": "1000",
+	"unit": "у.е./км.",
+	"tech_level": 3,
+	"required": 0
+  },
+  {
+	"id": 115,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.RFR",
+	"description": "Использование лицензированного РЧР или РЧР ограниченного  использования",
+	"type": "select",
+	"default_value": "2",
+	"unit": "",
+	"tech_level": 4,
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Не предполагается использование РЧР"
+	  },
+	  {
+		"value": "2",
+		"name": "Использование РЧР, не лицензируется"
+	  },
+	  {
+		"value": "3",
+		"name": "Предполагается использование лицензированного РЧР"
+	  }
+	]
+  },
+  {
+	"id": 140,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostInternalSewerage",
+	"description": "Стоимость материалов внутренней канализации",
+	"type": "input",
+	"default_value": "1000",
+	"unit": "у.е./км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 141,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostExternalSewerage",
+	"description": "Стоимость материалов наружной канализации",
+	"type": "input",
+	"default_value": "2000",
+	"unit": "у.е./км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 142,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostRFR",
+	"description": "Стоимость лицензии на использование РЧР в расчете на один объект",
+	"type": "input",
+	"default_value": "50",
+	"unit": "у.е.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 143,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostEquipmentInstallation",
+	"description": "Стоимость монтажных работ по обустройству мест под оборудование",
+	"type": "input",
+	"default_value": "10",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 144,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostEquipmentTune-up",
+	"description": "Стоимость работ по установке и настройке оборудования",
+	"type": "input",
+	"default_value": "20",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 145,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostSewerageConstruction",
+	"description": "Стоимость работ по строительству канализации",
+	"type": "input",
+	"default_value": "5",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 146,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostInternalSewerageConstruction",
+	"description": "Стоимость работ по строительству внутридомовых канализации",
+	"type": "input",
+	"default_value": "5",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 147,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostInstallationSubscribersLines",
+	"description": "Стоимость работ по монтажу абонентских линий",
+	"type": "input",
+	"default_value": "5",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 148,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostSettingSubscribersLines",
+	"description": "Стоимость работ по подвешиванию кабеля",
+	"type": "input",
+	"default_value": "5",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 149,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostCableSewerage",
+	"description": "Стоимость работ по прокладке кабеля в канализации",
+	"type": "input",
+	"default_value": "5",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 152,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsEquipmentTune-up",
+	"description": "Норматив трудозатрат на установку оборудования",
+	"type": "input",
+	"default_value": "2",
+	"unit": "чел*час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 153,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsInternalSewerageConstruction",
+	"description": "Норматив трудозатрат на строительство внутридомовой канализации",
+	"type": "input",
+	"default_value": "200",
+	"unit": "чел*час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 154,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsSewerageConstruction",
+	"description": "Норматив трудозатрат на строительство  кабельной канализации",
+	"type": "input",
+	"default_value": "400",
+	"unit": "чел*час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 155,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsCableSewerage",
+	"description": "Норматив трудозатрат по прокладке кабеля в канализации",
+	"type": "input",
+	"default_value": "20",
+	"unit": "чел*час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 156,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsSuspensionCable",
+	"description": "Норматив трудозатрат на подвешивание кабеля",
+	"type": "input",
+	"default_value": "10",
+	"unit": "чел*час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 157,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostDesigningNorm",
+	"description": "Процент нормативных затрат на проектирование",
+	"type": "input",
+	"default_value": "20",
+	"unit": "%",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 160,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostServiceEequipment",
+	"description": "Стоимость работ по эксплуатации оборудования",
+	"type": "input",
+	"default_value": "10",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 161,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostServiceCableInfrastructure",
+	"description": "Стоимость работ по эксплуатации кабельной инфраструктуры",
+	"type": "input",
+	"default_value": "10",
+	"unit": "у.е./час",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 162,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsServiceSuspensionCable",
+	"description": "Норматив ежегодных трудозатрат на обслуживание одного метра подвешенных кабелей",
+	"type": "input",
+	"default_value": "1",
+	"unit": "час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 163,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsServiceCableSewerage",
+	"description": "Нормы ежегодных трудозатрат на обслуживание одного метра кабеля в канализации",
+	"type": "input",
+	"default_value": "1",
+	"unit": "час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 164,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsLengthIn-houseSubscriberLines",
+	"description": "Норматив ежегодных трудозатрат на один метр внутридомовых абонентских линий ",
+	"type": "input",
+	"default_value": "10",
+	"unit": "час/км.",
+	"tech_level": 4,
+	"required": 0
+  },
+  {
+	"id": 165,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.LaborCostsActiveEquipment",
+	"description": "Норматив ежегодных трудозатрат на единицу активного оборудования",
+	"type": "input",
+	"default_value": "5",
+	"unit": "час/ед.",
+	"tech_level": 4,
+	"required": 0
+  }
+]
+
+

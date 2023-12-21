@@ -1,0 +1,9 @@
+[
+  {"result_id":1, "object_name": "Объект 1", "technology_name": "Набор технологий 1", "nvp": 15000},
+  {"result_id":2, "object_name": "Объект 1", "technology_name": "Набор технологий 2", "nvp": 1500},
+  {"result_id":3, "object_name": "Объект 2", "technology_name": "Набор технологий 1", "nvp": 0},
+  {"result_id":4, "object_name": "Объект 2", "technology_name": "Набор технологий 2", "nvp": -4200},
+  {"result_id":5, "object_name": "Объект 3", "technology_name": "Набор технологий 1", "nvp": 2719},
+  {"result_id":6, "object_name": "Объект 3", "technology_name": "Набор технологий 2", "nvp": 42420},
+  {"result_id":7, "object_name": "Объект 3", "technology_name": "Набор технологий 3", "nvp": -100500}
+]

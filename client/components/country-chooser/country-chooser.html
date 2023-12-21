@@ -1,0 +1,49 @@
+<!-- COUNTRY -->
+<div class="form-group"
+	 ng-class="{ 'has-error' : schoolWizardStep1Form1.countrycode.$invalid && !schoolWizardStep1Form1.countrycode.$pristine }">
+	<label class="col-sm-4 control-label no-padding-right" translate>location.country</label>
+	<div class="col-sm-8">
+						<span class="block input-icon input-icon-right">
+							<select name="countrycode" class="form-control" ng-model="scope.model.countrycode" required>
+								<option value="AZ" translate>location.AZ</option>
+								<option value="AM" translate>location.AM</option>
+								<option value="BY" translate>location.BY</option>
+								<option value="GE" translate>location.GE</option>
+								<option value="KZ" translate>location.KZ</option>
+								<option value="KG" translate>location.KG</option>
+								<option value="MD" translate>location.MD</option>
+								<option value="RU" translate>location.RU</option>
+								<option value="TJ" translate>location.TJ</option>
+								<option value="TM" translate>location.TM</option>
+								<option value="UZ" translate>location.UZ</option>
+								<option value="UA" translate>location.UA</option>
+								<option value="OTH" translate>location.OTH</option>
+							</select>
+						</span>
+		<p class="error-inline"
+		   ng-show="schoolWizardStep1Form1.countrycode.$dirty && schoolWizardStep1Form1.countrycode.$invalid"
+		   translate>
+			<span class="glyphicon glyphicon-exclamation-sign"></span>
+			location.choosecountry
+		</p>
+	</div>
+</div>
+
+<!-- SCHOOL NAME -->
+<div class="form-group"
+	 ng-class="{ 'has-error' : schoolWizardStep1Form1.name.$invalid && !schoolWizardStep1Form1.name.$pristine }">
+	<label class="col-sm-4 control-label no-padding-right" translate>location.name</label>
+	<div class="col-sm-8">
+						<span class="block input-icon input-icon-right">
+							<input ng-focus="" ng-model="scope.model.name"
+								   translate-attr="{ placeholder: 'location.name' }" type="text" name="name"
+								   class="form-control" ng-maxlength="30">
+						</span>
+		<p class="error-inline"
+		   ng-show="schoolWizardStep1Form1.name.$dirty && schoolWizardStep1Form1.name.$invalid"
+		   translate>
+			<span class="glyphicon glyphicon-exclamation-sign"></span>
+			location.name
+		</p>
+	</div>
+</div>

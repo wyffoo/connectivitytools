@@ -1,0 +1,49 @@
+.lan-network-segments-visualization {
+  &.lnsv-en div {
+
+	width: 100%;
+	height: 438px;
+
+
+	&.lnsv-clear-en {
+	  background: url(/assets/images/schoolWizard/clear_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-1-en {
+	  background: url(/assets/images/schoolWizard/1_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-2-en {
+	  background: url(/assets/images/schoolWizard/2_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-3-en {
+	  background: url(/assets/images/schoolWizard/3_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-1-2-en {
+	  background: url(/assets/images/schoolWizard/1-2_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-1-3-en {
+	  background: url(/assets/images/schoolWizard/1-3_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-2-3-en {
+	  background: url(/assets/images/schoolWizard/2-3_en.png) no-repeat;
+	  background-size: contain;
+	}
+
+	&.lnsv-1-2-3-en {
+	  background: url(/assets/images/schoolWizard/1-2-3_en.png) no-repeat;
+	  background-size: contain;
+	}
+  }
+
+}

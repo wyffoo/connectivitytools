@@ -1,0 +1,208 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<div class="jumbotron text-center jumbotron-bg-3">
+			<h3 translate>titles.jumbotron</h3>
+		</div>
+
+		<hr>
+		<h2 class="main-title" translate>form.title</h2>
+		<hr>
+
+			<!-- CUSTOM SERVICES-->
+			<div class="panel panel-default profile_services">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title pull-left " translate>form.custom_service</h3>
+					<toggle class="pull-right" ng-model="custom_services_extended" size="btn-sm" ng-change="" on="{{'form.extended'|translate}}" off="{{'form.simple'|translate}}"></toggle>
+				</div>
+				<div class="panel-body">
+					<table class="table table-bordered custom-services">
+						<thead>
+						<tr>
+							<th class="center" translate="form.services"></th>
+							<th colspan="6" class="center" translate="form.qlevel"></th>
+							<th colspan="6" class="center" translate="form.sci"></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th class="center" translate="form.prev_latency" colspan="3"></th>
+							<th class="center" translate="form.prev_data" colspan="3"></th>
+							<th class="center" translate="form.prev_intensity" colspan="3"></th>
+							<th class="center" translate="form.prev_volume" colspan="3"></th>
+						</tr>
+						<tr ng-if="custom_services_extended===true">
+							<th></th>
+							<th class="center table-danger" translate="form.low"></th>
+							<th class="center table-warning" translate="form.medium"></th>
+							<th class="center table-success" translate="form.high"></th>
+							<th class="center table-danger" translate="form.low"></th>
+							<th class="center table-warning" translate="form.medium"></th>
+							<th class="center table-success" translate="form.high"></th>
+							<th class="center table-info" translate="form.low"></th>
+							<th class="center table-warning" translate="form.medium"></th>
+							<th class="center table-danger" translate="form.high"></th>
+							<th class="center table-info" translate="form.low"></th>
+							<th class="center table-warning" translate="form.medium"></th>
+							<th class="center table-danger" translate="form.high"></th>
+						</tr>
+						</thead>
+<!--						<tr>-->
+<!--							<td translate="form.enter_service_name"></td>-->
+<!--							<td translate="form.enter_service_parameters" colspan="5"></td>-->
+<!--						</tr>-->
+<!--						</thead>-->
+						<tbody ng-if="custom_services_extended===true">
+							<tr>
+								<td class="center"><input size="15" placeholder="{{'form.new_service_placeholder'|translate}}" ng-model="new_service.service_name"/><a class="btn btn-xs" ng-click="$ctrl.saveNewService()"><span class="glyphicon glyphicon-save"></span><span translate="form.save_service"></span></a></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-model="new_service.latency_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-model="new_service.latency_medium"/></td>
+								<td class="center table-success input"><input style="width: 5em" type="number" ng-model="new_service.latency_high"/></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-model="new_service.bitrate_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-model="new_service.bitrate_medium"/></td>
+								<td class="center table-success input"><input style="width: 5em" type="number" ng-model="new_service.bitrate_high"/></td>
+								<td class="center table-info input"><input style="width: 5em" type="number" ng-model="new_service.intensity_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-model="new_service.intensity_medium"/></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-model="new_service.intensity_high"/></td>
+								<td class="center table-info input"><input style="width: 5em" type="number" ng-model="new_service.datavolume_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-model="new_service.datavolume_medium"/></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-model="new_service.datavolume_high"/></td>
+							</tr>
+							<tr ng-repeat="service in $ctrl.services" ng-if="service.defaultset===0">
+								<td>
+									<button class="btn btn-xs btn-danger" ng-click="$ctrl.confirmServiceDelete(service.service_name, $index)"><span class="glyphicon glyphicon-remove"></span></button>
+									<input size="13" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }' ng-model="$ctrl.services[$index].service_name"/>
+								</td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].latency_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].latency_medium"/></td>
+								<td class="center table-success input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].latency_high"/></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].bitrate_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].bitrate_medium"/></td>
+								<td class="center table-success input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].bitrate_high"/></td>
+								<td class="center table-info input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].intensity_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].intensity_medium"/></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].intensity_high"/></td>
+								<td class="center table-info input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].datavolume_low"/></td>
+								<td class="center table-warning input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].datavolume_medium"/></td>
+								<td class="center table-danger input"><input style="width: 5em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].datavolume_high"/></td>
+							</tr>
+						</tbody>
+						<tbody ng-if="custom_services_extended===false">
+							<tr>
+								<td class="center"><input size="40" placeholder="{{'form.new_service_placeholder'|translate}}" ng-model="new_service.service_name"/><a class="btn btn-xs" ng-click="$ctrl.saveNewService()"><span class="glyphicon glyphicon-save"></span><span translate="form.save_service"></span></a></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-model="new_service.latency_medium"/></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-model="new_service.bitrate_medium"/></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-model="new_service.intensity_medium"/></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-model="new_service.datavolume_medium"/></td>
+							</tr>
+							<tr ng-repeat="service in $ctrl.services" ng-if="service.defaultset===0">
+								<td>
+									<button class="btn btn-xs btn-danger" ng-click="$ctrl.confirmServiceDelete(service.service_name, $index)"><span class="glyphicon glyphicon-remove"></span></button>
+									<input size="35" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }' ng-model="$ctrl.services[$index].service_name"/>
+								</td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].latency_medium"/></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].bitrate_medium"/></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].intensity_medium"/></td>
+								<td class="center table-warning" colspan="3"><input style="width: 7em" type="number" ng-change="$ctrl.serviceSync($index)" ng-model-options='{ debounce: 1000 }'ng-model="$ctrl.services[$index].datavolume_medium"/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" translate>form.name</h3>
+				</div>
+				<div class="panel-body"
+					 ng-class="{ 'has-error' : newProfileForm.name.$invalid && newProfileForm.name.$dirty }">
+					<input ng-model="$ctrl.model.name" type="text" class="form-control" name="name" id="name" required>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" translate>form.qlevel</h3>
+				</div>
+				<div class="panel-body"
+					 ng-class="{ 'has-error' : newProfileForm.qlevel.$invalid && newProfileForm.qlevel.$dirty }">
+					<span class="btn-group btn-group-toggle">
+						<span class="btn btn-outline-danger" translate="form.low" ng-class="{active:$ctrl.model.quality_level==='low'}" ng-click="$ctrl.model.quality_level='low'"></span>
+						<span class="btn btn-outline-warning" translate="form.medium" ng-class="{active:$ctrl.model.quality_level==='medium'}" ng-click="$ctrl.model.quality_level='medium'"></span>
+						<span class="btn btn-outline-success" translate="form.high" ng-class="{active:$ctrl.model.quality_level==='high'}" ng-click="$ctrl.model.quality_level='high'"></span>
+					</span>
+					<p class="help-block" ng-if="$ctrl.model.quality_level==='low'" translate>form.qlevel_low</p>
+					<p class="help-block" ng-if="$ctrl.model.quality_level==='medium'" translate>form.qlevel_medium</p>
+					<p class="help-block" ng-if="$ctrl.model.quality_level==='high'" translate>form.qlevel_high</p>
+				</div>
+			</div>
+
+			<!-- SERVICES INTENSITIES -->
+			<div class="panel panel-default profile_services">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title pull-left" translate>form.intensities</h3>
+					<toggle class="pull-right" ng-model="include_default_services" size="btn-sm" ng-change="" on="{{'form.with_default_service'|translate}}" off="{{'form.without_default_service'|translate}}"></toggle>
+				</div>
+				<div class="panel-body">
+					<p translate>form.intensities_desc</p>
+					<uib-accordion close-others="false">
+						<!-- START: Traffic sources -->
+						<div uib-accordion-group class="panel-info" is-open="ts_status.open" ng-repeat="ts in $ctrl.traffic_sources">
+							<uib-accordion-heading>
+								{{'default_sources.'+ts[0]|translate}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ts_status.open, 'glyphicon-chevron-right': !ts_status.open}"></i>
+							</uib-accordion-heading>
+							<!-- START: Services -->
+							<div>
+								<table class="table table-bordered">
+									<thead>
+									<tr>
+										<th class="center" translate="form.services"></th>
+										<th class="center">
+											{{'form.sci'|translate}}
+											<br>
+											<span class="help-block">{{'form.set_all_services'|translate}}:</span>
+											<span class="btn-group btn-group-toggle">
+												<span class="btn btn-xs btn-default" translate="form.not_used" ng-click="$ctrl.setServiceUsingLevel(ts[0],null,'notused')"></span>
+												<span class="btn btn-xs btn-info" translate="form.low" ng-click="$ctrl.setServiceUsingLevel(ts[0],null,'low')"></span>
+												<span class="btn btn-xs btn-warning" translate="form.medium" ng-click="$ctrl.setServiceUsingLevel(ts[0],null,'medium')"></span>
+												<span class="btn btn-xs btn-danger" translate="form.high" ng-click="$ctrl.setServiceUsingLevel(ts[0],null,'high')"></span>
+											</span>
+										</th>
+										<th class="center" translate="form.prev_latency"></th>
+										<th class="center" translate="form.prev_data"></th>
+										<th class="center" translate="form.prev_intensity"></th>
+										<th class="center" translate="form.prev_volume"></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr ng-repeat="service in $ctrl.services" ng-if="(!include_default_services && service.defaultset===0) || include_default_services">
+										<td ng-if="service.defaultset===1">{{'default_services.'+service.id|translate}}</td>
+										<td ng-if="service.defaultset===0">{{service.service_name}}</td>
+										<td>
+											<div class="btn-group">
+												<span class="btn btn-xs btn-outline-secondary" ng-class="{'active':$ctrl.profile_records[ts[0]+'.'+service.id][2]=='notused'}"
+													  translate="form.not_used" ng-click="$ctrl.setServiceUsingLevel(ts[0],service.id,'notused')"></span>
+												<span class="btn btn-xs btn-outline-info" ng-class="{'active':$ctrl.profile_records[ts[0]+'.'+service.id][2]=='low'}"
+													  translate="form.low" ng-click="$ctrl.setServiceUsingLevel(ts[0],service.id,'low')"></span>
+												<span class="btn btn-xs btn-outline-warning" ng-class="{'active':$ctrl.profile_records[ts[0]+'.'+service.id][2]=='medium'}"
+													  translate="form.medium" ng-click="$ctrl.setServiceUsingLevel(ts[0],service.id,'medium')"></span>
+												<span class="btn btn-xs btn-outline-danger" ng-class="{'active':$ctrl.profile_records[ts[0]+'.'+service.id][2]=='high'}"
+													  translate="form.high" ng-click="$ctrl.setServiceUsingLevel(ts[0],service.id,'high')"></span>
+											</div>
+										</td>
+										<td>{{service['latency_'+$ctrl.model.quality_level]}}</td>
+										<td>{{service['bitrate_'+$ctrl.model.quality_level]}}</td>
+										<td>{{service['intensity_'+$ctrl.profile_records[ts[0]+'.'+service.id][2]]}}</td>
+										<td>{{service['datavolume_'+$ctrl.profile_records[ts[0]+'.'+service.id][2]]}}</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- END: Services -->
+						</div>
+						<!-- START: Traffic sources -->
+					</uib-accordion>
+				</div>
+			</div>
+
+			<bottom-buttons btn-left="$ctrl.back()" btn-right="$ctrl.saveProfile()"></bottom-buttons>
+	</div>
+</div>

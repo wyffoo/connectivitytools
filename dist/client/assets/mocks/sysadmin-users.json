@@ -1,0 +1,20 @@
+[
+  {
+	"first_name": "Мефистофель",
+	"last_name": "Коротков",
+	"email": "mk@mail.ru",
+	"registration_datetime": "2017-05-30 22:12:32",
+	"last_activity_datetime": "2017-05-30 23:12:32",
+	"total_projects": 2,
+	"status": "active"
+  },
+  {
+	"first_name": "Илья",
+	"last_name": "Олейников",
+	"email": "io@mail.ru",
+	"registration_datetime": "2017-05-30 22:12:32",
+	"last_activity_datetime": "2017-05-30 23:12:32",
+	"total_projects": 0,
+	"status": "suspended"
+  }
+]

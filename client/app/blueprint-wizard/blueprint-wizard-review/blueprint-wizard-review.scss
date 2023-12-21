@@ -1,0 +1,30 @@
+.form-container-school-wizard-initial {
+  /* HIDE RADIO */
+  [type=radio] {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+
+  /* IMAGE STYLES */
+  [type=radio] + .panel {
+	cursor: pointer;
+  }
+
+  /* CHECKED STYLES */
+  [type=radio]:checked + .panel {
+	outline: 2px solid cornflowerblue;
+  }
+
+  .configuration-type {
+	&:hover {
+	  cursor: pointer;
+	  @include box-shadow(rgba(0, 0, 0, 0.1) 0px 5px 5px 2px);
+	  background: rgba(200, 200, 200, 0.1);
+	  transition: 0.5s;
+	}
+  }
+}
+
+

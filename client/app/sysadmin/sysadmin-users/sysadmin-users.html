@@ -1,0 +1,44 @@
+<div class="form-inline">
+	<div class="form-inline">
+		<input class="form-control input-sm" ng-model="personFilter" id="person_filter" placeholder="{{'sysadmin-users.search_keyword'|translate}}">
+	</div>
+</div>
+<table class="table table-condensed" si-table>
+	<thead>
+	<tr>
+		<th translate>sysadmin-users.firstname</th>
+		<th translate>sysadmin-users.lastname</th>
+		<th sort-by="email">Е-mail</th>
+		<th sort-by="registration_date">{{'sysadmin-users.dateofreg'|translate}}</th>
+		<th ng-if="isCountriesMode">{{'sysadmin-users.assigned_countries'|translate}}</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr si-sortable ng-repeat="user in $ctrl.users | filter:personFilter">
+		<td>{{user.firstname}}</td>
+		<td>{{user.lastname}}</td>
+		<td>{{user.email}}</td>
+		<td>{{user.registration_date}}</td>
+		<td ng-if="isCountriesMode"><div jrg-multiselect data-user-id="{{user.id}}" select-opts='$ctrl.countries' ng-model='user.assigned_countries' on-change-evt="ucc{{user.id}}"></div></td>
+		<td>
+			<div class="pull-right">
+				<button ng-if="user.status === 'active'" type="button" class="btn btn-warning btn-sm"
+						ng-click="$ctrl.confirmBlock(user.email, user)"  translate>
+					sysadmin-users.block
+				</button>
+				<button ng-if="user.status !== 'active'" type="button" class="btn btn-success btn-sm"
+						ng-click="$ctrl.confirmUnblock(user.email, user)"  translate>sysadmin-users.unblock
+				</button>
+			</div>
+		</td>
+	</tr>
+	</tbody>
+	<tfoot>
+	<tr>
+		<td colspan="5">
+			<si-table-pagination limit="15" />
+		</td>
+	</tr>
+	</tfoot>
+</table>

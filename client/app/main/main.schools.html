@@ -1,0 +1,32 @@
+<div ng-if="!$ctrl.isLoggedIn()" class="jumbotron text-center main-jumbotron jumbotron-bg-3">
+	<h3 translate>titles.jumbotron</h3>
+</div>
+
+<div ng-if="!$ctrl.isLoggedIn()">
+
+<!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">-->
+<!--&lt;!&ndash;	<main-usertype-panel ui-sref="school-wizard-step1()" type="1" size="medium"></main-usertype-panel>&ndash;&gt;-->
+<!--	<main-usertype-panel type="1" size="medium"></main-usertype-panel>-->
+<!--</div>-->
+<div class="col-md-3 col-sm-1"></div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	<div class="main-usertype-panel" ui-sref="signup()">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<img ng-src="/assets/images/n4.gif" width="300px" height="300px" alt="{{'connect_multiple'|translate}}"
+					 class="img-responsive center-block"/>
+			</div>
+			<div class="panel-footer text-center">
+				<p translate="connect_multiple"></p>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="col-md-3 col-sm-1"></div>
+</div>
+
+<div ng-if="$ctrl.isLoggedIn()">
+	<p>Welcome! Loading projects ...</p>
+</div>
+
+

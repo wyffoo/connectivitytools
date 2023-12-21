@@ -1,0 +1,32 @@
+<offline-status></offline-status>
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
+				<span class="sr-only" translate="navbar.switch_navigation"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+			<ul class="nav navbar-nav">
+				<li ng-if="!nav.hasRole('sysadmin')" ui-sref-active="active"><a ui-sref="main" translate="navbar.home"></a></li>
+				<li ng-if="nav.hasRole('sysadmin')" ng-class="{active: nav.stateIs('sysadmin-users')}"><a ui-sref="sysadmin-users" translate>navbar.users</a></li>
+				<li ng-if="nav.hasRole('sysadmin')" ng-class="{active: nav.stateIs('sysadmin-locations')}"><a ui-sref="sysadmin-locations-list" translate>navbar.locations</a></li>
+				<li ng-class="{active: nav.stateIs('admin-projects-list')}"><a ui-sref="admin-projects-list" translate>navbar.projects</a></li>
+				<li ui-sref-active="active"><a ui-sref="about" translate>navbar.about</a></li>
+				<li ng-if="nav.isSchoolsMode"><a href="/assets/help/{{nav.currentLanguage}}/" target="_blank" translate>navbar.help</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+<!--				<li ng-show="!nav.isLoggedIn()"><p class="navbar-text"><language-picker type="navbar"></language-picker></p></li>-->
+				<li ng-show="!nav.isLoggedIn()"><p class="navbar-text"><a ui-sref="login" translate>navbar.enter</a></p></li>
+				<li ng-show="nav.isLoggedIn()"><p class="navbar-text"> <span translate> navbar.welcome </span> {{nav.getCurrentUser().firstname}}</p> </li>
+				<li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span
+						class="glyphicon glyphicon-cog"></span></a></li>
+				<li ng-show="nav.isLoggedIn()"><p class="navbar-text"><a ui-sref="logout" translate>navbar.exit</a></p></li>
+			</ul>
+		</div>
+	</div>
+</div>

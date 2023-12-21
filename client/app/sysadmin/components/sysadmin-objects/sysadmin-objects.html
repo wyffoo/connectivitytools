@@ -1,0 +1,29 @@
+<table class="table table-condensed">
+	<thead>
+	<th translate>sysadmin-objects.descr</th>
+	<th translate>sysadmin-objects.notreq</th>
+	<th translate>sysadmin-objects.value</th>
+	</thead>
+	<tbody>
+	<tr ng-repeat="p in $ctrl.params | filter: { id: query, group: grp } | orderBy: 'id' ">
+		<td class="col-md-6">{{p.description}}</td>
+		<td class="col-md-1">
+			<input class="checkbox" type="checkbox" ng-model="p.required">
+		</td>
+		<td class="col-md-5">
+			<div class="form-group" ng-if="p.type==='input'">
+				<div ng-class="{'input-group':p.unit}">
+					<input ng-model="p.default_value"
+						   type="number" class="form-control input-sm" placeholder="{{p.default_value}}"/>
+					<span class="input-group-addon" ng-show="p.unit">{{p.unit}}</span>
+				</div>
+			</div>
+			<div class="form-group" ng-if="p.type==='select'">
+				<select ng-model="p.default_value"
+						class="form-control input-sm"
+						ng-options="option.value as option.name for option in p.options"></select>
+			</div>
+		</td>
+	</tr>
+	</tbody>
+</table>

@@ -1,0 +1,7 @@
+<div class="wizard-progressbar">
+	<uib-progress>
+		<uib-bar ng-repeat="bar in sections track by $index" value="bar.value" type="{{bar.type}}"
+				 uib-popover="{{bar.popover}}" popover-trigger="mouseenter" popover-placement="bottom">
+		</uib-bar>
+	</uib-progress>
+</div>

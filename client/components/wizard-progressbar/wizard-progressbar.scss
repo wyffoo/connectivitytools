@@ -1,0 +1,22 @@
+.wizard-progressbar {
+
+  .progress-bar {
+	border: 1px white solid;
+  }
+
+  .progress-bar-active{
+	border-bottom: 3px dimgrey solid;
+  }
+
+  .progress-bar-completed {
+	@include progress-bar-variant($progress-bar-success-bg);
+  }
+
+  .progress-bar-pristine {
+	@include progress-bar-variant(lightgrey);
+  }
+
+  .progress-bar-partial {
+	@include progress-bar-variant($progress-bar-warning-bg);
+  }
+}

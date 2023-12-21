@@ -1,0 +1,50 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'lan2'"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+		<div class="col-sm-5 col-xs-5">
+			<p translate>lan-configuration.p</p>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul class="list-unstyled">
+						<li>
+							<checkbox name="lan_configuration_wired"
+									  ng-model="$ctrl.model.lan_configuration.wired"
+									  id="lan_configuration_wired"></checkbox>
+							<label for="lan_configuration_wired" translate>lan-configuration.bullet</label>
+						</li>
+						<li>
+							<checkbox name="lan_configuration_wireless"
+									  ng-model="$ctrl.model.lan_configuration.wireless"
+									  id="lan_configuration_wireless"></checkbox>
+							<label for="lan_configuration_wireless" translate>lan-configuration.bullet1</label>
+						</li>
+						<li>
+							<checkbox name="lan_configuration_public_hotspot"
+									  ng-model="$ctrl.model.lan_configuration.public_hotspot"
+									  id="lan_configuration_public_hotspot"></checkbox>
+							<label for="lan_configuration_public_hotspot" translate>lan-configuration.bullet2</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p translate>lan-configuration.p1</p>
+			<p translate>lan-configuration.p2</p>
+			<p translate>lan-configuration.p3</p>
+		</div>
+		<div class="col-sm-7 col-xs-7">
+			<p translate>lan-configuration.p4</p>
+			<lan-configuration-visualization
+					segments="$ctrl.model.lan_configuration"></lan-configuration-visualization>
+		</div>
+	</div>
+	<bottom-buttons btn-right="$ctrl.gotoNext()" btn-left="$ctrl.back()" textleft="'cancel'"
+					textright="'submit-configuration'"></bottom-buttons>
+</div>

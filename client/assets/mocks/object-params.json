@@ -1,0 +1,529 @@
+[
+  {
+	"id": 3,
+	"group": "GeographicalParametersSet",
+	"name": "GeographicalParametersSet.Square",
+	"description": "Площадь проектирования",
+	"type": "input",
+	"default_value": "1",
+	"unit": "кв.км",
+	"required": 1
+  },
+  {
+	"id": 4,
+	"group": "GeographicalParametersSet",
+	"name": "GeographicalParametersSet.BuiltupArea",
+	"description": "Процент застройки площади объекта",
+	"type": "input",
+	"default_value": "30",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 5,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.BuildingDensity",
+	"description": "Плотность застройки",
+	"type": "input",
+	"default_value": "5",
+	"unit": "зданий/кв. км ",
+	"required": 0
+  },
+  {
+	"id": 6,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.PrivateHouses",
+	"description": "Процент зданий частного сектора",
+	"type": "input",
+	"default_value": "20",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 7,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.LowriseMultifamily",
+	"description": "Процент малоэтажных многоквартирных зданий",
+	"type": "input",
+	"default_value": "30",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 8,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.MultistoryMultifamily",
+	"description": "Процент многоэтажных многоквартирных зданий",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 21,
+	"group": "PopulationOptionsSet",
+	"name": "PopulationOptionsSet.SolventPopulationYounger",
+	"description": "Процент  платежеспособного населения младшей возрастнойгруппы (до 25 лет)",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 22,
+	"group": "PopulationOptionsSet",
+	"name": "PopulationOptionsSet.SolventPopulationAverageAge",
+	"description": "Процент  платежеспособного населения средней возрастной группы (от 25 до 55 лет)",
+	"type": "input",
+	"default_value": "80",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 23,
+	"group": "PopulationOptionsSet",
+	"name": "PopulationOptionsSet.SolventPopulationAdult",
+	"description": "Процент  платежеспособного населения старшей возрастной группы (более 55 лет)",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 26,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.PopulationCoveredBroadband",
+	"description": "Процент населения, охваченный ШПД",
+	"type": "input",
+	"default_value": "20",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 27,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.DemandPopulationYounger",
+	"description": "Процент  населения  младшей возрастной группы (до 25 лет),которые заинтересованы в услугах",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 28,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.DemandPopulationAverageAge",
+	"description": "Процент населения средней возрастной группы (от 25 до 55лет), которые заинтересованы в услугах",
+	"type": "input",
+	"default_value": "70",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 29,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.DemandPopulationAdult",
+	"description": "Процент  населения  старшей возрастной группы (более 55 лет), которые заинтересованы в услугах",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 30,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.DemandTourist",
+	"description": "Процент туристов,  которые заинтересованы в услугах",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 31,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.Household",
+	"description": "Коэффициент семейственности (среднее количество человек в семье)",
+	"type": "input",
+	"default_value": "3",
+	"unit": "чел.",
+	"required": 0
+  },
+  {
+	"id": 32,
+	"group": "DemandOptionsSet",
+	"name": "DemandOptionsSet.PayableYounger",
+	"description": "Процент платежеспособного населения младшей возрастной группы (до 25 лет)",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 33,
+	"group": "DemandOptionsSet",
+	"name": "DemandOptionsSet.PayableAverageAge",
+	"description": "Процент платежеспособного населения средней возрастнойгруппы (до 25 до 55 лет)",
+	"type": "input",
+	"default_value": "40",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 34,
+	"group": "DemandOptionsSet",
+	"name": "DemandOptionsSet.PayableAdult",
+	"description": "Процент платежеспособного населения старшей возрастнойгруппы (более 55 лет)",
+	"type": "input",
+	"default_value": "50",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 1,
+	"group": "ObjectsDesigningSet",
+	"name": "ObjectsDesigningSet.Type",
+	"description": "Тип объекта",
+	"type": "select",
+	"default_value": "7",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Столица/крупнейший региональный центр"
+	  },
+	  {
+		"value": "2",
+		"name": "Региональный (областной, краевой) центр"
+	  },
+	  {
+		"value": "3",
+		"name": "Районный центр"
+	  },
+	  {
+		"value": "4",
+		"name": "Город регионального значения"
+	  },
+	  {
+		"value": "5",
+		"name": "Сельская"
+	  }
+	]
+  },
+  {
+	"id": 2,
+	"group": "GeographicalParametersSet",
+	"name": "GeographicalParametersSet.LocationType",
+	"description": "Тип местности",
+	"type": "select",
+	"default_value": "3",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Равнинная местность"
+	  },
+	  {
+		"value": "2",
+		"name": "Горная"
+	  },
+	  {
+		"value": "3",
+		"name": "Смешанная"
+	  }
+	]
+  },
+  {
+	"id": 9,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.AverageFloorsLowrise",
+	"description": "Среднее количество этажей в малоэтажном здании",
+	"type": "input",
+	"default_value": "3",
+	"unit": "ед.",
+	"required": 0
+  },
+  {
+	"id": 10,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.AverageMultistorey",
+	"description": "Среднее количество этажей в многоэтажном здании",
+	"type": "input",
+	"default_value": "6",
+	"unit": "ед.",
+	"required": 0
+  },
+  {
+	"id": 11,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.BuildingType",
+	"description": "Преобладающий тип материала постройки зданий",
+	"type": "select",
+	"default_value": "4",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Кирпич"
+	  },
+	  {
+		"value": "2",
+		"name": "Железобетонная основа"
+	  },
+	  {
+		"value": "3",
+		"name": "Ракушечник"
+	  },
+	  {
+		"value": "4",
+		"name": "Смешанный"
+	  }
+	]
+  },
+  {
+	"id": 12,
+	"group": "DevelopmentParametersSet",
+	"name": "DevelopmentParametersSet.Architecture",
+	"description": "Преобладающий архитектурный стиль зданий",
+	"type": "select",
+	"default_value": "3",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Исторические здания, памятники архитектуры"
+	  },
+	  {
+		"value": "2",
+		"name": "Здания, не имеющие исторической ценности"
+	  },
+	  {
+		"value": "3",
+		"name": "Смешанный"
+	  }
+	]
+  },
+  {
+	"id": 13,
+	"group": "InfrastructureOptionsSet",
+	"name": "InfrastructureOptionsSet.CableDuct",
+	"description": "Наличие кабельной канализации",
+	"type": "select",
+	"default_value": "1",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Да"
+	  },
+	  {
+		"value": "2",
+		"name": "Нет"
+	  },
+	  {
+		"value": "3",
+		"name": "Частично"
+	  }
+	]
+  },
+  {
+	"id": 14,
+	"group": "InfrastructureOptionsSet",
+	"name": "InfrastructureOptionsSet.InfrastructureHangingCables",
+	"description": "Наличие инфраструктуры для подвешивания кабелей",
+	"type": "select",
+	"default_value": "1",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Да"
+	  },
+	  {
+		"value": "2",
+		"name": "Нет"
+	  },
+	  {
+		"value": "3",
+		"name": "Частично"
+	  }
+	]
+  },
+  {
+	"id": 15,
+	"group": "InfrastructureOptionsSet",
+	"name": "InfrastructureOptionsSet.CableChannelsBuildings",
+	"description": "Наличие кабельных каналов в жилых зданиях",
+	"type": "select",
+	"default_value": "3",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Да"
+	  },
+	  {
+		"value": "2",
+		"name": "Нет"
+	  },
+	  {
+		"value": "3",
+		"name": "Частично"
+	  }
+	]
+  },
+  {
+	"id": 16,
+	"group": "InfrastructureOptionsSet",
+	"name": "InfrastructureOptionsSet.RestrictionUseWirelessTechnologies",
+	"description": "Наличие ограничений относительно использования беспроводных  технологий (занятость  РЧР, специализированные объекты и  т.д.)",
+	"type": "select",
+	"default_value": "2",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Да"
+	  },
+	  {
+		"value": "2",
+		"name": "Нет"
+	  },
+	  {
+		"value": "3",
+		"name": "Частично"
+	  }
+	]
+  },
+  {
+	"id": 17,
+	"group": "PowerOptionsSet",
+	"name": "PowerOptionsSet.InfrastructurePowerSupply",
+	"description": "Наличие инфраструктуры для электропитания промежуточных  узлов ",
+	"type": "select",
+	"default_value": "1",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Да"
+	  },
+	  {
+		"value": "2",
+		"name": "Нет"
+	  },
+	  {
+		"value": "3",
+		"name": "Частично"
+	  }
+	]
+  },
+  {
+	"id": 18,
+	"group": "PowerOptionsSet",
+	"name": "PowerOptionsSet.QualityPowerSupply",
+	"description": "Качество электропитания",
+	"type": "select",
+	"default_value": "1",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Нормативное"
+	  },
+	  {
+		"value": "2",
+		"name": "Среднее"
+	  },
+	  {
+		"value": "3",
+		"name": "Низкое"
+	  }
+	]
+  },
+  {
+	"id": 19,
+	"group": "PopulationOptionsSet",
+	"name": "PopulationOptionsSet.Population",
+	"description": "Количество жителей, которые проживают в данном объекте на постоянной основе",
+	"type": "input",
+	"default_value": "300",
+	"unit": "чел.",
+	"required": 1
+  },
+  {
+	"id": 20,
+	"group": "PopulationOptionsSet",
+	"name": "PopulationOptionsSet.TouristPopulation",
+	"description": "Количество  дополнительного населения,  проживающегоединовременно в данном объекте в туристический период",
+	"type": "input",
+	"default_value": "100",
+	"unit": "чел.",
+	"required": 0
+  },
+  {
+	"id": 24,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.LevelCompetition",
+	"description": "Уровень  проникновения  сетей доступа",
+	"type": "select",
+	"default_value": "2",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Сети доступа отсутствуют"
+	  },
+	  {
+		"value": "2",
+		"name": "Сети доступа развиты незначительно"
+	  },
+	  {
+		"value": "3",
+		"name": "Сети доступа развиты значительно"
+	  }
+	]
+  },
+  {
+	"id": 25,
+	"group": "AccessLevelOptionsSet",
+	"name": "AccessLevelOptionsSet.AccessCompetitors",
+	"description": "Тип  доступа,  используемый другими операторами",
+	"type": "select",
+	"default_value": "3",
+	"unit": "",
+	"required": 0,
+	"options": [
+	  {
+		"value": "1",
+		"name": "Беспроводной (до 256 Кбит/с)"
+	  },
+	  {
+		"value": "2",
+		"name": "Беспроводной (свыше 256 Кбит/с)"
+	  },
+	  {
+		"value": "3",
+		"name": "Проводной (до 256 Кбит/с)"
+	  },
+	  {
+		"value": "4",
+		"name": "Проводной (свыше 256 Кбит/с)"
+	  }
+	]
+  }
+]
+
+
+

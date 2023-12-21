@@ -1,0 +1,69 @@
+{
+    "name": "slim/slim-skeleton",
+    "description": "A Slim Framework skeleton application for rapid development",
+    "keywords": [
+        "microframework",
+        "rest",
+        "router",
+        "psr7"
+    ],
+    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Lockhart",
+            "email": "info@joshlockhart.com",
+            "homepage": "http://www.joshlockhart.com/"
+        },
+        {
+            "name": "Pierre Berube",
+            "email": "pierre@lgse.com",
+            "homepage": "http://www.lgse.com/"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "aws/aws-sdk-php": "3.263.*",
+        "bernard/bernard": "0.13.0",
+        "fastbill/parallel-process-dispatcher": "1.2.*",
+        "google/recaptcha": "1.2.4",
+        "jmikola/geojson": "1.0.*",
+        "monolog/monolog": "2.1.*",
+        "php-amqplib/php-amqplib": "v2.12.3",
+        "php-di/php-di": "6.2.1",
+        "phpoffice/phpspreadsheet": "1.15",
+        "predis/predis": "1.1.6",
+        "slim/psr7": "1.1.0",
+        "slim/slim": "4.5.*",
+        "symfony/console": "^5.1",
+        "waavi/sanitizer": "^1.0"
+    },
+    "require-dev": {
+        "jangregor/phpstan-prophecy": "^0.8.0",
+        "phpstan/extension-installer": "^1.0.4",
+        "phpstan/phpstan": "^0.12.34",
+        "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php -S 127.0.0.1:8080 -t public",
+        "test": "phpunit"
+    }
+}

@@ -1,0 +1,208 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'broadband3'"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+
+		<div class="col-sm-8 col-xs-8">
+			<div class="panel">
+				<div class="panel-body">
+					<table class="table table-bordered">
+						<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="3" translate>
+								tp.sci
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td translate>
+								tp.low
+							</td>
+							<td translate>
+								tp.med
+							</td>
+							<td translate>
+								tp.hi
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="3" translate>tp.qos</td>
+							<td translate>tp.low</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('advanced-')" translate>
+									tp.advanced-
+								</button>
+							</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('advanced')" translate>
+									tp.advanced
+								</button>
+							</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('advanced+')" translate>
+									tp.advanced+
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td translate>tp.med</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('intermediate-')" translate>
+									tp.intermediate-
+								</button>
+							</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('intermediate')" translate>
+									tp.intermediate
+								</button>
+							</td>
+							<td>
+								<button class="btn btn-default"
+										ng-click="$ctrl.descriptionPanelContent('intermediate+')" translate>
+									tp.intermediate+
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td translate>tp.hi</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('basic-')" translate>
+									tp.basic-
+								</button>
+							</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('basic')" translate>
+									tp.basic
+								</button>
+							</td>
+							<td>
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('basic-')" translate>
+									tp.basic+
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td colspan="3">
+								<button class="btn btn-default" ng-click="$ctrl.descriptionPanelContent('udtp')" translate>
+									tp.udtp
+								</button>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-4">
+			<div class="panel">
+				<div class="panel-body">
+					<div ng-if="$ctrl.model.tp_id === 'advanced-'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.advanced-</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.advanced-
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'advanced'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.advanced</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.advanced
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'advanced+'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.advanced+</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.advanced+
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'intermediate-'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.intermediate-</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.intermediate-
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'intermediate'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.intermediate</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.intermediate
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'intermediate+'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.intermediate+</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.intermediate+
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'basic-'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.basic-</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.basic-
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'basic'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.basic</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.basic
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'basic+'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.basic+</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.basic+
+						</p>
+					</div>
+					<div ng-if="$ctrl.model.tp_id === 'udtp'">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6"><a translate>tp.udtp</a></div>
+							<div class="col-xs-6 col-sm-6"><a translate>tp.preview</a></div>
+						</div>
+						<p translate>
+							tp.description.udtp
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<bottom-buttons btn-right="$ctrl.continue()" btn-left="$ctrl.back()"></bottom-buttons>
+		</div>
+	</div>
+</div>

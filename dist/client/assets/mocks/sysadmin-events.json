@@ -1,0 +1,44 @@
+[
+  {
+	"datetime": "2017-05-30 22:12:32",
+	"type": 1,
+	"user_id": 1,
+	"user_fullname": "Илья Сидоров",
+	"description": "Описание события 1"
+  },
+  {
+	"datetime": "2017-05-30 22:12:32",
+	"type": 1,
+	"user_id": 1,
+	"user_fullname": "Илья Сидоров",
+	"description": "Описание события 2"
+  },
+  {
+	"datetime": "2017-05-30 22:12:32",
+	"type": 2,
+	"user_id": 1,
+	"user_fullname": "Илья Сидоров",
+	"description": "Описание события 3"
+  },
+  {
+	"datetime": "2017-05-30 22:12:32",
+	"type": 3,
+	"user_id": 2,
+	"user_fullname": "Петр Павлов",
+	"description": "Описание события 4"
+  },
+  {
+	"datetime": "2017-05-30 22:12:32",
+	"type": 3,
+	"user_id": 2,
+	"user_fullname": "Петр Павлов",
+	"description": "Описание события 5"
+  },
+  {
+	"datetime": "2017-05-30 22:12:32",
+	"type": 4,
+	"user_id": 3,
+	"user_fullname": "Петр Павлов",
+	"description": "Описание события 6"
+  }
+]

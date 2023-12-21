@@ -1,0 +1,42 @@
+.main-jumbotron {
+  .main-jumbotron-quote {
+	.tooltip-inner {
+	  max-width: 400px;
+	}
+	a, a:link, a:visited, a:hover {
+	  color: white;
+	  text-decoration: underline;
+	}
+	a:hover {
+	  @include box-shadow (rgba(0, 0, 0, 0.1) 0px 5px 5px 2px);
+	}
+  }
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.jumbotron {
+  color: white;
+  background: url('/assets/images/jumbotron-bg1.png') center center no-repeat;
+}
+
+.jumbotron-bg-2 {
+  background-image: url('/assets/images/jumbotron-bg2.png');
+}
+
+.jumbotron-bg-3 {
+  background-image: url('/assets/images/jumbotron-bg3.png');
+}

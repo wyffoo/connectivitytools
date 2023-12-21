@@ -1,0 +1,19 @@
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (1, 'Sub-Saharan Africa Subregion 1');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (2, 'Sub-Saharan Africa Subregion 2');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (3, 'Sub-Saharan Africa Subregion 3');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (4, 'Middle East and Central Asia Subregion 1');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (5, 'Middle East and Central Asia Subregion 2');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (6, 'Middle East and Central Asia Subregion 3');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (7, 'Latin America and Caribbean Subregion 1');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (8, 'Latin America and Caribbean Subregion 2');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (9, 'Latin America and Caribbean Subregion 3');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (10, 'East and Australasia Subregion 1');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (11, 'East and Australasia Subregion 2');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (12, 'East and Australasia Subregion 3');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (13, 'Europe Subregion 1');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (14, 'Europe Subregion 2');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (15, 'Europe Subregion 3');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (16, 'Europe Subregion 4');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (17, 'Eastern Europe and Nothern Asia');
+INSERT INTO `giga`.`region` (`id`, `region_name`) VALUES (18, 'North America');
+ 

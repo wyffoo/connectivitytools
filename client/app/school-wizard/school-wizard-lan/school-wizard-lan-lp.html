@@ -1,0 +1,33 @@
+<div class="body-content">
+	<div class="col-sm-2 col-xs-2"></div>
+	<div class="col-sm-8 col-xs-8">
+		<wizard-header step="'lan6'"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+
+		<!-- LEARNING PROCESS -->
+		<form class="form-horizontal form-container-school-wizard-bd1"
+			  name="schoolWizardBroadbandForm1" ng-submit="$ctrl.submit()" novalidate>
+			<div class="form-group">
+				<label class="col-sm-4 control-label no-padding-right">Number of shifts (optional):</label>
+				<div class="col-sm-8">
+						<span class="block input-icon input-icon-right">
+							<select name="countrycode" class="form-control" ng-model="$ctrl.model.shifts" required>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</span>
+				</div>
+			</div>
+			<bottom-buttons btn-right="$ctrl.gotoBuild()" btn-left="$ctrl.previous()" textleft="'cancel'"
+							textright="'continue'"></bottom-buttons>
+		</form>
+	</div>
+</div>

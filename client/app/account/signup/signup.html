@@ -1,0 +1,167 @@
+<div class="body-content">
+	<div class="page-signup col-sm-12 col-xs-12" ng-controller="SignupController">
+
+		<div class="center">
+			<h1 translate>signup.regisration</h1>
+		</div>
+
+		<div class="form-container-signup">
+
+			<!-- alert messages -->
+			<div>
+				<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+					<span class="{{alert.icone}}"></span>
+					{{alert.msg}}
+				</uib-alert>
+			</div>
+
+			<form class="form-horizontal" name="signUpForm" ng-submit="submitFormSignUp()" novalidate>
+
+				<div class="form-group"
+					 ng-class="{ 'has-error' : signUpForm.code.$invalid && !signUpForm.code.$pristine }">
+					<label class="col-sm-4 control-label no-padding-right" translate>signup.code</label>
+					<div class="col-sm-8">
+                            <span class="block input-icon input-icon-right">
+                                <input ng-focus="" ng-model="signUp.code" translate-attr="{ placeholder: 'signup.code' }" type="text"
+									   name="code"
+									   class="form-control" required ng-maxlength="30">
+                            </span>
+						<small><a translate="signup.requestcode" href="mailto:fns@itu.int"></a></small>
+						<p class="error-inline"
+						   ng-show="signUpForm.code.$dirty && signUpForm.code.$invalid" translate>
+							<span class="glyphicon glyphicon-exclamation-sign"></span>
+							signup.tellyourcode
+						</p>
+					</div>
+				</div>
+
+				<!-- FIRST NAME -->
+				<div class="form-group"
+				     ng-class="{ 'has-error' : signUpForm.firstname.$invalid && !signUpForm.firstname.$pristine }">
+					<label class="col-sm-4 control-label no-padding-right" translate>signup.name</label>
+					<div class="col-sm-8">
+                            <span class="block input-icon input-icon-right">
+                                <input ng-focus="" ng-model="signUp.firstname" translate-attr="{ placeholder: 'signup.name' }" type="text"
+                                       name="firstname"
+                                       class="form-control" required ng-maxlength="30">
+                            </span>
+						<p class="error-inline"
+						   ng-show="signUpForm.firstname.$dirty && signUpForm.firstname.$invalid" translate>
+							<span class="glyphicon glyphicon-exclamation-sign"></span>
+							signup.tellyourname
+						</p>
+					</div>
+				</div>
+
+				<!-- SECOND NAME -->
+				<div class="form-group"
+				     ng-class="{ 'has-error' : signUpForm.lastname.$invalid && !signUpForm.lastname.$pristine }">
+					<label class="col-sm-4 control-label no-padding-right" translate>signup.lastname</label>
+					<div class="col-sm-8">
+                            <span class="block input-icon input-icon-right">
+                                <input ng-model="signUp.lastname"  translate-attr="{ placeholder: 'signup.lastname' }" type="text" name="lastname"
+                                       class="form-control" required ng-maxlength="30">
+                            </span>
+						<p class="error-inline"
+						   ng-show="signUpForm.lastname.$dirty && signUpForm.lastname.$invalid" translate>
+							<span class="glyphicon glyphicon-exclamation-sign"></span>
+							signup.tellyourlastname
+						</p>
+					</div>
+				</div>
+
+				<!-- EMAIL -->
+				<div class="form-group"
+				     ng-class="{ 'has-error' : (signUpForm.email.$invalid && !signUpForm.email.$pristine)
+					     || signUpForm.email.$error.emailAlreadyRegistered || signUpForm.email.$error.emailCheckError}">
+					<label class="col-sm-4 control-label no-padding-right">E-mail</label>
+					<div class="col-sm-8">
+                            <span class="block input-icon input-icon-right">
+                                <input ng-model="signUp.email" placeholder="E-mail" type="email" name="email"
+                                       class="form-control" required ng-maxlength="45">
+	                            <p class="error-inline"
+	                               ng-show="signUpForm.email.$dirty && signUpForm.email.$error.emailCheckError" translate>
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    signup.cannotcheckemail
+                                </p>
+                                <p class="error-inline"
+                                   ng-show="signUpForm.email.$dirty && signUpForm.email.$error.emailAlreadyRegistered" translate>
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    signup.emailinuse
+                                </p>
+                                <p class="success-inline"
+                                   ng-show="signUpForm.email.$dirty && signUpForm.email.$error.onlineCheckWasDone
+                                    && !signUpForm.email.$error.emailCheckError && !signUpForm.email.$error.emailAlreadyRegistered
+                                    && !signUpForm.email.$invalid" translate>
+                                    <span class="glyphicon glyphicon-ok-sign"></span>
+                                    signup.loginisfree
+                                </p>
+                            </span>
+					</div>
+				</div>
+
+				<!-- PASSWORD -->
+				<div class="form-group"
+				     ng-class="{ 'has-error' : signUpForm.password.$invalid && !signUpForm.password.$pristine && signUpForm.password.$error.passwordIsNotValid}">
+					<label class="col-sm-4 control-label no-padding-right" translate>signup.password</label>
+					<div class="col-sm-8">
+                            <span class="block input-icon input-icon-right">
+                                <input validate-password ng-model="signUp.password" translate-attr="{ placeholder: 'signup.password' }" type="password"
+                                       name="password" class="form-control" required ng-minlength="8" ng-maxlength="32">
+                                <p class="error-inline"
+                                   ng-show="signUpForm.password.$dirty && signUpForm.password.$error.passwordIsNotValid" translate>
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    signup.incorrectpassformat
+                                </p>
+                            </span>
+					</div>
+				</div>
+
+				<!-- CONFIRM YOUR PASSWORD -->
+				<div class="form-group"
+				     ng-class="{ 'has-error' : signUpForm.confirmPassword.$invalid && !signUpForm.confirmPassword.$pristine && signUpForm.confirmPassword.$error.errorCompareTo}">
+					<label class="col-sm-4 control-label no-padding-right" translate>signup.reppass</label>
+					<div class="col-sm-8">
+                            <span class="block input-icon input-icon-right">
+                                <input compare-to="signUp.password" ng-model="signUp.confirmPassword"
+									   translate-attr="{ placeholder: 'signup.reppass' }" type="password" name="confirmPassword"
+                                       class="form-control" required>
+                                <p class="error-inline"
+                                   ng-show="signUpForm.confirmPassword.$dirty && signUpForm.confirmPassword.$error.errorCompareTo" translate>
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    signup.difpasswords
+                                </p>
+                            </span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-4 control-label no-padding-right"></label>
+					<div class="col-sm-8" vc-recaptcha
+					     key="recaptchaKey"
+					     on-success="setRecaptchaResponse(response)"></div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-4 control-label no-padding-right"></label>
+					<div class="col-sm-8">
+						<button ng-click="dosignUp(signUp)" type="submit" class="btn btn-primary btn-lg btn-block"
+						        ng-disabled="signUpForm.$invalid || loading
+							        || signUpForm.email.$error.emailCheckError
+							        || !signUpForm.email.$error.onlineCheckWasDone
+							        || signUpForm.email.$error.emailAlreadyRegistered
+							        || !recaptchaResponse">
+							{{btSignUp}}
+						</button>
+					</div>
+				</div>
+
+			</form>
+
+			<section>
+				<p class="text-center">{{'signup.isaccountexist'|translate}} <a ui-sref="login" translate>signup.enter</a></p>
+			</section>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+<div class="body-content">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 translate="settings.selectlanguage"></h1>
+			<language-picker type="settings"></language-picker>
+		</div>
+
+		<div class="col-sm-12">
+			<h1 translate>settings.changepass</h1>
+		</div>
+		<div class="col-sm-12">
+			<form class="form" name="form" ng-submit="vm.changePassword(form)" novalidate>
+
+				<div class="form-group">
+					<label translate>settings.curpass</label>
+
+					<input type="password" name="password" class="form-control" ng-model="vm.user.oldPassword"/>
+					<div class="alert alert-danger margin-top-sm" ng-show="vm.errors.other">
+						{{ vm.errors.other }}
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label translate>settings.newpass</label>
+
+					<input type="password" name="newPassword" class="form-control" ng-model="vm.user.newPassword"
+						   ng-minlength="8" ng-maxlength="32"
+					       required/>
+					<p class="alert alert-info margin-top-sm"
+					   ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || vm.submitted)" translate>
+						signup.incorrectpassformat
+					</p>
+				</div>
+
+				<div class="form-group">
+					<label translate>settings.reppass</label>
+
+					<input type="password" name="confirmPassword" class="form-control"
+					       ng-model="vm.user.confirmPassword"
+					       match="vm.user.newPassword"
+						   ng-minlength="8" ng-maxlength="32"
+					       required=""/>
+					<p class="alert alert-warning margin-top-sm"
+					   ng-show="form.confirmPassword.$error.match" translate>
+						settings.difpass
+					</p>
+
+				</div>
+
+				<p class="help-block"> {{ vm.message }} </p>
+
+				<button class="btn btn-lg btn-primary" type="submit" translate>settings.savechanges</button>
+			</form>
+		</div>
+	</div>
+</div>

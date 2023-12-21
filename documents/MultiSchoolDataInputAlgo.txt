@@ -1,0 +1,40 @@
+ At the beginning user can choose one or both options for new
+project - BroadbandConnection or/and LAN.
+
+     This creates at least 3 different combinations for templates:
+Broadband only, LAN only, BB+LAN.
+
+     Then, in case of selecting BB user also has additional choose: to
+enter Required Bandwidth (RB) directly or to calculate in by entering
+some initial data and by choosing Traffic Profile (TP).
+
+     This step gives us altogether 5 different combinations for
+templates: Broadband only+RB, Broadband only+TP, LAN only, BB+LAN +RB,
+BB+LAN+TP.
+
+     Then for cases that have LAN we can choose two main options: to
+calculate network in classrooms; to calculate hotspot.
+
+     Here I have a questions for Igor - how should we deal in case of
+nothing had choosen? To skip LAN in total?
+
+     So, LAN options give us with 3 combinations (Classrooms only,
+Hotspot only, Classrooms + Hotspot) that are applieble for all cases
+where we have LAN.
+
+     As result we have 11 dirrerent combinations for templates:
+Broadband only+RB, Broadband only+TP, LAN only (Classrooms only), LAN
+only (Hotspot only), LAN only (Classrooms + Hotspot),  BB+LAN
+(Classrooms only) +RB,  BB+LAN (Hotspot only) +RB,  BB+LAN (Classrooms +
+Hotspot) +RB, BB+LAN (Classrooms only)+TP, BB+LAN (Hotspot only)+TP,
+BB+LAN (Classrooms + Hotspot)+TP.
+
+     At last we have two options for each of these cases: simple
+template & extended template.
+
+     So, we have 22 different templates with different set of fields
+depends from the options were choosen. But probably less (or more),
+because for example case "Broadband only+RB" could not be divided into
+simple & extended, but at the same time we had skiped flag about
+topology. We do not need coordinates in template if we won't calculate
+interschool connections.

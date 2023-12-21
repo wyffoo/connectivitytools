@@ -1,0 +1,230 @@
+<!doctype html>
+<!-- {{git}} -->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<base href="/">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css(client) app/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+	<link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.css" />
+	<link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css" />
+	<!-- endbower -->
+	<link rel="stylesheet" href="bower_components/leaflet.fullscreen/Control.FullScreen.css" />
+	<link rel="stylesheet" href="bower_components/angular-bootstrap-toggle/dist/angular-bootstrap-toggle.css"/>
+	<link rel="stylesheet" href="bower_components/angular-multiselect/multiselect.min.css"/>
+	<!-- endbuild -->
+	<!-- build:css({.tmp,client}) app/app.css -->
+	<link rel="stylesheet" href="app/app.css">
+	<!-- injector:css -->
+	<!-- endinjector -->
+	<!-- endbuild -->
+</head>
+<body ng-app="gigaApp">
+<!--[if lt IE 7]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+	your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<navbar></navbar>
+<div ui-view="" class="container"></div>
+<footer></footer>
+
+<span us-spinner="{radius:30, width:8, length: 16}"></span>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKQZC1P6K9"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-JKQZC1P6K9');
+</script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- build:js({client,node_modules}) app/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="bower_components/lodash/lodash.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+      <script src="bower_components/checklist-model/checklist-model.js"></script>
+      <script src="bower_components/spin.js/spin.js"></script>
+      <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+      <script src="bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
+      <script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
+      <script src="bower_components/file-saver.js/FileSaver.js"></script>
+      <script src="bower_components/ngstorage/ngStorage.js"></script>
+      <script src="bower_components/Chart.js/Chart.js"></script>
+      <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+      <script src="bower_components/x2js/xml2json.min.js"></script>
+      <script src="bower_components/angular-x2js/dist/x2js.min.js"></script>
+      <script src="bower_components/angular-recaptcha/release/angular-recaptcha.js"></script>
+      <script src="bower_components/angularjs-compare-to-directive/compareto.js"></script>
+      <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+      <script src="bower_components/angular-auto-focus/angular-auto-focus.js"></script>
+      <script src="bower_components/angular-translate/angular-translate.js"></script>
+      <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+      <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+      <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+      <script src="bower_components/d3/d3.js"></script>
+      <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
+      <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+      <script src="bower_components/ui-leaflet/dist/ui-leaflet.js"></script>
+      <script src="bower_components/ZingChart-AngularJS/src/zingchart-angularjs.js"></script>
+      <script src="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js"></script>
+      <script src="bower_components/si-table/dist/si-table.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-touch/angular-touch.js"></script>
+      <!-- endbower -->
+      <script src="bower_components/angular-multiselect/multiselect.js"></script>
+	  <script src="bower_components/zingchart/zingchart.min.js"></script>
+	  <script src="bower_components/Leaflet.label/dist/leaflet.label.js"></script>
+      <script src="bower_components/leaflet.fullscreen/Control.FullScreen.js"></script>
+	  <script src="assets/js/leaflet-easyPrint.js"></script>
+      <script src="bower_components/angular-bootstrap-toggle/dist/angular-bootstrap-toggle.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(.tmp) app/app.js -->
+      <script src="app/app.js"></script>
+      <!-- injector:js -->
+      <script src="app/admin/admin.module.js"></script>
+      <script src="app/blueprint-wizard/blueprint-wizard.module.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard.module.js"></script>
+      <script src="app/school-wizard/school-wizard.module.js"></script>
+      <script src="app/sysadmin/sysadmin.module.js"></script>
+      <script src="app/traffic-profile/traffic-profile.module.js"></script>
+      <script src="components/auth/auth.module.js"></script>
+      <script src="components/util/util.module.js"></script>
+      <script src="app/about/about.controller.js"></script>
+      <script src="app/about/about.js"></script>
+      <script src="app/account/account.js"></script>
+      <script src="app/account/directives/validate-password.js"></script>
+      <script src="app/account/directives/validate-username.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/admin/admin-blueprint-project-form/admin-blueprint-project-form.controller.js"></script>
+      <script src="app/admin/admin-blueprint-project-form/admin-blueprint-project-form.js"></script>
+      <script src="app/admin/admin-params/components/object-params-form/object-params-form.directive.js"></script>
+      <script src="app/admin/admin-params/object-params.controller.js"></script>
+      <script src="app/admin/admin-params/object-params.js"></script>
+      <script src="app/admin/admin-project-form/admin-project-form.controller.js"></script>
+      <script src="app/admin/admin-project-form/admin-project-form.js"></script>
+      <script src="app/admin/admin-project-setup/admin-project-setup.controller.js"></script>
+      <script src="app/admin/admin-project-setup/admin-project-setup.js"></script>
+      <script src="app/admin/admin-projects-list/admin-projects-list.controller.js"></script>
+      <script src="app/admin/admin-projects-list/admin-projects-list.js"></script>
+      <script src="app/admin/components/admin-project-calc-results/admin-project-calc-results.controller.js"></script>
+      <script src="app/admin/components/admin-project-obj-calc-results/admin-project-obj-calc-results.controller.js"></script>
+      <script src="app/admin/components/admin-project-status/admin-project-status.directive.js"></script>
+      <script src="app/admin/components/admin-project-tech-dependency/admin-project-tech-dependency.controller.js"></script>
+      <script src="app/admin/components/admin-project-tech-params/admin-project-tech-params.controller.js"></script>
+      <script src="app/admin/components/admin-project-tech-provider-params/admin-project-tech-provider-params.controller.js"></script>
+      <script src="app/admin/components/admin-projects-obj-calc/admin-projects-obj-calc.directive.js"></script>
+      <script src="app/admin/components/admin-projects-submenu/admin-projects-submenu.directive.js"></script>
+      <script src="app/app.constant.js"></script>
+      <script src="app/blueprint-wizard/blueprint-wizard-review/blueprint-wizard-review.controller.js"></script>
+      <script src="app/blueprint-wizard/blueprint-wizard-review/blueprint-wizard-review.js"></script>
+      <script src="app/blueprint-wizard/blueprint-wizard-settings/blueprint-wizard-settings.controller.js"></script>
+      <script src="app/blueprint-wizard/blueprint-wizard-settings/blueprint-wizard-settings.js"></script>
+      <script src="app/dashboard/dashboard.controller.js"></script>
+      <script src="app/dashboard/dashboard.js"></script>
+      <script src="app/feedback/feedback.controller.js"></script>
+      <script src="app/feedback/feedback.js"></script>
+      <script src="app/main/main.controller.js"></script>
+      <script src="app/main/main.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-broadband/multischool-wizard-broadband-bandwidth-selector.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-broadband/multischool-wizard-broadband-ct.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-broadband/multischool-wizard-broadband-initial.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-broadband/multischool-wizard-broadband-tp.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-broadband/multischool-wizard-broadband.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-lan/multischool-wizard-lan-configuration.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-lan/multischool-wizard-lan-initial.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-lan/multischool-wizard-lan.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-review/multischool-wizard-review.controller.js"></script>
+      <script src="app/multischool-wizard/multischool-wizard-review/multischool-wizard-review.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-bandwidth-selector.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-extended-computers.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-extended-users.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-initial.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-location.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-required_bandwidth.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-tp.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband-users-simple.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-broadband/school-wizard-broadband.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan-buildings.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan-configuration.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan-extended-users.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan-initial.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan-lp.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan-users-simple.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-lan/school-wizard-lan.js"></script>
+      <script src="app/school-wizard/school-wizard-step1/school-wizard-step1.controller.js"></script>
+      <script src="app/school-wizard/school-wizard-step1/school-wizard-step1.js"></script>
+      <script src="app/sysadmin/components/sysadmin-objects/sysadmin-objects.directive.js"></script>
+      <script src="app/sysadmin/sysadmin-events/sysadmin-events.controller.js"></script>
+      <script src="app/sysadmin/sysadmin-events/sysadmin-events.js"></script>
+      <script src="app/sysadmin/sysadmin-locations-list/sysadmin-locations-list.controller.js"></script>
+      <script src="app/sysadmin/sysadmin-locations-list/sysadmin-locations-list.js"></script>
+      <script src="app/sysadmin/sysadmin-projects-list/sysadmin-projects-list.controller.js"></script>
+      <script src="app/sysadmin/sysadmin-projects-list/sysadmin-projects-list.js"></script>
+      <script src="app/sysadmin/sysadmin-projects-settings/sysadmin-projects-settings.controller.js"></script>
+      <script src="app/sysadmin/sysadmin-projects-settings/sysadmin-projects-settings.js"></script>
+      <script src="app/sysadmin/sysadmin-users/sysadmin-users.controller.js"></script>
+      <script src="app/sysadmin/sysadmin-users/sysadmin-users.js"></script>
+      <script src="app/traffic-profile/traffic-profile-form.js"></script>
+      <script src="app/traffic-profile/traffic-profile.js"></script>
+      <script src="assets/js/leaflet-easyPrint.js"></script>
+      <script src="components/auth/auth.service.js"></script>
+      <script src="components/auth/interceptor.service.js"></script>
+      <script src="components/auth/router.decorator.js"></script>
+      <script src="components/auth/user.service.js"></script>
+      <script src="components/bottom-buttons/bottom-buttons.directive.js"></script>
+      <script src="components/country-chooser/country-chooser.js"></script>
+      <script src="components/country-picker/country-picker.directive.js"></script>
+      <script src="components/dashboard-menu/dashboard-menu.directive.js"></script>
+      <script src="components/footer/footer.directive.js"></script>
+      <script src="components/input-templates/input-templates.directive.js"></script>
+      <script src="components/lan-configuration-visualization/lan-configuration-visualization.directive.js"></script>
+      <script src="components/language-picker/language-picker.directive.js"></script>
+      <script src="components/main-project-type-panel/main-project-type-panel.directive.js"></script>
+      <script src="components/modal/modal.service.js"></script>
+      <script src="components/navbar/navbar.controller.js"></script>
+      <script src="components/navbar/navbar.directive.js"></script>
+      <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
+      <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
+      <script src="components/offline-status/offline-status.directive.js"></script>
+      <script src="components/project-review/project-review.directive.js"></script>
+      <script src="components/resources/locations.resource.js"></script>
+      <script src="components/resources/projects.resource.js"></script>
+      <script src="components/resources/users.resource.js"></script>
+      <script src="components/simple-alert/simple-alert.directive.js"></script>
+      <script src="components/util/util.service.js"></script>
+      <script src="components/wizard-header/wizard-header.directive.js"></script>
+      <script src="components/wizard-progressbar/wizard-progressbar.controller.js"></script>
+      <script src="components/wizard-progressbar/wizard-progressbar.directive.js"></script>
+      <!-- endinjector -->
+    <!-- endbuild -->
+  </body>
+</html>

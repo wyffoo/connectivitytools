@@ -1,0 +1,31 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'lan1'" progressbar="$ctrl.model.progress"></wizard-header>
+
+		<div class="center">
+			<img src="/assets/images/n2.jpg" alt="" width="30%"/>
+		</div>
+
+		<div class="panel panel-default margin-lg">
+			<div class="panel-body">
+				<span translate>multi-lan-initial.help1</span>
+				<ul>
+					<li translate>multi-lan-initial.help2</li>
+					<li translate>multi-lan-initial.help3</li>
+				</ul>
+			</div>
+			<div class="panel-footer center">
+				<button class="btn btn-success btn" ng-click="$ctrl.calculate()" translate>
+					buttons.calculate-lan
+				</button>
+			</div>
+		</div>
+		<div class="center">
+			<button type="button" class="btn btn-warning btn" ng-click="$ctrl.skip()" translate>
+				buttons.skip-lan
+			</button>
+		</div>
+
+		<bottom-buttons hide-right="yes" btn-left="$ctrl.back()"></bottom-buttons>
+	</div>
+</div>

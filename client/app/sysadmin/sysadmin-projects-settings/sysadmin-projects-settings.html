@@ -1,0 +1,28 @@
+<div class="page-header">
+	<h1 translate>sysadmin-projectss-settings.table
+		<small>sysadmin-projectss-settings.technologies</small>
+	</h1>
+</div>
+<table class="table table-condensed">
+	<thead>
+	<tr>
+		<th>№</th>
+		<th translate>sysadmin-projectss-settings.title</th>
+		<th translate>sysadmin-projectss-settings.descr</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="technology in $ctrl.technologies">
+		<td>{{technology.id}}</td>
+		<td>{{technology.name}}</td>
+		<td>{{technology.description}}</td>
+		<td class="col-md-2">
+			<button class="btn btn-default btn-sm" type="button" ng-click="$ctrl.showForm({id:1})" translate>sysadmin-projectss-settings.edit
+			</button>
+			<button class="btn btn-danger btn-sm" type="button" ng-clik="$ctrl.delete(technology)" translate>sysadmin-projectss-settings.delete</button>
+		</td>
+	</tr>
+	</tbody>
+</table>
+<button class="btn btn-default" type="button" ng-click="$ctrl.showForm()" translate>sysadmin-projectss-settings.addnew</button>

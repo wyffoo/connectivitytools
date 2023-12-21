@@ -1,0 +1,47 @@
+<wizard-header step="'initial'" progressbar="$ctrl.model.progress" hidesub="true"></wizard-header>
+<div class="row">
+	<div class="col-md-12">
+		<form name="newProjectForm" ng-submit="$ctrl.save()" novalidate>
+			<!-- COUNTRY -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" translate>location.country</h3>
+				</div>
+				<div class="panel-body"
+					 ng-class="{ 'has-error' : newProjectForm.name.$invalid && newProjectForm.name.$dirty }">
+					<select auto-focus name="countrycode" class="form-control" ng-model="$ctrl.model.country_id" required>
+						<option ng:repeat="country in $ctrl.countries" value="{{country.id}}" translate>
+							{{country.country_name}}
+						</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" translate>admin-project.projectname</h3>
+				</div>
+				<div class="panel-body"
+				     ng-class="{ 'has-error' : newProjectForm.name.$invalid && newProjectForm.name.$dirty }">
+					<input ng-model="$ctrl.model.name" type="text" class="form-control" name="name" id="name" required>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" translate>admin-project.projectdesc</h3>
+				</div>
+				<div class="panel-body">
+					<textarea ng-model="$ctrl.model.description"
+					          class="form-control" rows="3" name="description" id="description"></textarea>
+				</div>
+			</div>
+
+			<div class="col-sm-12 text-right">
+				<button type="submit" class="btn btn-success"
+						ng-disabled="newProjectForm.$invalid || isLoading" translate>admin-project.project_continue
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

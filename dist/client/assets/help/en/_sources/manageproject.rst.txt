@@ -1,0 +1,161 @@
+.. contents::
+
+.. _ManagingTheProjects:
+
+=====================
+Managing The Projects
+=====================
+
+.. _ManagingDataEntryTemplate:
+
+Managing Data Entry Template
+============================
+
+By clicking on project name so you have further options to customize your file. Here you can add variables for obtain your project.  
+
+.. figure:: /help_images/manageproject/14/51.png
+   :align: center
+ 
+   Figure 1. Home page
+
+You can view here all project data of your project. If you have downloaded templates in :ref:`CalculationSettings` please upload them clicking on button \"\Upload Newe file\" \ in \"\Managing data entry template\" \ field. Or here you can also download one of given templates (Figure 2). 
+
+.. figure:: /help_images/manageproject/14/52.png
+   :align: center
+ 
+   Figure 2. Templates downloading
+
+--------------------------------
+
+.. _Template:
+
+Template
+========
+
+Types of templates:
+
+**Simple template** - use when school data is limited (Required Bandwidth for connecting school; Distance to the fiber; School building area).
+
+.. figure:: /help_images/manageproject/15/53.png
+   :align: center 
+ 
+   Figure 2. Simple template
+
+**School Identification** - this section is used only for unique identification of school, but does not used for calculations. All of these fields could be missed, in this case objects (schools) will receive automatic names during the data import (e.g. School \#\1, School \#\2 etc.)
+
+.. figure:: /help_images/manageproject/15/54.png
+   :align: center 
+ 
+   Figure 3. School Identification
+
+**Geographical Location and Infrastructure Presence** - this section is used by methodology of connecting schools to broadband transport backbones. Parameters that you should enter: Latitude; Longtitude; Type of Cell Coverage (2G \/ \ 3G \/ \ 4G); Availability of electricity, Distance to the fiber.
+
+.. figure:: /help_images/manageproject/15/55.png
+   :align: center 
+ 
+   Figure 4. Geographical Location and Infrastructure Presence
+
+**Users** - this section is used for calculation number of devices that will be used in school.
+
+.. figure:: /help_images/manageproject/15/56.png
+   :align: center 
+ 
+   Figure 5. Users
+
+**Data entering completeness** - this section is used for demonstrating if it is all necessary information was interred for particular school (in the row) for future processing and calculations.
+
+.. figure:: /help_images/manageproject/15/57.png
+   :align: center 
+ 
+   Figure 6. Data entering completeness
+
+**Extended template** - Use when school data is detailed (Required Bandwidth for connecting school; Distance to the fiber; School building parameters, including school building width & length (or its area) and number of floors). If it is necessary you can return to previous steps using \"\Go Back\" \ button (Marked in yellow). In Extended template you have more classified variables in \"\Users\" \ parameters.
+
+.. figure:: /help_images/manageproject/15/58.png
+   :align: center 
+ 
+   Figure 7. Extended template
+
+-------------------------------
+
+.. _ManageProjectVariables:
+
+Manage Project Variables
+========================
+
+Also here you can change \"\Manage Project Variables\" \ if you do not agree with program ones. Download \"\Project Variables Template\" \ using |download| button. Fill in teamplate and upload them to the project by using |upload| button. If you want to reset variables to default ones click |reset| (Figure 1).
+
+.. |download| image:: /help_images/manageproject/16/button_download.png
+              :scale: 60%
+
+.. |upload| image:: /help_images/manageproject/16/button_upload.png
+            :scale: 60%
+
+.. |reset| image:: /help_images/manageproject/16/button_reset.png
+           :scale: 60%
+
+.. figure:: /help_images/manageproject/16/59.png
+   :align: center 
+ 
+   Figure 1. Manage Project Variables form
+
+----------------------------------------
+
+.. _ProjectCalculation:
+
+Project Calculation
+===================
+
+If you want to calculate the project press button |calc| in Managing The Projects tab. After information input you\'\ll see \"\Calculation\" \ options on the top of the window. Click to calculate the project (Figure 1).
+
+.. |calc| image:: /help_images/manageproject/17/button_calc.png
+          :scale: 60%
+
+.. figure:: /help_images/manageproject/17/60.png
+   :align: center
+ 
+   Figure 1. Calculations form
+
+.. figure:: /help_images/manageproject/17/61.png
+   :align: center
+ 
+   Figure 2. Home page
+
+---------------------
+
+.. _DuplicatingAProject:
+
+Duplicating A Project
+=====================
+
+You can create new project with \"\Duplicate the project\" \ button |duplicate|. 
+
+.. |duplicate| image:: /help_images/manageproject/18/button_duplicate.png
+               :scale: 60%
+
+.. figure:: /help_images/manageproject/18/62.png
+   :align: center
+ 
+   Figure 1. Home page
+
+--------------------
+
+.. _DeletingAProject: 
+
+Deleting A Project
+==================
+
+To remove file press |delete| button on home page. Or same button in managing data entry template.
+
+.. |delete| image:: /help_images/manageproject/19/button_delete.png
+            :scale: 60%
+
+.. figure:: /help_images/manageproject/19/63.png
+   :align: center
+
+   Figure 1. Delete button on home page
+
+.. figure:: /help_images/manageproject/19/64.png
+   :align: center
+ 
+Figure 2. Delete button on \"\Managing data entry template\" \ page

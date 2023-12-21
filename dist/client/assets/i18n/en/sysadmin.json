@@ -1,0 +1,84 @@
+{
+  "sysadmin-locations": {
+	"identifier": "Identifier",
+	"name": "Name",
+	"alt_name": "Alt Name",
+	"lat": "Latitude",
+	"long": "Longitude",
+	"population": "Population",
+	"admin_name": "Admin name",
+	"admin_code": "Admin code",
+	"parent": "Parent",
+	"rb": "RB",
+	"area": "Area",
+	"flag": "Flag",
+	"choose_country": "- choose the country -",
+	"search": "Search",
+	"search_keyword": "Search keyword",
+	"city": "City",
+	"social_point": "Social Point",
+	"hexagon": "Hexagon",
+	"download_dataset": "Download Dataset",
+	"upload_dataset": "Upload Dataset"
+  },
+  "sysadmin-objects": {
+    "descr": "Description",
+    "notreq": "Optional",
+    "value": "Value"
+  },
+  "sysadmin-technology": {
+    "paramsoftech": "Technology parameters",
+    "title": "Name",
+    "desc": "Description",
+    "notreq": "Optional",
+    "value": "Value",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "sysadmin-events": {
+    "table": "Table ",
+    "events": "Of events",
+    "choose": "Choose",
+    "date": "Date",
+    "user": "User",
+    "event": "Event"
+  },
+  "sysadmin-objects-settings": {
+    "settings": "Settings ",
+    "objectsofdesign": "Of design objects",
+    "geogparams": "Geographic parameters",
+    "buildparams": "Building parameters",
+    "infrparams": "Infrastructure parameters",
+    "poweparams": "Power supply parameters",
+    "populparams": "Population parameters",
+    "accesslevparams": "Competition parameters",
+    "demandparams": "Demand parameters",
+    "typeofobject": "Type of design object",
+    "save": "Save"
+  },
+  "sysadmin-projectss-settings": {
+    "table": "Table ",
+    "technologies": "Of access networks building technologies",
+    "title": "Name",
+    "descr": "Description",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addnew": "Add new technology"
+  },
+  "sysadmin-users": {
+    "table": "Table ",
+    "users": "Of users",
+    "firstname": "Name",
+    "lastname": "Surname",
+    "find": "Search",
+    "dateofreg": "Registration date",
+    "dateoflastactive": "Date of last activity",
+    "countofactiveprojects": "Number of active projects",
+    "block": "Block",
+    "unblock": "Unblock",
+    "delete": "delete",
+    "show": "Show ",
+	"assigned_countries": "Assigned Countries",
+	"search_keyword": "Search keyword"
+  }
+}

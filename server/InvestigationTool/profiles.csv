@@ -1,0 +1,7 @@
+NAME;V_FILE
+Two in One: Default;variables1.csv
+Access Networks: Small Locality;an_sl_var.csv
+Middle-Mile:Small Locality;mm_sl_var.csv
+Access Networks: Middle Locality;an_ml_var.csv
+LAN only;lan.csv
+Topology;topology.csv

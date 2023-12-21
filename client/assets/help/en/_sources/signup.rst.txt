@@ -1,0 +1,143 @@
+.. contents::
+
+.. _AccountAuthentication:
+
+========================
+ Account Authentication
+========================
+
+.. _RegistrationCreatingAnAccount:
+
+Registration. Creating An Account
+=================================
+
+Registration in **Broadband Calculation Tool: Schools** is required only for multiple school mode. If you wish to identify the needs of one school in local computer network and broadband connection, and get a reference report with an estimation of costs and possible implementation scenarios you no need to sing up.
+
+**Step 1.** Navigate to the Home page of the `Broadband Calculation Tool: Schools website <https://connectschools.online/#!/>`_ (Figure 1).
+
+.. figure:: /help_images/signup/01/01.png
+   :align: center
+
+   Figure 1. Web Application Home page
+
+**Step 2.** If you have already registered an account press click on \"\Sing in\" \ button at the top right side of the window (Figure 2) or \"\Enter\" \ under the \"\Send\" \ button in \"\Registration form\" \ window to go to the user authentication (Figure 4).
+
+.. figure:: /help_images/signup/01/02.png
+   :align: center
+
+   Figure 2. \"\Sing in\" \ button
+
+**Step 3.** To open Broadband Calculation Tool: Schools\'\s \"\Registration form\" \ click the banner, in the middle of the window, shown in Figure 3.
+
+.. figure:: /help_images/signup/01/03.png
+   :align: center
+
+   Figure 3. Banner
+
+**Step 4.** The \"\Registration form\" \ will open in your browser and you will be asked to either register a new account or use an existing account. If you have not setup an account before, fill in the \"\Registration form\" \ (Figure 4).
+
+.. figure:: /help_images/signup/01/04.png
+   :align: center
+
+   Figure 4. Registration form
+
+**Step 5.** Users will be asked to enter or select the following information (all items are required):
+
+1. Text field for entering the name
+
+ .. image:: /help_images/signup/01/name.png
+    :scale: 60%
+
+2. Text field for entering the family name, Surname
+
+ .. image:: /help_images/signup/01/surname.png
+    :scale: 60%
+
+3. Text field for entering the email address, Email
+
+ .. image:: /help_images/signup/01/email.png
+    :scale: 60%
+
+4. Text field for entering the password
+
+ .. image:: /help_images/signup/01/password.png
+    :scale: 60%
+
+ .. important::
+
+    Password must be 8-32 characters long, consisting at least one number from 0-9, small and capital letters of the latin alphabet.
+
+5. Text field for a security check, users will be asked to retype their password
+
+ .. image:: /help_images/signup/01/repeatpassword.png
+    :scale: 60%
+
+ .. important::
+
+    In case of wrong password entering you will see notification \"\Must concide with the password in previous field\"\. To check your password click |eye| button in the at the top right side of the field \"\Repeate the password\"\.
+
+.. |eye| image:: /help_images/signup/01/button_eye.png
+         :scale: 60%
+
+6. Malware Protection Component, reCAPTCHA
+
+ .. image:: /help_images/signup/01/recaptcha.png
+    :scale: 60%
+
+**Step 6.** After filling the \"\Registration form\"\, activate the malware check, ticking the option \"\I\'\m not a robot\"\, select the appropriate images among those which appear on the screen and click \"\Verify\"\ (Figure 5).
+
+.. figure:: /help_images/signup/01/05.png
+   :align: center
+
+   Figure 5. reCAPTCHA window
+
+**Step 7.** If you select images correctly, the corresponding message \"\I\'\m not a robot\" \ will be displayed. Click \"\Send\" \ (Figure 6).
+
+.. figure:: /help_images/signup/01/06.png
+   :align: center
+
+   Figure 6. Submitting the registration form
+
+--------
+
+.. _UserAuthentification:
+
+User Authentication
+===================
+
+Authorization in **Broadband Calculation Tool: Schools** is required for registered users only for multiple school mode.
+
+**Step 1.** If you have already registered an account, fill in your login details (Figure 1). If you have no account press \"\Registration\" \ under \"\Send\" \ and go to  Step 4 in :ref:`RegistrationCreatingAnAccount` .
+
+.. figure:: /help_images/signup/02/07.png
+   :align: center
+   :scale: 60%
+
+   Figure 1. \"\Sign in\" \ form
+
+The log in form includes the following components:
+
+1. Text field for entering the login (your E-mail address);
+
+ .. image:: /help_images/signup/02/login.png
+    :scale: 50%
+
+2. Text field for entering the password, Password.
+
+ .. image:: /help_images/signup/02/pass.png
+    :scale: 50%
+
+**Step 2.** Press \"\Send\" \ to enter your profile (Figure 2).
+
+.. figure:: /help_images/signup/02/08.png
+   :align: center
+   :scale: 60%
+
+   Figure 2. Log in to the Broadband Calculation Tool: Schools
+
+After successfully creating an account and registering, you are ready to work in Broadband Calculation Tool: Schools.
+
+.. figure:: /help_images/signup/02/09.png
+   :align: center
+
+   Figure 3. Broadband Calculation Tool: Schools Account

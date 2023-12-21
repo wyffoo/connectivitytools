@@ -1,0 +1,24 @@
+.. contents::
+
+===================
+General information
+===================
+
+:Site: https://connectschools.online/
+
+
+Features and technical characteristics
+======================================
+
+**Broadband Calculation Tool: Schools** is designed for technology selection and calculation costs to connect schools to the Internet.
+
+This tool implements methodologies for calculating internal school computer networks and connections to broadband access networks. It helps to choose the optimal network deployment options in terms of capital and operational expenses.
+
+**Broadband Calculation Tool: Schools** provides two calculation modes: for one school and for a group of schools.
+
+The first mode can be used by school’s administrations to identify the needs of their school in local computer network and broadband connection, and get a reference report with an estimation of costs and possible implementation scenarios. It doesn't require registration and can be used right away.
+
+The second mode is deigned for use at the level of education or telecommunication authorities to plan the coverage of a number of schools in a particular region. It allows to create multiple projects and make calculations over the number of schools taking into account additional information regarding their mutual location.
+
+
+

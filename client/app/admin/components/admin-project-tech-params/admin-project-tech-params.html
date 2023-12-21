@@ -1,0 +1,46 @@
+<div class="modal-header">
+	<h4 class="modal-title">{{'admin-project.enterparamsforproject'|translate}}<strong>{{project.name}}</strong> - <strong><i>{{technology.name}}</i></strong>
+	</h4>
+</div>
+<div class="modal-body tech-params">
+	<form name="form">
+		<table class="table table-condensed">
+			<tbody>
+			<tr ng-repeat="p in params" ng-class="'tech-level-'+p.tech_level">
+				<td>{{p.description}}</td>
+				<td class="col-md-5">
+					<div class="form-group" ng-if="p.type==='input'">
+						<div ng-class="{'input-group':p.unit}">
+							<input ng-model="model[p.id]"
+							       type="number" class="form-control input-sm" placeholder="{{p.default_value}}"/>
+							<span class="input-group-addon" ng-show="p.unit">{{p.unit}}</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="p.type==='select'">
+						<div class="input-group">
+							<div class="input-group-addon btn">
+								<a ng-click="editDependencies(p)" translate>admin-project.depends</a>
+							</div>
+							<select ng-model="model[p.id]"
+							        class="form-control input-sm"
+							        ng-options="option.value as option.name for option in p.options"></select>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+			</tbody>
+			<thead>
+			<tr>
+				<th translate>admin-project.paramdesc</th>
+				<th translate>admin-project.value</th>
+			</tr>
+			</thead>
+		</table>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-disabled="progress" ng-click="ok()" translate>admin-project.saveparams</button>
+	<button class="btn btn-warning" type="button" ng-disabled="progress" ng-click="cancel()" translate>admin-project.cancel</button>
+</div>
+

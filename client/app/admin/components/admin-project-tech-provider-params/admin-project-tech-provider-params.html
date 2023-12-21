@@ -1,0 +1,37 @@
+<div class="modal-header">
+	<h3 class="modal-title" translate>admin-project.enterparamsfortechset</h3>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal" name="form">
+		<table class="table table-condensed">
+			<tbody>
+			<tr ng-repeat="p in params">
+				<td class="col-md-9">{{p.description}}</td>
+				<td>
+					<div class="input-group" ng-if="p.type==='input'">
+						<input ng-model="model[p.id]"
+						       type="number" class="form-control input-sm" placeholder="{{p.default_value}}">
+						<span class="input-group-addon" ng-if="p.unit">{{p.unit}}</span>
+					</div>
+					<div class="input-group" ng-if="p.type==='select'">
+						<select ng-model="model[p.id]"
+						        class="form-control input-sm"
+						        ng-options="option.value as option.name for option in p.options"></select>
+					</div>
+				</td>
+			</tr>
+			</tbody>
+			<thead>
+			<tr>
+				<th translate>admin-project.title</th>
+				<th translate>admin-project.value</th>
+			</tr>
+			</thead>
+		</table>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-disabled="progress" ng-click="ok()" translate>admin-project.saveparams</button>
+	<button class="btn btn-warning" type="button" ng-disabled="progress" ng-click="cancel()" translate>admin-project.cancel</button>
+</div>
+

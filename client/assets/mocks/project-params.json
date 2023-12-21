@@ -1,0 +1,63 @@
+[
+  {
+	"id": 51,
+	"group": "AccessTechnologyOptionsSet",
+	"name": "AccessTechnologyOptionsSet.CostElectricity",
+	"description": "Стоимость электричества",
+	"type": "input",
+	"default_value": "0.1",
+	"unit": "у.е./кВт*час",
+	"required": 0
+  },
+  {
+	"id": 52,
+	"group": "PVOptionsSet",
+	"name": "PVOptionsSet.DiscountRate",
+	"description": "Ставка дисконтирования",
+	"type": "input",
+	"default_value": "11",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 53,
+	"group": "PVOptionsSet",
+	"name": "PVOptionsSet.ProfitTax",
+	"description": "Ставка налога на прибыль",
+	"type": "input",
+	"value": "14",
+	"default_value": "17",
+	"unit": "%",
+	"required": 0
+  },
+  {
+	"id": 54,
+	"group": "PVOptionsSet",
+	"name": "PVOptionsSet.EquipmentServiceLife",
+	"description": "Средний срок службы оборудования",
+	"type": "input",
+	"default_value": "10",
+	"unit": "год",
+	"required": 0
+  },
+  {
+	"id": 55,
+	"group": "PVOptionsSet",
+	"name": "PVOptionsSet.ARPU",
+	"description": "Среднемесячный доход на одного абонента",
+	"type": "input",
+	"default_value": "50",
+	"unit": "у.е.",
+	"required": 0
+  },
+  {
+	"id": 56,
+	"group": "PVOptionsSet",
+	"name": "PVOptionsSet.VATTax",
+	"description": "Ставка налога на добавленную стоимость",
+	"type": "input",
+	"default_value": "20",
+	"unit": "%",
+	"required": 0
+  }
+]

@@ -1,0 +1,57 @@
+//Nine predefined profiles 
+
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (1, "Basic-", 'LOW', TRUE); 
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (2, "Basic", 'LOW', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (3, "Basic+", 'LOW', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (4, "Intermediate-", 'MEDIUM', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (5, "Intermediate", 'MEDIUM', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (6, "Intermediate+", 'MEDIUM', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (7, "Advanced-", 'HIGH', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (8, "Advanced", 'HIGH', TRUE);
+
+INSERT INTO `giga`.`traffic_profiles` (`id`, `profile_name`, `quality_level`, `defaultset`) VALUES (9, "Advanced+", 'HIGH', TRUE);
+
+
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (1, "Primary school students' workstations (or laptops) in the classrooms");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (2, "Primary school students' mobile devices");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (3, "Secondary school students' workstations (or laptops) in the classrooms");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (4, "Secondary school students' mobile devices");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (5, "High school students' workstations (or laptops) in the classrooms");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (6, "High school students' mobile devices");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (7, "Teaching staff' workstations (or laptops) in the teacher's offices or in the classrooms");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (8, "Teaching staff' mobile devices");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (9, "Administrative personel' workstations (or laptops) in the  offices");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (10, "Administrative personel' mobile devices Guests' and community's mobile devices");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (11, "User Defined Group #1");
+INSERT INTO `giga`.`traffic_sources` (`id`, `trafficsource_name`) VALUES (12, "User Defined Group #2");
+
+
+
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (1, "Streaming video, including interactive online TV, live-stream trainings, individualized live video instructions etc.", TRUE, NULL, 1000,500,250,2,4,6,0.21,0.42,0.63,137.5,275,412.5);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (2, "Services for group & individual communication, including webinars, conferences, meetings, tutoring, etc.", TRUE, NULL,400,200,100,1,1.5,2.25,0.002,0.004,0.006,67.5,135,202.5);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (3, "Online virtual simulators, educational online games, etc.", TRUE, NULL,400,200,100,0.5,0.75,1.125,0.004,0.008,0.012,50,100,150);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (4, "Services for group work (virtual boards, online graphics, etc.)", TRUE, NULL,400,200,100,1,1.5,2.25,0.0025,0.005,0.0075,25,50,75);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (5, "Other Real Time Traffic Services", TRUE, NULL,1000,500,250,0.5,0.75,1.125,0.0025,0.005,0.0075,50,100,150);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (6, "Recorded educational clips, video instructions, trainings, Individualized recorded video, multimedia courses etc.", TRUE, NULL,1000,500,250,0.75,1.125,1.6875,0.00125,0.0025,0.00375,125,250,375);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (7, "Learning management systems, including libraries, repositories, databases, educational web-services, services for storing information etc.", TRUE, NULL,1500,750,375,0.5,0.75,1.125,0.04,0.08,1,2.5,5,100);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (8, "Web-serfing, Search engines, bookmarking services, etc. E-mail, FTP and other classic services", TRUE, NULL,1500,750,375,0.5,0.75,1.125,0.17,0.34,0.51,2.5,5,7.5);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (9, "Discussion boards, Social media & networks, forums etc.", TRUE, NULL,1500,750,375,0.5,0.75,1.125,0.0875,0.175,0.2625,0.75,1.5,2.25);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (10, "Calendars and organizers, including lessons planning. Government e-portal access. Reporting Services etc.", TRUE, NULL,1500,750,375,0.25,0.375,0.5625,0.1,0.2,0.3,0.75,1.5,2.25);
+INSERT INTO `giga`.`services` (`id`,`service_name`, `defaultset`, `users_id`, `latency_low`, `latency_medium`, `latency_high`, `bitrate_low`, `bitrate_medium`, `bitrate_high`, `intensity_low`, `intensity_medium`, `intensity_high`, `datavolume_low`, `datavolume_medium`, `datavolume_high`) VALUES (11, "Other Non-Real Time Traffic Services", TRUE, NULL,1500,750,375,0.25,0.375,0.5625,0.1,0.2,0.3,0.75,1.5,2.25);
+
+
+
+
+
+INSERT INTO `giga`.`profile_records` (`id`, `traffic_profiles_id`, `traffic_sources_id`, `services_id`, `using_level`) VALUES (1, 1, 1, 1, 'LOW');
+//Will be generated for each combination of source & service 
+(2, 1, 1, 'MEDIUM');
+(3, 1, 1, 'HIGH');

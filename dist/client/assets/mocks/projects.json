@@ -1,0 +1,67 @@
+[
+  {
+	"id": 1,
+	"identifier": "test_ident1",
+	"name": "Test project 1",
+	"description": "Description of the test project",
+	"status": "calculated",
+	"progress": 100,
+	"objects": [
+	  "Объект 1",
+	  "Объект 2",
+	  "Объект 3",
+	  "Объект 4"
+	]
+  },
+  {
+	"id": 2,
+	"identifier": "test_ident2",
+	"name": "Test project 2",
+	"description": "Description of the test project",
+	"status": "in-progress",
+	"progress": 30,
+	"objects": [
+	  "Объект 1",
+	  "Объект 2"
+	]
+  },
+  {
+	"id": 3,
+	"identifier": "test_ident3",
+	"name": "Test project 3",
+	"description": "Description of the test project",
+	"status": "partially-calculated",
+	"progress": 100,
+	"objects": [
+	  "Объект 1",
+	  "Объект 2",
+	  "Объект 3"
+	]
+  },
+  {
+	"id": 4,
+	"identifier": "test_ident4",
+	"name": "Test project 4",
+	"description": "Description of the test project",
+	"progress": 0,
+	"status": "not-calculated",
+	"objects": [
+	  "Объект 1",
+	  "Объект 2",
+	  "Объект 3"
+	]
+  },
+  {
+	"id": 5,
+	"identifier": "test_ident5",
+	"name": "Test project 5",
+	"description": "Description of the test project",
+	"progress": 0,
+	"status": "waiting",
+	"objects": [
+	  "Объект 1",
+	  "Объект 2",
+	  "Объект 3"
+	]
+  }
+]

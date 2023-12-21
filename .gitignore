@@ -1,0 +1,14 @@
+.idea
+coverage
+unit_coverage
+client/dev/bower_components
+typings
+/documents/*.bak
+
+.tmp
+.Rproj.user
+/dist/giga.tar.gz
+/dist/giga-api.tar.gz
+/dist/giga-calc-worker.tar.gz
+/server/InvestigationTool/.RData
+/server/InvestigationTool/.Rhistory

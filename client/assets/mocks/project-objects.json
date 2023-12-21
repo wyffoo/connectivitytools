@@ -1,0 +1,15 @@
+[
+  {"id":1,"name":"Object 1","isCompleted":true,"isCalculated":false},
+  {"id":2,"name":"Object 2","isCompleted":false,"isCalculated":false},
+  {"id":3,"name":"Object 3","isCompleted":true,"isCalculated":true},
+  {"id":4,"name":"Object 4","isCompleted":true,"isCalculated":false},
+  {"id":5,"name":"Object 5","isCompleted":false,"isCalculated":false},
+  {"id":6,"name":"Object 6","isCompleted":true,"isCalculated":true},
+  {"id":7,"name":"Object 7","isCompleted":true,"isCalculated":false},
+  {"id":8,"name":"Object 8","isCompleted":false,"isCalculated":false},
+  {"id":9,"name":"Object 9","isCompleted":true,"isCalculated":true},
+  {"id":10,"name":"Object 10","isCompleted":true,"isCalculated":false},
+  {"id":11,"name":"Object 11","isCompleted":false,"isCalculated":false},
+  {"id":12,"name":"Object 12","isCompleted":true,"isCalculated":true}
+
+]

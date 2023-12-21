@@ -1,0 +1,20 @@
+FROM php:7.4-fpm
+#install php-gd
+RUN apt-get update && apt-get install -y curl wget unzip zlib1g zlib1g-dev libpng-dev libcurl4-openssl-dev libzip-dev
+RUN docker-php-ext-install mysqli pdo pdo_mysql gd curl iconv sockets zip
+RUN docker-php-ext-enable mysqli pdo pdo_mysql gd curl iconv sockets zip
+COPY . /var/www/html
+
+RUN echo 'memory_limit = 5G' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+RUN echo 'max_execution_time = 900' >> /usr/local/etc/php/conf.d/docker-php-maxexectime.ini;
+RUN echo 'upload_max_filesize = 150M' >> /usr/local/etc/php/conf.d/docker-php-uploadmax.ini;
+RUN echo 'post_max_size = 150M' >> /usr/local/etc/php/conf.d/docker-php-post_max_size.ini;
+RUN echo 'pm.start_servers = 5' >> /usr/local/etc/php-fpm.d/www.conf;
+RUN echo 'pm.max_children = 50' >> /usr/local/etc/php-fpm.d/www.conf;
+RUN echo 'pm.min_spare_servers = 5' >> /usr/local/etc/php-fpm.d/www.conf;
+RUN echo 'pm.max_spare_servers = 10' >> /usr/local/etc/php-fpm.d/www.conf;
+RUN echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/www.conf;
+
+RUN rm -rf /var/www/html/logs/* \
+    && chown -R www-data:www-data /var/www/html
+

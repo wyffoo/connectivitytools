@@ -1,0 +1,52 @@
+<dashboard-menu></dashboard-menu>
+<div class="page-header">
+	<h1>Designing
+		<small>entering parameters for
+			<strong ng-if="$ctrl.selectedObjects !== 'all'">
+				{{$ctrl.selectedObjectsNames.join(', ')}}
+			</strong>
+			<strong ng-if="$ctrl.selectedObjects ==='all'">
+				all objects
+			</strong>
+		</small>
+	</h1>
+</div>
+
+<div class="object-params">
+	<uib-tabset vertical="true" type="pills" template-url="object-params-tabset.html" class="row">
+		<uib-tab index="0" heading="Geographical parameters">
+			<object-params-form class="col-md-9" items="$ctrl.geo" model="$ctrl.model.params"
+			                    title="Geographical parameters"></object-params-form>
+		</uib-tab>
+		<uib-tab index="1" heading="Building parameters">
+			<object-params-form class="col-md-9" items="$ctrl.dev" model="$ctrl.model.params"
+			                    title="Building parameters"></object-params-form>
+		</uib-tab>
+		<uib-tab index="2" heading="Infrastructure parameters">
+			<object-params-form class="col-md-9" items="$ctrl.inf" model="$ctrl.model.params"
+			                    title="Infrastructure parameters"></object-params-form>
+		</uib-tab>
+		<uib-tab index="3" heading="Power parameters">
+			<object-params-form class="col-md-9" items="$ctrl.pow" model="$ctrl.model.params"
+			                    title="Power parameters"></object-params-form>
+		</uib-tab>
+		<uib-tab index="4" heading="Population parameters">
+			<object-params-form class="col-md-9" items="$ctrl.pop" model="$ctrl.model.params"
+			                    title="Population parameters"></object-params-form>
+		</uib-tab>
+		<uib-tab index="5" heading="Parameters of competition">
+			<object-params-form class="col-md-9" items="$ctrl.acc" model="$ctrl.model.params"
+			                    title="Parameters of competition"></object-params-form>
+		</uib-tab>
+		<uib-tab index="6" heading="Parameters of demand" style="display: none;">
+			<object-params-form class="col-md-9" items="$ctrl.dem" model="$ctrl.model.params"
+			                    title="Parameters of demand"></object-params-form>
+		</uib-tab>
+	</uib-tabset>
+	<button class="btn btn-default pull-right" ng-click="$ctrl.save()">{{$ctrl.buttonSave}}</button>
+</div>
+
+
+
+
+

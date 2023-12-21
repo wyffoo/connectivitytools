@@ -1,0 +1,216 @@
+METHODOLOGY;ALGORITHM;FORMULA;PNAME;PDESC;UNIT;RSTART;REND;STEP;DVALUE;TYPE;TYPE2;SORTA;SORTM
+METHOD1;ALL;;;;;;;;;;;;
+METHOD1;ALGORITHM1_1;ALL;AccessTechnologyOptionsSet.MediumTypeOfSL;Type of transmission medium for the organization of subscriber lines ;(1 - wireless, 2 - copper, 3 - fiber-optic);1.00;3.00;1.00;1.00;ID;ID;6;6
+METHOD1;ALGORITHM1_1;FORMULA_1_1_1;GeographicalParametersSet.Square;Total area of the object (design area);sq km;1.00;200.00;5.00;10.00;ID;ID;1;1
+METHOD1;ALGORITHM1_1;FORMULA_1_1_1;GeographicalParametersSet.BuiltupArea;Percentage of build-up area of the object;%;10.00;100.00;5.00;50.00;ID;ID;2;2
+METHOD1;ALGORITHM1_1;FORMULA_1_1_2;GeographicalParametersSet.Square;Total area of the object (design area);sq km;1.00;1000.00;0.1;20.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_2;Intermediate.BuiltupArea;Build-up area;sq km;10.00;100.00;5.00;10.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_2;GeographicalParametersSet.ReliefCoef;Coefficient of considering the terrain relief (the ability to reduce or increase the signal range for wireless technology due to the features of the terrain relief);coeff;0.00;2.00;0.1;0.6;ID;ID;3;3
+METHOD1;ALGORITHM1_1;FORMULA_1_1_2;AccessTechnologyOptionsSet.RadiusEOA;Territory coverage area radius for one of AOE unit (maximum length of subscriber lines, distance of signal propagation in the absence of buildings, etc.);km;0.10;5.00;0.1;0.5;ID;ID;7;9
+METHOD1;ALGORITHM1_1;FORMULA_1_1_3;Intermediate.BuiltupArea;Built-up area;sq km;10.00;100.00;5.00;5.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_3;DevelopmentParametersSet.PrivateHouses;Percentage of private (low-rise) dwellings;%;1.00;100.00;5.00;30.00;ID;ID;11;59
+METHOD1;ALGORITHM1_1;FORMULA_1_1_3;AccessTechnologyOptionsSet.RadiusEOA;Territory coverage area radius for one of AOE unit (maximum length of subscriber lines, distance of signal propagation in the absence of buildings, etc.);km;0.10;5.00;0.1;0.5;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_3;AccessTechnologyOptionsSet.ReduceRadius;Coefficient of reduction of the radius of coverage due to density of buildings and basic building materials;coeff;0.00;1.00;0.1;0.7;ID;ID;8;10
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;GeographicalParametersSet.Square;Total area of the object (design area);sq km;1.00;200.00;5.00;10.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;GeographicalParametersSet.BuiltupArea;Percentage of build-up area of the object;%;10.00;100.00;5.00;50.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;DevelopmentParametersSet.BuildingDensity;Building density;buildings/sq km;1.00;100.00;1.00;5.00;ID;ID;12;60
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;DevelopmentParametersSet.AverageFloorsLowrise;Average number of floors in a middle-rise building;floors;1.00;10.00;1.00;3.00;ID;ID;13;61
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;DevelopmentParametersSet.LowriseMultifamily;Percentage of middle-rise multi-apartment buildings;%;0.00;50.00;5.00;40.00;ID;ID;14;62
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;DevelopmentParametersSet.AverageMultistorey;Average number of floors in a high-rise building;floors;5.00;30.00;1.00;9.00;ID;ID;15;63
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;DevelopmentParametersSet.MultistoryMultifamily;Percentage of high-rise multi-apartment buildings;%;0.00;100.00;5.00;30.00;ID;ID;16;64
+METHOD1;ALGORITHM1_1;FORMULA_1_1_4;AccessTechnologyOptionsSet.QuantityFloorsEOA;Number of floors covered by signal per one AOE unit;floors;1.00;5.00;1.00;2.00;ID;ID;9;11
+METHOD1;ALGORITHM1_1;FORMULA_1_1_5;Intermediate.BuiltupArea;Build-up area;sq km;10.00;100.00;5.00;5.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_5;AccessTechnologyOptionsSet.RadiusEOA;Territory coverage area radius for one of AOE unit (maximum length of subscriber lines, distance of signal propagation in the absence of buildings, etc.);km;0.10;5.00;0.1;0.5;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_6;Intermediate.BuiltupArea;Build-up area;sq km;10.00;100.00;5.00;5.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_6;DevelopmentParametersSet.BuildingDensity;Building density;buildings/sq km;0.1;100.00;0.1;5.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_6;DevelopmentParametersSet.PrivateHouses;Percentage of private sector (low-rise) dwellings;%;1.00;100.00;5.00;30.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_6;AccessTechnologyOptionsSet.NumberSubscribersEOA;Number of subscribers that can be served by one unit of AOE (number of subscriber ports, number of subscribers that form the maximum number of simultaneous connections. etc.);peoples;5.00;100.00;5.00;50.00;ID;ID;10;12
+METHOD1;ALGORITHM1_1;FORMULA_1_1_6;DevelopmentParametersSet.LowriseMultifamily;Percentage of middle-rise multi-apartment buildings;%;0.00;50.00;5.00;40.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_6;DevelopmentParametersSet.MultistoryMultifamily;Percentage of high-rise multi-apartment buildings;%;0.00;100.00;5.00;30.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_7;PopulationOptionsSet.Population;Number of permanent residents living in the locality;peoples;2000.00;20000.00;100.00;10000.00;ID;ID;4;4
+METHOD1;ALGORITHM1_1;FORMULA_1_1_7;PopulationOptionsSet.TouristPopulation;Number of additional non-permanent residents living in this locality simultaneously;peoples;0.00;50000.00;50.00;1000.00;ID;ID;5;5
+METHOD1;ALGORITHM1_1;FORMULA_1_1_7;AccessLevelOptionsSet.DemandTourist;Percent of non-permanent residents who are interested in broadband services;%;0.00;100.00;5.00;20.00;ID;ID;17;65
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;Intermediate.BaseNumberOfPopulation;Number of solvent population;people;100.00;100000.00;100.00;10000.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;AccessLevelOptionsSet.Household;Nepotism rate (the average number of people in the family);people;1.00;10.00;1.00;3.00;ID;ID;18;66
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;DemandOptionsSet.PayableYounger;Percentage of solvent population of the younger age group (up to 25 years old);%;1.00;100.00;5.00;40.00;ID;ID;23;67
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;AccessLevelOptionsSet.DemandPopulationYounger;Percentage of the population of the younger age group (up to 25 years old) who are interested in broadband services;%;1.00;100.00;5.00;30.00;ID;ID;19;68
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;DemandOptionsSet.PayableAverageAge;Percentage of solvent population of the middle age group (from 25 to 55 years old);%;1.00;100.00;5.00;30.00;ID;ID;24;69
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;AccessLevelOptionsSet.DemandPopulationAverageAge;Percentage of population of the middle age group (from 25 to 55 years old) who are interested in broadband  services;%;1.00;100.00;5.00;30.00;ID;ID;20;70
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;DemandOptionsSet.PayableAdult;Percentage of solvent population of the older age group (over 55 years old);%;1.00;100.00;5.00;40.00;ID;ID;24;71
+METHOD1;ALGORITHM1_1;FORMULA_1_1_8;AccessLevelOptionsSet.DemandPopulationAdult;Percentage of the population of the older age group (over 55 years old) who are interested in broadband services;%;1.00;100.00;5.00;40.00;ID;ID;21;72
+METHOD1;ALGORITHM1_1;FORMULA_1_1_9;Intermediate.BaseSubscribers;Permanent residents for estimation of potential subscribers base;people;2000.00;20000.00;100.00;10000.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_9;AccessLevelOptionsSet.PopulationCoveredBroadband;Percentage of population using broadband services;%;1.00;100.00;5.00;40.00;ID;ID;22;73
+METHOD1;ALGORITHM1_1;FORMULA_1_1_10;Intermediate.Subscribers;Number of solvent population not covered by competitors (number of potential subscribers);people;1.00;100.00;100.00;10000.00;IM;;;
+METHOD1;ALGORITHM1_1;FORMULA_1_1_10;AccessTechnologyOptionsSet.NumberSubscribersEOA;Number of subscribers that can be served by one unit of AOE (number of subscriber ports, number of subscribers that form the maximum number of simultaneous connections. etc.);peoples;5.00;100.00;5.00;24.00;IM;;;
+METHOD1;ALGORITHM1_2;ALL;AccessTechnologyOptionsSet.MediumTypeOfCL;Type of transmission medium for the organization of trunks of a distribution network;(1 - wireless, 2 - copper, 3 - fiber-optic);1.00;3.00;1.00;2.00;ID;ID;5;7
+METHOD1;ALGORITHM1_2;ALL;GeographicalParametersSet.Square;Total area of the object (design area);sq km;1.00;200.00;5.00;10.00;ID;;3;
+METHOD1;ALGORITHM1_2;ALL;Intermediate.BuiltupArea;Build-up area;sq km;10.00;100.00;5.00;10.00;ID;;1;
+METHOD1;ALGORITHM1_2;FORMULA_1_2_1;Intermediate.NetworkArea;Network area;sq km;20.00;100.00;0.50;10.00;IM;;;
+METHOD1;ALGORITHM1_2;FORMULA_1_2_1;GeographicalParametersSet.ReliefCoef;Coefficient of considering the terrain relief (the ability to reduce or increase the signal range for wireless technology due to the features of the terrain relief);coeff;0.00;2.00;0.1;0.60;ID;;4;
+METHOD1;ALGORITHM1_2;FORMULA_1_2_1;AccessTechnologyOptionsSet.MaximumLengthCommunicationChannelDistributing;Maximum length of the communication link for the distribution segment;km;0.10;50.00;0.10;0.10;ID;ID;6;13
+METHOD1;ALGORITHM1_2;FORMULA_1_2_2;Intermediate.NetworkArea;Network area;sq km;20.00;100.00;0.50;10.00;IM;;;
+METHOD1;ALGORITHM1_2;FORMULA_1_2_3;Intermediate.NumberOfAOEsPlaces;Total number of locations for AOEs installation;places;5.00;5000.00;5.00;5.00;ID;;2;
+METHOD1;ALGORITHM1_2;FORMULA_1_2_3;AccessTechnologyOptionsSet.ReservationMode;Number of TEAPs ports required to connect one AOE;ports;1.00;4.00;1.00;1.00;ID;ID;7;14
+METHOD1;ALGORITHM1_2;FORMULA_1_2_3;AccessTechnologyOptionsSet.QuantityEOAToTEOA;Number of AOEs that can be connected to one TEAP;unit;5.00;100.00;5.00;24.00;ID;ID;8;15
+METHOD1;ALGORITHM1_3;ALL;AccessTechnologyOptionsSet.MediumTypeOfSL;Type of transmission medium for the organization of subscriber lines;(1 - wireless, 2 - copper, 3 - fiber-optic);1.00;3.00;1.00;1.00;ID;;2;
+METHOD1;ALGORITHM1_3;ALL;AccessTechnologyOptionsSet.MaximumLengthOfSLInBuildings;Maximum length of indoor lines;km;0.10;1.00;0.10;0.20;ID;ID;3;16
+METHOD1;ALGORITHM1_3;ALL;DevelopmentParametersSet.PercentOfExistingInternalCableDuct;Percentage of buildings covered by existing indoor cable ducts for cable laying;%;0.00;100.00;5.00;50.00;ID;ID;7;74
+METHOD1;ALGORITHM1_3;ALL;DevelopmentParametersSet.PercentOfExistingPillars;Percentage of infrastructure coverage for hanged-up cables;%;0.00;100.00;5.00;50.00;ID;ID;8;75
+METHOD1;ALGORITHM1_3;ALL;DevelopmentParametersSet.PercentOfExistingExternalDuct;Percentage of coverage of the territory of the locality with cable ducts for laying outdoor communication lines;%;0.00;100.00;5.00;50.00;ID;ID;9;76
+METHOD1;ALGORITHM1_3;FORMULA_1_3_1;Intermediate.Subscribers;Number of solvent population not covered by competitors (number of potential subscribers);people;1.00;100000.00;100.00;10000.00;ID;;1;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;Intermediate.SubscribersNear;Number of subscribers located in the near (30% of the maximum distance) zone from the AOE;people;1.00;100000.00;100.00;1000.00;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;Intermediate.SubscribersMiddle;Number of subscribers located in the middle (60% of the maximum distance) zone from AOE;people;1.00;100000.00;100.00;2000.00;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;Intermediate.SubscribersFar;Number of subscribers located in the far (100% of the maximum distance) zone from AOE;people;1.00;100000.00;100.00;3000.00;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;Intermediate.NearLength;Near zone length;km;0.10;50.00;0.10;0.20;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;Intermediate.MiddleLength;Middle zone length ;km;0.10;50.00;0.10;0.40;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;Intermediate.FarLength;Far zone length;km;0.10;100.00;0.10;0.60;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_2;AccessTechnologyOptionsSet.RadiusEOA;Territory coverage area radius for one of AOE unit (maximum length of subscriber lines, distance of signal propagation in the absence of buildings, etc.);km;0.10;5.00;0.1;1.00;ID;;4;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_3;Intermediate.LinesInBuildingsLength;Length of indoor subscriber lines;km;0.01;0.50;0.01;10.00;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_3;Intermediate.LinesOutsideLength;Length of outdoor subscriber lines;km;0.01;0.50;0.01;10.00;IM;;;
+METHOD1;ALGORITHM1_3;FORMULA_1_3_3;AccessTechnologyOptionsSet.AggregationInternalLines;Coefficient of lines aggregation to the cable for indoor lines;coeff;1.00;24.00;4.00;0.20;ID;ID;5;17
+METHOD1;ALGORITHM1_3;FORMULA_1_3_3;AccessTechnologyOptionsSet.AggregationExternalLines;Coefficient of lines aggregation to the cable for outdoor lines;coeff;1.00;24.00;4.00;0.20;ID;ID;6;18
+METHOD1;ALGORITHM1_4;ALL;DevelopmentParametersSet.PercentOfExistingPillars;Percentage of infrastructure coverage for hanged-up cables;%;0.00;100.00;5.00;50.00;ID;;8;
+METHOD1;ALGORITHM1_4;ALL;DevelopmentParametersSet.PercentOfExistingExternalDuct;Percentage of coverage of the territory of the locality with cable ducts for laying outdoor communication lines;%;0.00;100.00;5.00;50.00;ID;;9;
+METHOD1;ALGORITHM1_4;ALL;AccessTechnologyOptionsSet.MediumTypeOfCL;Type of transmission medium for the organization of trunks of a distribution network;(1 - wireless, 2 - copper, 3 - fiber-optic);1.00;3.00;1.00;2.00;ID;IM;3;
+METHOD1;ALGORITHM1_4;ALL;AccessTechnologyOptionsSet.MediumTypeOfCLAggr;Type of transmission medium for the organization of trunks of a aggregation network;(1 - wireless, 2 - copper, 3 - fiber-optic);1.00;3.00;1.00;3.00;ID;ID;4;8
+METHOD1;ALGORITHM1_4;FORMULA_1_4_1;AccessTechnologyOptionsSet.MaximumLengthCommunicationChannelDistributing;Maximum length of the communication link for the distribution segment;km;0.10;50.00;0.10;10.00;IM;IM;;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_1;Intermediate.NumberOfAOEsPlaces;Total number of AOEs locations for installation;places;5.00;5000.00;5.00;5.00;ID;;1;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_1;Intermediate.NetworkRadius;Network Radius;km;1.00;100.00;0.10;2.00;ID;;2;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_2;AccessTechnologyOptionsSet.MaximumCommunicationChannelAggregative;Maximum length of the communication link for the aggregation segment;km;0.10;50.00;0.10;10.00;ID;ID;5;19
+METHOD1;ALGORITHM1_4;FORMULA_1_4_2;Intermediate.NumberOfTAOEsPlaces;Total number of TEAPs locations for installation;places;1.00;1000.00;1.00;5.00;IM;;;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_2;Intermediate.NetworkRadius;Network Radius;km;1.00;100.00;0.10;2.00;IM;;;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_3;Intermediate.LengthExternalCLDestribut;The length of the outdoor links of the distribution segment;km;0.10;100.00;0.10;10.00;IM;;;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_3;AccessTechnologyOptionsSet.AggregationExternalLinesDistributing;Coefficient of lines aggregation to the cable for outdoor links of distribution segment;coeff;4.00;48.00;4.00;0.20;ID;ID;6;20
+METHOD1;ALGORITHM1_4;FORMULA_1_4_4;Intermediate.LengthExternalCLAggr;The length of the outdoor links of the aggregate segment;km;0.10;100.00;0.10;10.00;IM;;;
+METHOD1;ALGORITHM1_4;FORMULA_1_4_4;AccessTechnologyOptionsSet.AggregationExternalLinesAggregative;Coefficient of link aggregation to the cable for outdoor links of aggregation segment;coeff;4.00;48.00;4.00;0.20;ID;ID;7;21
+METHOD1;ALGORITHM1_5;ALL;AccessTechnologyOptionsSet.CostSN;Cost of special equipment of the switching node;currency unit;50.00;1000000.00;50.00;5000.00;ID;ID;12;22
+METHOD1;ALGORITHM1_5;FORMULA_1_5_1;Intermediate.NumberOfAOEs;Number of AOE units;unit;10.00;10000.00;50.00;50.00;ID;;1;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_1;AccessTechnologyOptionsSet.CostEOA;Cost of one AOE unit;currency unit;20.00;50000.00;20.00;200.00;ID;ID;13;23
+METHOD1;ALGORITHM1_5;FORMULA_1_5_2;Intermediate.NumberOfTAOEs;Number of TEAPs units;unit;0.00;500.00;1.00;50.00;ID;;2;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_2;AccessTechnologyOptionsSet.CostTEOADistributing;Cost of one TEAP unit;currency unit;20.00;100000.00;20.00;400.00;ID;ID;14;24
+METHOD1;ALGORITHM1_5;FORMULA_1_5_3;Intermediate.NumberOfAOEsPlaces;Total number of AOEs locations for installation;places;5.00;5000.00;5.00;5.00;ID;;3;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_3;AccessTechnologyOptionsSet.CostMaterialsEOA;Cost of materials for arrangement of one AOE location;currency unit;10.00;500.00;10.00;200.00;ID;ID;15;25
+METHOD1;ALGORITHM1_5;FORMULA_1_5_4;Intermediate.NumberOfTAOEsPlaces;Total number of TEAPs locations for installation;places;1.00;1000.00;1.00;5.00;ID;;4;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_4;AccessTechnologyOptionsSet.CostMaterialsTEOA;Cost of materials for arrangement of one TEAP location for distribution segment;currency unit;100.00;5000.00;50.00;400.00;ID;ID;16;26
+METHOD1;ALGORITHM1_5;FORMULA_1_5_5;Intermediate.LinesInBuildingsLength;Length of indoor subscriber lines;km;0.01;0.50;0.01;10.00;ID;;5;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_5;Intermediate.LinesOutsideLength;Length of outdoor subscriber lines;km;0.01;0.50;0.01;10.00;ID;;6;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_5;AccessTechnologyOptionsSet.CostSubscribersLines;Cost of SL cable;currency unit/km;50.00;5000.00;5.00;50.00;ID;ID;17;27
+METHOD1;ALGORITHM1_5;FORMULA_1_5_6;Intermediate.LengthExternalCLDestributTrunk;Length of distribution segment trunk cable;km;0.10;100.00;0.10;10.00;ID;;7;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_6;AccessTechnologyOptionsSet.CostConnectingLines;Cost of the distribution segment cable;currency unit/km;100.00;10000.00;10.00;50.00;ID;ID;18;28
+METHOD1;ALGORITHM1_5;FORMULA_1_5_7;Intermediate.LengthExternalCLAggrTrunk;Length of aggregation segment trunk cable ;km;0.10;100.00;0.10;10.00;ID;;8;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_7;AccessTechnologyOptionsSet.CostConnectingLinesAggregateSegment;Cost of the aggregation segment cable ;currency unit/km;100.00;10000.00;0.10;50.00;ID;ID;19;29
+METHOD1;ALGORITHM1_5;FORMULA_1_5_8;Intermediate.LengthInternalCableDuctToBuild;Length of the house cable duct that must be built for laying subscriber lines;km;0.01;1.00;0.01;10.00;ID;;9;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_8;AccessTechnologyOptionsSet.CostInternalSewerage;Cost of indoor duct materials;currency unit/km;10.00;5000.00;0.10;50.00;ID;ID;20;30
+METHOD1;ALGORITHM1_5;FORMULA_1_5_9;Intermediate.LengthOfNewInfrastractureForSL;Length of the new infrastructure for cables hanging-up of subscriber lines;km;0.03;5.00;0.03;10.00;ID;;10;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_9;Intermediate.LengthOfNewInfrastractureForCL;Total length of the new infrastructure for cables hanging-up of distribution and aggregation segment;km;0.10;500.00;0.10;10.00;ID;;11;
+METHOD1;ALGORITHM1_5;FORMULA_1_5_9;AccessTechnologyOptionsSet.CostPillars;Cost of new infrastructure for hanging-up cables;currency unit/km;10000.00;100000.00;100.00;50.00;ID;ID;21;31
+METHOD1;ALGORITHM1_6;ALL;;;;;;;;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_1;Intermediate.NumberOfAOEsPlaces;Total number of AOEs locations for installation;places;5.00;5000.00;5.00;5.00;ID;;1;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_1;AccessTechnologyOptionsSet.LaborCostsEOA;Typical labor costs for the arrangement of a locations for AOE;hours/unit;1.00;50.00;4.00;3.00;ID;ID;13;32
+METHOD1;ALGORITHM1_6;FORMULA_1_6_2;Intermediate.DurationPlacesAOEs;Time budget for installation work on arrangement of locations for AOEs;hours;1.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_2;AccessTechnologyOptionsSet.CostEquipmentInstallation;Cost of installation work on the arrangement of locations for AOEs;currency unit/hour;2.00;100.00;2.00;50.00;ID;ID;14;33
+METHOD1;ALGORITHM1_6;FORMULA_1_6_3;Intermediate.NumberOfTAOEsPlaces;Total number of TEAPs locations for installation;places;1.00;1000.00;1.00;5.00;ID;;2;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_3;AccessTechnologyOptionsSet.LaborCostsTEOA;Typical labor costs for the arrangement of a locations for TEAP;hours/unit;100.00;1000.00;50.00;3.00;ID;ID;15;34
+METHOD1;ALGORITHM1_6;FORMULA_1_6_4;Intermediate.DurationPlacesTAOEs;Time budget for installation works on arrangement of locations for TEAPs;hours;1.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_4;AccessTechnologyOptionsSet.CostEquipmentInstallation;Cost of installation work on the arrangement for equipment locations;currency unit/hour;2.00;100.00;2.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_5;Intermediate.NumberOfAOEs;Number of AOE units;unit;10.00;10000.00;50.00;50.00;ID;;3;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_5;AccessTechnologyOptionsSet.LaborCostsEquipmentTuneup;Typical labor costs for installation of equipment;hours/unit;4.00;80.00;4.00;3.00;ID;ID;16;35
+METHOD1;ALGORITHM1_6;FORMULA_1_6_6;Intermediate.DurationInstallationAOEs;Time budget for installation and configuration of AOEs;hours;0.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_6;AccessTechnologyOptionsSet.CostEquipmentTuneup;Cost of works on installation and configuration of equipment;currency unit/hour;2.00;100.00;10.00;50.00;ID;ID;17;36
+METHOD1;ALGORITHM1_6;FORMULA_1_6_7;Intermediate.NumberOfTAOEs;Number of TEAPs units;unit;0.00;500.00;1.00;50.00;ID;;4;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_7;AccessTechnologyOptionsSet.LaborCostsEquipmentTuneup;Typical labor costs for installation of equipment;hours/unit;4.00;80.00;4.00;3.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_8;Intermediate.DurationInstallationTAOEs;Time budget for installation and configuration of TEAPs;hours;0.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_8;AccessTechnologyOptionsSet.CostEquipmentTuneup;Cost of works on installation and configuration of equipment;currency unit/hour;2.00;100.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_9;Intermediate.LengthInternalCableDuctToBuild;Length of the house cable duct that must be built for laying subscriber lines;km;0.01;1.00;0.01;10.00;ID;;5;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_9;AccessTechnologyOptionsSet.LaborCostsInternalSewerageConstruction;Typical labor costs for the installation of indoor duct;hours/km;200.00;1000.00;20.00;10.00;ID;ID;18;37
+METHOD1;ALGORITHM1_6;FORMULA_1_6_10;Intermediate.DurationInsideCableDuct;Time budget for installation of indoor cable ducts;hours;0.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_10;AccessTechnologyOptionsSet.CostInternalSewerageConstruction;Cost of installation of indoor cable ducts;currency unit/hour;2.00;100.00;2.00;50.00;ID;ID;19;38
+METHOD1;ALGORITHM1_6;FORMULA_1_6_11;Intermediate.LenghtHangedupCalbesSL;Length of the hanged-up cables of subscriber lines;km;0.03;5.00;0.03;10.00;ID;;6;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_11;AccessTechnologyOptionsSet.LaborCostsCableSewerage;Typical labor costs for the installation of subscriber lines;hours/km;8.00;80.00;4.00;10.00;ID;ID;20;39
+METHOD1;ALGORITHM1_6;FORMULA_1_6_12;Intermediate.DurationSLInstallation;Time budget for installation of indoor subscriber lines;hours;0.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_12;AccessTechnologyOptionsSet.CostInstallationSubscribersLines;Cost of work on the installation of subscriber lines;currency unit/hour;2.00;5000.00;10.00;50.00;ID;ID;21;40
+METHOD1;ALGORITHM1_6;FORMULA_1_6_13;Intermediate.LengthOfNewInfrastractureForSL;Length of the new infrastructure for hanging-up cables of subscriber lines ;km;0.03;5.00;0.03;10.00;ID;;7;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_13;Intermediate.LengthOfNewInfrastractureForCL;Total length of the new infrastructure for hanging-up cables of distribution and aggregation segment;km;0.10;500.00;0.10;10.00;ID;;8;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_13;AccessTechnologyOptionsSet.LaborCostsForConstractionOfNewInfrastructure;Typical labor costs for the installation of infrastructure for hanging-up cables;hours/km;200.00;1000.00;20.00;10.00;ID;ID;22;41
+METHOD1;ALGORITHM1_6;FORMULA_1_6_14;Intermediate.DurationNewInfrastructure;Time budget for the installation of new infrastructure for hanging-up cables ;hours;1.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_14;AccessTechnologyOptionsSet.CostOfConstractionNewInfrastrucutre;Cost of the installation of new infrastructure for hanging-up cables;currency unit/hour;2.00;1000.00;10.00;50.00;ID;ID;23;42
+METHOD1;ALGORITHM1_6;FORMULA_1_6_15;Intermediate.LenghtHangedupCalbesSL;Length of the hanged-up cables of subscriber lines;km;0.03;5.00;0.03;10.00;ID;;9;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_15;Intermediate.LenghtHangedupCalbesCL;Length of the hanged-up cables of distribution and aggregation segment;km;0.03;5.00;0.03;10.00;ID;;10;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_15;AccessTechnologyOptionsSet.LaborCostsSuspensionCable;Typical labor costs for the cable hanging-up;hours/km;200.00;1000.00;20.00;10.00;ID;ID;24;43
+METHOD1;ALGORITHM1_6;FORMULA_1_6_16;Intermediate.DurationOfHangedUpCable;Time budget for installation of outdoor lines in the duct;hours;0.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_16;AccessTechnologyOptionsSet.CostSettingSubscribersLines;Cost of work on cable hanging-up;currency unit/hour;2.00;5000.00;10.00;50.00;ID;ID;25;44
+METHOD1;ALGORITHM1_6;FORMULA_1_6_17;Intermediate.LenghtSLInExternalDuct;Length of subscriber lines in the outdoor cable ducts;km;0.01;0.50;0.01;10.00;ID;;11;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_17;Intermediate.LenghtCLInExternalDuct;Length of distribution and aggregation segment in the outdoor cable ducts;km;0.10;100.00;0.10;10.00;ID;;12;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_17;AccessTechnologyOptionsSet.LaborCostsCableSewerage;Typical labor costs for laying the cable in the duct;hours/km;50.00;10.00;1.00;10.00;ID;ID;26;45
+METHOD1;ALGORITHM1_6;FORMULA_1_6_18;Intermediate.DurationInstallCableInDuct;Time budget for installation of outdoor lines in the duct;hours;0.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_6;FORMULA_1_6_18;AccessTechnologyOptionsSet.CostCableSewerage;Cost of laying the cable in the duct;currency unit/hour;4.00;100.00;2.00;100.00;ID;ID;27;46
+METHOD1;ALGORITHM1_7;ALL;;;;;;;;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_1;Intermediate.NumberOfAOEs;Number of AOE units;unit;10.00;10000.00;50.00;50.00;ID;;1;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_1;AccessTechnologyOptionsSet.LaborCostsActiveEquipment;Typical annual labor cost per unit of active equipment;hours/year;50.00;400.00;10.00;10.00;ID;ID;18;47
+METHOD1;ALGORITHM1_7;FORMULA_1_7_2;Intermediate.NumberOfAOEs;Number of AOE units;unit;10.00;10000.00;50.00;50.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_2;AccessTechnologyOptionsSet.PowerConsumptionEOA;Annual power consumption over a unit of AOE;kWh/year;10.00;1000.00;10.00;300.00;ID;ID;19;48
+METHOD1;ALGORITHM1_7;FORMULA_1_7_3;Intermediate.AnnualLaborCostAOEsOperation;Annual labor for the operation of AOEs;hours/year;1.00;1000.00;10.00;100.00;ID;;2;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_3;AccessTechnologyOptionsSet.CostServiceEequipment;Cost of equipment maintenance;currency unit/hour;1.00;20.00;1.00;50.00;ID;ID;20;49
+METHOD1;ALGORITHM1_7;FORMULA_1_7_3;Intermediate.ElectricityConsuptionsbyAOEs;Power consumption for access control equipment;kWh/year;100.00;10000.00;100.00;100.00;ID;;3;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_3;AccessTechnologyOptionsSet.CostElectricity;Cost of electricity;currency unit/kWh ;0.04;4.00;0.01;1.00;ID;ID;21;50
+METHOD1;ALGORITHM1_7;FORMULA_1_7_4;Intermediate.NumberOfTAOEs;Number of TEAPs units;unit;0.00;500.00;1.00;50.00;ID;;4;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_4;AccessTechnologyOptionsSet.LaborCostsActiveEquipment;Typical annual labor cost per unit of active equipment;hours/year;50.00;400.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_5;Intermediate.NumberOfTAOEs;Number of TEAPs units;unit;0.00;10000.00;1.00;50.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_5;AccessTechnologyOptionsSet.PowerConsumptionTEOA;Annual power consumption over a unit of TEAP;kWh/year;1.00;1000.00;10.00;500.00;ID;ID;22;51
+METHOD1;ALGORITHM1_7;FORMULA_1_7_6;Intermediate.AnnualLaborCostTAOEsOperation;Annual labor costs for the operation of TEAPs;hours/year;1.00;1000.00;10.00;100.00;ID;;5;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_6;AccessTechnologyOptionsSet.CostServiceEequipment;Cost of equipment maintenance;currency unit/hour;1.00;20.00;1.00;100.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_6;Intermediate.ElectricityConsuptionsbyTAOEs;Power consumption for technical equipment of access provision;kWh/year;100.00;10000.00;100.00;100.00;ID;;6;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_6;AccessTechnologyOptionsSet.CostElectricity;Cost of electricity;currency unit/kWh ;0.04;4.00;0.01;100.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_7;Intermediate.LinesInBuildingsLength;Length of indoor subscriber lines;km;0.01;0.50;0.01;10.00;ID;;7;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_7;AccessTechnologyOptionsSet.LaborCostsLengthInhouseSubscriberLines;Typical annual labor costs per km of indoor subscriber lines;hours/year;10.00;1000.00;10.00;10.00;ID;ID;23;52
+METHOD1;ALGORITHM1_7;FORMULA_1_7_8;Intermediate.AnnualLaborCostSLOperation;Annual labor costs for service of indoor subscriber lines ;hours/year;0.00;1000.00;10.00;100.00;ID;;8;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_8;AccessTechnologyOptionsSet.CostServiceCableInfrastructure;Cost of work on the operation of cable infrastructure;currency unit/hour;2.00;1000.00;10.00;50.00;ID;ID;24;53
+METHOD1;ALGORITHM1_7;FORMULA_1_7_9;Intermediate.LenghtHangedupCalbesSL;Length of the hanged-up cables of subscriber lines;km;0.03;5.00;0.03;10.00;ID;;9;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_9;Intermediate.LenghtHangedupCalbesCL;Length of the hanged-up cables of distribution and aggregation segment;km;0.03;5.00;0.03;10.00;ID;;10;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_9;AccessTechnologyOptionsSet.LaborCostsServiceSuspensionCable;Typical annual labor costs for maintenance of one km of hanged-up cable;hours/year;1000.00;20000.00;1.00;10.00;ID;ID;25;54
+METHOD1;ALGORITHM1_7;FORMULA_1_7_10;Intermediate.AnnualLaborCostHangedCableOperation;Annual labor costs for service of hanged-up lines;hours/year;0.00;1000.00;10.00;100.00;ID;;11;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_10;AccessTechnologyOptionsSet.LaborCostsServiceCableSewerage;Typical annual labor costs for maintenance of one km of cable in the duct ;hours/year;100.00;400.00;10.00;10.00;ID;ID;26;55
+METHOD1;ALGORITHM1_7;FORMULA_1_7_11;Intermediate.LenghtSLInExternalDuct;Length of subscriber lines in the outdoor cable ducts;km;0.01;0.50;0.01;10.00;ID;;12;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_11;Intermediate.LenghtCLInExternalDuct;Length of distribution and aggregation segment in the outdoor cable ducts;km;0.10;100.00;0.10;10.00;ID;;13;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_11;DevelopmentParametersSet.NormativeAnnualRentOfCableDuct;Typical annual rent the outdoor cable duct for the cable;currency unit/km;0.00;10000.00;10.00;50.00;ID;ID;27;87
+METHOD1;ALGORITHM1_7;FORMULA_1_7_12;Intermediate.AnnualLaborCostCableInDuctOperation;Annual labor costs for service of lines in cable duct;hours/year;0.00;1000.00;10.00;100.00;ID;;14;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_12;AccessTechnologyOptionsSet.CostServiceCableInfrastructure;Cost of work on the operation of cable infrastructure;currency unit/hour;2.00;1000.00;10.00;100.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_13;Intermediate.LengthOfNewInfrastractureForCL;Total length of the new infrastructure for hanging-up cables of distribution and aggregation segment;km;0.10;500.00;0.10;10.00;ID;;15;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_13;Intermediate.LengthOfNewInfrastractureForSL;Length of the new infrastructure for hanging-up cables of subscriber lines ;km;0.03;5.00;0.03;10.00;ID;;16;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_13;AccessTechnologyOptionsSet.LaborCostsServicePillars;Typical annual labor costs for service of one km of the infrastructure for hanging-up cables (pillars);hours/year;1000.00;20000.00;1.00;10.00;ID;ID;28;56
+METHOD1;ALGORITHM1_7;FORMULA_1_7_14;Intermediate.AnnualLaborCostNewInfrastructure;Annual labor costs for new infrastructure service for hanging-up cables (pillars);hours/year;0.00;1000.00;10.00;100.00;ID;;17;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_14;DevelopmentParametersSet.CostOfOperationNewInfrastructure;Cost of work on the operation of the infrastructure for hanging-up cables (pillars);currency unit/hour;2.00;1000.00;10.00;50.00;ID;ID;29;77
+METHOD1;ALGORITHM1_7;FORMULA_1_7_15;Intermediate.LenghtSLInExternalDuct;Length of subscriber lines in the outdoor cable ducts;km;0.01;0.50;0.01;10.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_15;Intermediate.LenghtCLInExternalDuct;Length of distribution and aggregation segment in the outdoor cable ducts;km;0.10;100.00;0.10;10.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_15;DevelopmentParametersSet.RentCostForCableInDuct;Typical annual rent the outdoor cable duct for the cable;currency unit/km;0.00;10000.00;10.00;200.00;ID;ID;30;78
+METHOD1;ALGORITHM1_7;FORMULA_1_7_16;Intermediate.LenghtHangedupCalbesSL;Length of the hanged-up cables of subscriber lines;km;0.03;5.00;0.03;10.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_16;Intermediate.LenghtHangedupCalbesCL;Length of the hanged-up cables of distribution and aggregation segment;km;0.03;5.00;0.03;10.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_16;Intermediate.LengthOfNewInfrastractureForCL;Total length of the new infrastructure for hanging-up cables of distribution and aggregation segment;km;0.10;500.00;0.10;10.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_16;Intermediate.LengthOfNewInfrastractureForSL;Length of the new infrastructure for hanging-up cables of subscriber lines ;km;0.03;5.00;0.03;10.00;IM;;;
+METHOD1;ALGORITHM1_7;FORMULA_1_7_16;DevelopmentParametersSet.RentCostForHangedCable;Typical annual rent the pillars for the hanged-up cable;currency unit/km;0.00;10000.00;10.00;200.00;ID;ID;31;79
+METHOD1;ALGORITHM1_8;ALL;;;;;;;;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_1;AccessTechnologyOptionSet.CostOfRFRLicense;Cost of a license for radio spectrum usage per one AOE;currency unit;0.00;1000000.00;1000.00;50.00;ID;ID;7;57
+METHOD1;ALGORITHM1_8;FORMULA_1_8_1;Intermediate.NumberOfAOEs;Number of AOE units;unit;10.00;10000.00;50.00;50.00;ID;;1;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_1;Intermediate.CostOfEquipment;Total cost of equipment;currency unit;10.00;1000000000.00;1000.00;1000000.00;ID;;2;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_1;PVOptionsSet.DesignEquipmentCoeff;Percentage of typical costs for design from the cost of equipment ;%;1.00;50.00;1.00;4.00;ID;ID;9;80
+METHOD1;ALGORITHM1_8;FORMULA_1_8_1;Intermediate.CostOfConstruction;Total cost of access network deployment;currency unit;100.00;1000000000.00;1000.00;1000000.00;ID;;3;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_1;PVOptionsSet.DesignConstrCoeff;Percentage of typical costs for design from the cost of deployment;%;1.00;50.00;1.00;5.00;ID;ID;10;81
+METHOD1;ALGORITHM1_8;FORMULA_1_8_2;Intermediate.CostOfEquipment;Total cost of equipment;currency unit;10.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_2;Intermediate.CostOfConstruction;Total cost of access network deployment;currency unit;10.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_2;Intermediate.DesignAndLicensing;Design and licensing costs;currency unit;100.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_3;Intermediate.Subscribers;Number of solvent population not covered by competitors (number of potential subscribers);people;1.00;100000.00;100.00;10000.00;ID;;4;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_3;PVOptionSet.ARPU;Average month income per one subscriber;currency unit/month;1.00;10000000.00;1.00;20.00;ID;ID;11;82
+METHOD1;ALGORITHM1_8;FORMULA_1_8_3;PVOptionSet.VATax;Value-added tax rate;%;0.00;50.00;5.00;20.00;ID;ID;12;83
+METHOD1;ALGORITHM1_8;FORMULA_1_8_4;Intermediate.NetIncome;Net Income;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_4;Intermediate.CostOfOperation;Cost of the annual operation of an access network;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;ID;;5;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_4;PVOptionSet.ProfitTax;Corporate tax rate;%;0.00;50.00;5.00;17.00;ID;ID;13;84
+METHOD1;ALGORITHM1_8;FORMULA_1_8_4;Intermediate.CostOfEquipmentAndMaterials;Total cost of equipment, components and materials;currency unit;0.00;1000000000.00;1000.00;1000000.00;ID;;6;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_4;AccessTechnologyOptionSet.AvrLifeTimeOfEqAndMat;Average lifetime of the equipment and materials;yer;1.00;50.00;1.00;5.00;ID;ID;8;58
+METHOD1;ALGORITHM1_8;FORMULA_1_8_5;Intermediate.NetIncome;Net Income;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_5;Intermediate.CostOfOperation;Cost of the annual operation of an access network;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_5;Intermediate.CorporateTax;Corporate tax;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_6;PVOptionSet.DiscountRate;Discount Rate;%;1.00;100.00;1.00;11.00;ID;ID;14;85
+METHOD1;ALGORITHM1_8;FORMULA_1_8_6;PVOptionSet.PaybackPeriod;Period of Investment Payback;year;1.00;50.00;1.00;2.00;ID;ID;15;86
+METHOD1;ALGORITHM1_8;FORMULA_1_8_6;Intermediate.CashFlow;Annual Cash Flow;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_7;Intermediate.DiscountedCF;Discounted cash flow;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD1;ALGORITHM1_8;FORMULA_1_8_7;Intermediate.TotalInvest;Total investment costs for access networks deployment;currency unit;0.00;1000000000.00;1000.00;1000000.00;IM;;;

@@ -1,0 +1,39 @@
+<div>
+	<div ng-show="!results || results.length===0">
+		<div class="form-group" ng-show="projects && projects.length>0">
+			<label>{{projectFieldTitle}}</label>
+			<select class="form-control"
+			        ng-options="item.name for item in projects track by item.id" ng-model="selectedProject">
+			</select>
+		</div>
+		<div class="form-group" ng-show="objects && objects.length>0">
+			<label translate>admin-project.titleobjectinproject</label>
+			<select class="form-control"
+			        ng-options="item.name for item in objects track by item.id" ng-model="selectedObject">
+			</select>
+		</div>
+	</div>
+
+	<div ng-show="results && results.length > 0">
+		<h4>{{'admin-project.resultofcalcforproject'|translate}}</h4> <h4><strong>{{selectedProject.name}}</strong></h4>
+		<p translate>admin-project.optimalfor</p> <strong>{{selectedObject.name}}</strong> - <strong>{{results[0].technology_name}}</strong>
+		<table class="table table-condensed">
+			</caption>
+			<tbody>
+			<tr ng-repeat="item in results" ng-class="{'text-danger, bg-danger':item.npv<0,
+			'text-info, bg-info':item.npv===0,
+			'text-success, bg-success':item.npv>0}">
+				<td>{{item.technology_name}}</td>
+				<td>{{item.npv}}</td>
+			</tr>
+			</tbody>
+			<thead>
+			<tr>
+				<th translate>admin-project.setoftechnologies2</th>
+				<th>NPV</th>
+			</tr>
+			</thead>
+		</table>
+		<a class="btn btn-default" href="/api/results/object/{{selectedObject.id}}/report" target="_blank" translate>admin-project.detailed</a>
+	</div>
+</div>

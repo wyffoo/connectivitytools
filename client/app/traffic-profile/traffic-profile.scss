@@ -1,0 +1,28 @@
+table.scroll {
+  width: 100%;
+}
+
+table.scroll tbody,
+table.scroll thead { display: block; }
+
+table.scroll tbody {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.profile_services {
+  .btn-group {
+	display: flex;
+  }
+}
+
+table.custom-services td.input {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+table.custom-services td.input {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

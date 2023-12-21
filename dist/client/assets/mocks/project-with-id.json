@@ -1,0 +1,36 @@
+{
+  "id": 1,
+  "name": "Тестовый проект",
+  "description": "Описание тестового проекта",
+  "objects": [
+	{
+	  "name": "Объект 1",
+	  "designer": {
+		"id": 3,
+		"name": "Проектировщик 3"
+	  }
+	},
+	{
+	  "name": "Объект 2",
+	  "designer": {
+		"id": 2,
+		"name": "Проектировщик 2"
+	  }
+	},
+	{
+	  "name": "Объект 3",
+	  "designer": {
+		"id": 1,
+		"name": "Проектировщик 1"
+	  }
+	}
+  ],
+  "technologies": [
+	{
+	  "id": 1,
+	  "name": "WiFi+Ethernet_c+Ethernet_f",
+	  "description": "WiFi - на уровне доступа\nEthernet на медных кабелях - на уровне распределения\nEthernet оптика - на восстановительном сегменте"
+	}
+  ],
+  "isPublic": true
+}

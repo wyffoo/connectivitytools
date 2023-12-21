@@ -1,0 +1,39 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'blueprintsettings'"></wizard-header>
+		<div class="panel panel-default margin-lg">
+			<div class="panel-body">
+				<p translate>multi-broadband-initial.help5</p>
+				<p translate>multi-broadband-initial.help6</p>
+			</div>
+			<table>
+				<tr>
+					<td colspan="2" class="col-xs-6" translate>
+						<strong>multi-broadband-ct.optimization</strong>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-xs-12" colspan="2">
+						<checkbox larger ng-model="optimization_cost" id="optimization_cost"></checkbox>
+						<label for="optimization_cost" class="h4 padding-left-sm" translate>multi-broadband-ct.optimization_cost</label>
+						<p class="help-block" translate>multi-broadband-ct.modal2_body</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-xs-12" colspan="2">
+						<checkbox larger ng-model="optimization_npv" id="optimization_npv"></checkbox>
+						<label for="optimization_npv" class="h4 padding-left-sm" translate>multi-broadband-ct.optimization_npv</label>
+						<p class="help-block" translate>multi-broadband-ct.modal1_body</p>
+					</td>
+				</tr>
+			</table>
+			<div class="panel-footer center">
+				<button type="submit" class="btn btn-success" ng-click="$ctrl.calculate()" translate>
+					buttons.calculate_with_topology
+				</button>
+			</div>
+		</div>
+
+		<bottom-buttons hide-right="yes" btn-left="$ctrl.back()"></bottom-buttons>
+	</div>
+</div>

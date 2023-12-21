@@ -1,0 +1,57 @@
+<!-- LOCATIONS -->
+<div ng-if="!isSchoolsMode && !isGlobalMode">
+	<p><span translate>review.predefined_locations_type</span>
+		<select ng-model="locations_type">
+			<option value="city">City</option>
+			<option value="social_point">Social Points</option>
+			<option value="hexagon_6">Hexagon 6</option>
+			<option value="hexagon_7">Hexagon 7</option>
+			<option value="hexagon_8">Hexagon 8</option>
+			<option value="hexagon_9">Hexagon 9</option>
+		</select>
+	</p>
+	<a class="btn btn-small btn-success" target="_blank" href="/api/projects/inputlocations/{{project.id}}/{{project.name}}/{{locations_type}}" translate>review.download_predefined_locations</a>
+</div>
+<!-- TEMPLATE -->
+<div ng-if="isSchoolsMode">
+	<div class="panel panel-default" ng-if="template.length > 0 && type === 'full'">
+		<div class="panel-heading" translate>review.download_template</div>
+		<div class="panel-body">
+			<div class="col-sm-12 center well" ng-repeat="version in template">
+				<div ng-if="version.template_type==='INPUTSIMPLE'">
+					<div class="h4" translate>review.simpletemplate</div>
+					<p class="success-inline" translate>review.tpl_1</p>
+					<p class="error-inline" translate>review.tpl_2</p>
+					<p translate>review.tpl_3</p>
+				</div>
+				<div ng-if="version.template_type==='INPUTEXTENDED'">
+					<div class="h4" translate>review.exttemplate</div>
+					<p class="success-inline" translate>review.tpl_4</p>
+					<p class="error-inline" translate>review.tpl_5</p>
+					<p translate>review.tpl_6</p>
+				</div>
+				<p>{{version.description}}</p>
+				<a class="btn btn-default" target="_blank" href="/api/projects/inputtemplate/{{version.id}}/{{project.name}}" translate>review.download_template</a>
+			</div>
+		</div>
+	</div>
+
+	<div ng-if="type === 'simple'">
+		<div class="col-sm-12 center well" ng-repeat="version in template">
+			<div ng-if="version.template_type==='INPUTSIMPLE'">
+				<div class="h4" translate>review.simpletemplate</div>
+				<p class="success-inline" translate>review.tpl_1</p>
+				<p class="error-inline" translate>review.tpl_2</p>
+				<p translate>review.tpl_3</p>
+			</div>
+			<div ng-if="version.template_type==='INPUTEXTENDED'">
+				<div class="h4" translate>review.exttemplate</div>
+				<p class="success-inline" translate>review.tpl_4</p>
+				<p class="error-inline" translate>review.tpl_5</p>
+				<p translate>review.tpl_6</p>
+			</div>
+			<p>{{version.description}}</p>
+			<a class="btn btn-default" target="_blank" href="/api/projects/inputtemplate/{{version.id}}/{{project.name}}" translate>review.download_template</a>
+		</div>
+	</div>
+</div>

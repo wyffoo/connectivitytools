@@ -1,0 +1,30 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'review'" progressbar="$ctrl.model.progress"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+		<project-review project="$ctrl.model" settings="$ctrl.model" countries="$ctrl.countries"></project-review>
+
+		<!--		country_id: "158"-->
+		<!--		description: "test"-->
+		<!--		is_bandwidth_calc_required: "calculate_with_tech"-->
+		<!--		is_broadband_required: true-->
+		<!--		is_lan_required: {wired: false, wireless: true, public_hotspot: true}-->
+		<!--		is_net_in_output: false-->
+		<!--		name: "test"-->
+		<!--		net_in_output_optimization: "npv"-->
+		<!--		net_in_output_techs: ["cellular", "satellite", "rts", "focl"]-->
+		<!--		project_id: "116"-->
+		<!--		steps: [true]-->
+		<!--		tp_id: 5-->
+
+		<bottom-buttons btn-left="$ctrl.back()" btn-right="$ctrl.saveProject()"></bottom-buttons>
+
+	</div>
+</div>

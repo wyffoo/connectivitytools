@@ -1,0 +1,7 @@
+add database
+admin - read-only access to global country databases
+global admin - upload data, interactive table with search and edit or data
+bandwidth results, middle mile results, last mile results
+results table with different iterations
+records difference
+

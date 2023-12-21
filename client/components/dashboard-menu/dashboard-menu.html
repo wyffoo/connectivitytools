@@ -1,0 +1,13 @@
+<div class="row">
+	<nav class="navbar navbar-default navbar-inverse">
+		<ul class="nav navbar-nav" ng-if="hasRole('admin')">
+			<li ng-class="{active: stateIs('admin-projects-list')}"><a ui-sref="admin-projects-list" translate>navbar.projects</a></li>
+		</ul>
+		<ul class="nav navbar-nav" ng-if="hasRole('sysadmin')">
+			<li ng-class="{active: stateIs('sysadmin-locations')}"><a ui-sref="admin-projects-list" translate>navbar.locations</a></li>
+			<li ng-class="{active: stateIs('sysadmin-projects-list')}"><a ui-sref="admin-projects-list" translate>navbar.projects</a></li>
+			<li ng-show="nav.hasRole('sysadmin')" ui-sref-active="active"><a ui-sref="admin" translate>navbar.users</a></li>
+		</ul>
+	</nav>
+</div>
+

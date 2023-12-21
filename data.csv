@@ -1,0 +1,38 @@
+PARAM;VALUE;DESCRIPTION
+ExtParam.ConstructionCostFOCL;5000;Fiber optic cable line construction cost (aerial / buried / over existing cable ducts or poles) USD per km
+ExtParam.EquipCostFOCL;0;Fiber optic cable line construction cost (aerial / buried / over existing cable ducts or poles) USD per km
+ExtParam.AnnualMaintenanceCostFOCL;163.64;Annual fiber optic cable line operation and maintenance cost (aerial / buried / over existing cable ducts or poles) USD per km per year
+ExtParam.AnnualISPFeeFOCL1;17.21;Annual ISP fee for 1 Mbps of dedicated internet access channel over a fiber optic cable line  (For total troughput < 1 Gbps)	USD per Mbps per year
+ExtParam.AnnualISPFeeFOCL2;10.30;Annual ISP fee for 1 Mbps of dedicated internet access channel over a fiber optic cable line  (For total troughput >= 1 Gbps) USD per Mbps per year
+ExtParam.RTS_1_MaxBw;750;Microwave type 1 maximum link speed in Mbps
+ExtParam.RTS_2_MaxBw;9750;Microwave type 2 maximum link speed in Mbps
+ExtParam.ConstructionCostRTS_1;2000;Microwave point-to-point channel construction cost USD per installation
+ExtParam.ConstructionCostRTS_2;12400;Microwave point-to-point channel construction cost USD per installation
+ExtParam.ConstructionDistLimitRTS_1;50;RTS_1 maximum per hop distance in km
+ExtParam.ConstructionDistLimitRTS_2;18;RTS_2 maximum per hop distance in km
+ExtParam.AnnualMaintenanceCostRTS_1;100;Annual microwave point-to-point channel operation and maintenance cost USD per km per year
+ExtParam.AnnualMaintenanceCostRTS_2;200;Annual microwave point-to-point channel operation and maintenance cost USD per km per year
+ExtParam.SpectrumLicenseCostOne_1;611;One time spectrum license fee for 1MHz USD per MHz, was 0 for Brazil
+ExtParam.SpectrumLicenseCostReccur_1;0;Annual recurring spectrum license fee for 1MHz USD per MHz per year
+ExtParam.SpectrumLicenseCostOne_2;0;One time spectrum license fee for 1MHz USD per MHz, was 0 for Brazil
+ExtParam.SpectrumLicenseCostReccur_2;75;Annual recurring spectrum license fee for 1MHz USD per MHz per year
+ExtParam.EquipSAT;599;Satellite terminal equipment purchase and installation cost		USD per Mbps
+ExtParam.ScaleSAT_MaxBw;50;Satellite link speed that can be upscaled by increasing number of terminals
+ExtParam.EquipMainantanceSAT;10;Annual satellite terminal and ad-hoc equipment maintenance cost USD per Mbps per year
+ExtParam.AnnualISPFeeSAT;12;Annual ISP fee for 1 Mbps of dedicated internet access channel over a satellite link USD per Mbps per year
+ExtParam.EquipCELL;400;Cellular terminal equipment purchase and installation cost USD per Mbps
+ExtParam.AnnualISPFeeCELL;25;Annual fee for 1 Mbps of dedicated internet access over cellular link USD per Mbps per year
+ExtParam.AverageIncome;7850;Average wage per year
+ExtParam.ServiceLicenseFeeOne;100000;One time service license fee USD
+ExtParam.LmApCapacity;20;Capacity of the access point
+ExtParam.LmApConEqCost;300;Cost of equipment and istallation for access point
+ExtParam.LmApMntCost;50;Maintanace cost per 1 access point
+ExtParam.LmApElectrCons;263;Total cost of electricity consume by 1 access point for 1 year KW/h (30W, 263)
+ExtParam.LmRoadsToFOCL;1;Coefficient for estimation of required total FOCL length via total roads length in hexagon
+ExtParam.LmBsCapacity;192;Capacity of the bs (MikroTik InterCell 10 B38+B39 | Base station | LTE B38 + B39, 2x RJ45 1000Mb/s, 2x SFP) 
+ExtParam.LmBsCoverage;78;Base station NLOS coverage, sq.km 
+ExtParam.LmBsConEqCost;3400;Cost of equipment and istallation for access point
+ExtParam.LmBsMntCost;300;Maintanace cost per 1 access point
+ExtParam.LmBsElectrCons;1752;Total cost of electricity consumed by 1 access point for 1 year KW/h (200W, 1752)
+ExtParam.LmElectrCost;0.156;Electricity cost USD
+ExtParam.LmObjSize;5.161;Size of Object in km

@@ -1,0 +1,32 @@
+<div class="modal-header">
+	<h3 class="modal-title" translate>admin-project.resultofcalcforproject</h3> <h3>{{project.name}}</h3>
+</div>
+<div class="modal-body">
+	<p translate>admin-project.resultsofcalc</p>
+	<table class="table table-condensed">
+		<tbody>
+		<tr ng-repeat="item in results" ng-class="{'text-danger, bg-danger':item.npv<0,
+			'text-info, bg-info':item.npv===0,
+			'text-success, bg-success':item.npv>0}">
+			<td>{{item.object_name}}</td>
+			<td>{{item.technology_name}}</td>
+			<td>{{item.npv}}</td>
+			<td>
+				<button class="btn btn-default btn-xs" ng-click="onDownloadReport(item.result_id)" translate>admin-project.protocol</button>
+			</td>
+		</tr>
+		</tbody>
+		<thead>
+		<tr>
+			<th translate>admin-project.objectofdesign</th>
+			<th translate>admin-project.setoftechnologies2</th>
+			<th>NPV</th>
+			<th></th>
+		</tr>
+		</thead>
+	</table>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-click="dismiss()" translate>admin-project.close</button>
+</div>
+

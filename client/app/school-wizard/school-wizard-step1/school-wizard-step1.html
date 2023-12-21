@@ -1,0 +1,73 @@
+<div class="body-content">
+	<div class="col-sm-2 col-xs-2"></div>
+	<div class="col-sm-8 col-xs-8">
+		<wizard-header step="'initial'"></wizard-header>
+
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+
+		<!-- New Calculation -->
+		<form class="form-horizontal form-container-school-wizard-initial"
+			  name="schoolWizardStep1Form1" ng-submit="$ctrl.submit()" novalidate>
+
+			<p ng-click="$ctrl.modalTest()">Modal test</p>
+			<!-- COUNTRY -->
+			<div class="form-group"
+				 ng-class="{ 'has-error' : schoolWizardStep1Form1.countrycode.$invalid && !schoolWizardStep1Form1.countrycode.$pristine }">
+				<label class="col-sm-4 control-label no-padding-right" translate>location.country</label>
+				<div class="col-sm-8">
+						<span class="block input-icon input-icon-right">
+							<select name="countrycode" class="form-control" ng-model="$ctrl.model.country_id" required>
+								<option ng:repeat="country in $ctrl.countries" value="{{country.id}}" translate>
+									{{country.country_name}}
+								</option>
+							</select>
+						</span>
+					<p class="error-inline"
+					   ng-show="schoolWizardStep1Form1.countrycode.$dirty && schoolWizardStep1Form1.countrycode.$invalid"
+					   translate>
+						<span class="glyphicon glyphicon-exclamation-sign"></span>
+						location.choosecountry
+					</p>
+				</div>
+			</div>
+
+			<!-- SCHOOL NAME -->
+			<div class="form-group"
+				 ng-class="{ 'has-error' : schoolWizardStep1Form1.name.$invalid && !schoolWizardStep1Form1.name.$pristine }">
+				<label class="col-sm-4 control-label no-padding-right" translate>location.name</label>
+				<div class="col-sm-8">
+						<span class="block input-icon input-icon-right">
+							<input ng-focus="" ng-model="$ctrl.model.project_name"
+								   translate-attr="{ placeholder: 'location.name' }" type="text" name="name"
+								   class="form-control" ng-maxlength="30">
+						</span>
+					<p class="error-inline"
+					   ng-show="schoolWizardStep1Form1.name.$dirty && schoolWizardStep1Form1.name.$invalid"
+					   translate>
+						<span class="glyphicon glyphicon-exclamation-sign"></span>
+						location.name
+					</p>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label class="col-sm-8 control-label no-padding-right"></label>
+				<div class="col-sm-4">
+					<button type="submit" class="btn btn-primary btn-lg btn-block"
+							ng-disabled="schoolWizardStep1Form1.$invalid || loading" translate>
+						buttons.continue
+					</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</div>

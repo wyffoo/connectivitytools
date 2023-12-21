@@ -1,0 +1,37 @@
+<div ng-if="!$ctrl.isLoggedIn() && $ctrl.isCountriesMode" class="jumbotron text-center main-jumbotron">
+	<h3 translate>titles.countriesjumbotron</h3>
+</div>
+<div ng-if="!$ctrl.isLoggedIn()">
+
+	<!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">-->
+	<!--&lt;!&ndash;	<main-usertype-panel ui-sref="school-wizard-step1()" type="1" size="medium"></main-usertype-panel>&ndash;&gt;-->
+	<!--	<main-usertype-panel type="1" size="medium"></main-usertype-panel>-->
+	<!--</div>-->
+	<div class="col-lg-3 col-md-3 col-sm-1">
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-10">
+		<div class="main-usertype-panel" ui-sref="signup()">
+			<div class="panel panel-default">
+
+				<div class="panel-body">
+					<img ng-src="/assets/images/11.png" width="300px" height="300px"
+						 alt="{{'calculate_blueprint'|translate}}"
+						 class="img-responsive center-block"/>
+				</div>
+				<div class="panel-footer text-center">
+					<p translate="calculate_blueprint"></p>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-1">
+	</div>
+</div>
+
+<div ng-if="$ctrl.isLoggedIn()">
+	<p>Welcome! Loading projects ...</p>
+</div>
+
+

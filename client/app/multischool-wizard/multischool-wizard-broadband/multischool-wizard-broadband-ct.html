@@ -1,0 +1,81 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'mbroadband3'" progressbar="$ctrl.model.progress" hidesub="true"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+			<table class="table table-bordered">
+				<tbody>
+				<tr>
+					<td colspan="2" class="col-xs-6 h4">
+						<strong translate>subtitles.mbroadband3</strong>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="col-xs-6">
+						<checkbox larger ng-model="tech_all" id="tech_all" ng-change="$ctrl.switchTechAll()"></checkbox>
+						<label for="tech_all" class="h4 padding-left-sm" translate>multi-broadband-ct.all</label>
+					</td>
+				</tr>
+				<tr ng-if="$ctrl.model.is_net_in_output===true">
+					<td colspan="2">
+						<p class="help-block" translate>multi-broadband-ct.in_net_in_output</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-xs-6">
+						<checkbox larger ng-model="tech_focl" id="tech_focl"></checkbox>
+						<label for="tech_focl" class="h4 padding-left-sm" translate>multi-broadband-ct.focl</label>
+						<div class="help-block">
+							<p translate>multi-broadband-ct.focl_help1</p>
+							<p translate>multi-broadband-ct.focl_help2</p>
+							<p translate>multi-broadband-ct.focl_help3</p>
+							<p translate>multi-broadband-ct.focl_help4</p>
+						</div>
+					</td>
+					<td class="col-xs-6">
+						<checkbox larger ng-model="tech_cellular" id="tech_cellular"></checkbox>
+						<label for="tech_cellular" class="h4 padding-left-sm" translate>multi-broadband-ct.cellular</label>
+						<div class="help-block">
+							<p translate>multi-broadband-ct.cellular_help1</p>
+							<p translate>multi-broadband-ct.cellular_help2</p>
+							<p translate>multi-broadband-ct.cellular_help3</p>
+							<p translate>multi-broadband-ct.cellular_help4</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-xs-6">
+						<checkbox larger ng-model="tech_rts" id="tech_rts"></checkbox>
+						<label for="tech_rts" class="h4 padding-left-sm" translate>multi-broadband-ct.rts</label>
+						<div class="help-block">
+							<p translate>multi-broadband-ct.rts_help1</p>
+							<p translate>multi-broadband-ct.rts_help2</p>
+							<p translate>multi-broadband-ct.rts_help3</p>
+							<p translate>multi-broadband-ct.rts_help4</p>
+						</div>
+					</td>
+
+					<td class="col-xs-6" ng-hide="$ctrl.model.tp_ql==='HIGH'">
+						<checkbox larger ng-model="tech_satellite" id="tech_satellite"></checkbox>
+						<label for="tech_satellite" class="h4 padding-left-sm" translate>multi-broadband-ct.satellite</label>
+						<div class="help-block">
+							<p translate>multi-broadband-ct.satellite_help1</p>
+							<p translate>multi-broadband-ct.satellite_help2</p>
+							<p translate>multi-broadband-ct.satellite_help3</p>
+							<p translate>multi-broadband-ct.satellite_help4</p>
+						</div>
+					</td>
+
+				</tr>
+				</tbody>
+			</table>
+
+		<bottom-buttons btn-left="$ctrl.back()" btn-right="$ctrl.continue()"></bottom-buttons>
+	</div>
+</div>

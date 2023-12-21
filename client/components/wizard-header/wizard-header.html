@@ -1,0 +1,24 @@
+<div ng-if="isSchoolsMode" class="jumbotron text-center jumbotron-bg-3">
+	<h3 translate>titles.jumbotron</h3>
+</div>
+<div ng-if="isCountriesMode" class="jumbotron text-center">
+	<h3 translate>titles.countriesjumbotron</h3>
+</div>
+<div ng-if="isGlobalMode" class="jumbotron text-center">
+	<h3 translate>titles.globaljumbotron</h3>
+</div>
+<wizard-progressbar ng-if="isSchoolsMode" state="progressbar"></wizard-progressbar>
+
+<!-- alert messages -->
+<div>
+	<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+		<span class="{{alert.icone}}"></span>
+		{{alert.msg}}
+	</uib-alert>
+</div>
+
+<hr>
+<h2 class="main-title" translate>{{"titles." + step}}</h2>
+<hr>
+<h3 translate ng-if="!hidesub">{{"subtitles." + step}}</h3>
+<hr ng-if="!hidesub">

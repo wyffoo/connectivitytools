@@ -1,0 +1,29 @@
+.tech-params {
+  .tech-level-1 {
+
+  }
+  .tech-level-2 {
+
+  }
+  .tech-level-3 {
+
+  }
+  .tech-level-4 {
+
+  }
+}
+
+.page-header {
+  margin-top: 0;
+  h1 {
+	margin: 0;
+  }
+}
+
+.trash {
+  color: rgb(209, 91, 71);
+}
+
+@import "components/admin-project-status/admin-project-status";
+
+

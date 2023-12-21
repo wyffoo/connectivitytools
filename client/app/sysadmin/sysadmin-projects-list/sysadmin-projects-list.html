@@ -1,0 +1,64 @@
+<div class="page-header">
+	<h1 translate>admin-project.projects</h1>
+	<h5 translate>admin-project.listofprojects</h5>
+</div>
+<div class="row">
+	<div class="col-md-12 well center-block">
+		<admin-projects-submenu></admin-projects-submenu>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped sysadmin-projects-list">
+			<thead>
+			<tr>
+				<th translate>admin-project.projectname</th>
+				<th translate>admin-project.projectstatus</th>
+				<th translate>admin-project.description</th>
+				<th translate>admin-project.created</th>
+				<th translate>admin-project.updated</th>
+				<th class="text-right"><button class="btn btn-default btn-sm" ng-click="$ctrl.state.reload()"><span class="glyphicon glyphicon-refresh"></span></button></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="project in $ctrl.projects">
+				<td><a ui-sref="admin-project-setup({projectId:project.id})">{{project.name|cut:true:20:'...'}}</a></td>
+				<td><admin-project-status status="project.status" progress="project.progress"></admin-project-status></td>
+				<td>{{project.description|cut:true:50:'...'}}</td>
+				<td>{{project.created}}</td>
+				<td>{{project.updated}}</td>
+				<td class="text-right">
+					<div role="group">
+						<button ng-if="templatedata_uploaded===1 && project.status == 'not-calculated'"
+								type="button" class="btn btn-default btn-sm" uib-tooltip="{{'admin-project.calculate_project'|translate}}" tooltip-placement="left"
+								ng-click="$ctrl.calculate(project)"><span class="glyphicon glyphicon-play"></span>
+						</button>
+						<button ng-if="project.status == 'calculated'"
+								type="button" class="btn btn-default btn-sm" uib-tooltip="{{'admin-project.recalculate_project'|translate}}" tooltip-placement="left"
+								ng-click="$ctrl.calculate(project)"><span class="glyphicon glyphicon-refresh"></span>
+						</button>
+						<button type="button" class="btn btn-default btn-sm" uib-tooltip="{{'admin-project.detailed_project_info'|translate}}" tooltip-placement="left"
+						        ui-sref="admin-project-setup({projectId:project.id})"><span class="glyphicon glyphicon-info-sign"></span>
+						</button>
+<!--						<a ng-disabled="project.status!='calculated' && project.status!='partially-calculated'" tooltip-placement="left"-->
+<!--								type="button" class="btn btn-default btn-sm" uib-tooltip="Download calculation report."-->
+<!--								target="_blank" href="/api/results/project/{{project.id}}/xlsx"><span class="glyphicon glyphicon-file"></span>-->
+<!--						</a>-->
+<!--						<a ng-disabled="project.status!='calculated' && project.status!='partially-calculated'" tooltip-placement="left"-->
+<!--								type="button" class="btn btn-default btn-sm" uib-tooltip="Download calculation log file."-->
+<!--						   		target="_blank" href="/api/results/project/{{project.id}}/log"><span class="glyphicon glyphicon-list"></span>-->
+<!--						</a>-->
+						<button type="button" class="btn btn-default btn-sm" uib-tooltip="{{'admin-project.duplicate_project_info'|translate}}" tooltip-placement="left"
+								ng-click="$ctrl.confirmDuplicate(project.name, project)"><span class="glyphicon glyphicon-new-window"></span>
+						</button>
+						<button ng-disabled="project.status==='in-progress'" type="button" class="btn btn-danger btn-sm" uib-tooltip="{{'admin-project.delete_project'|translate}}" tooltip-placement="left"
+						        ng-click="$ctrl.confirmDelete(project.name, project)"><span class="glyphicon glyphicon-remove"></span>
+						</button>
+					</div>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<!--TODO: pagination-->
+	</div>
+</div>

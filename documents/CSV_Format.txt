@@ -1,0 +1,24 @@
+HEXAGONS
+
+hex_id,lat,lng,pops,size,parent,rb,flag
+
+hex_id -> locations.identifier (example "867a6a8afffffff") //Cannot be empty 
+lat -> locations.lat                //Cannot be empty 
+lng -> locations.long               //Cannot be empty 
+pops -> locations.population        //Cannot be empty, but could be 0 
+size -> locations.type              //Cannot be empty
+        h6 ->  'hexagon_6'
+        h7 ->  'hexagon_7'
+        h8 ->  'hexagon_8'
+        h9 ->  'hexagon_9'
+parent -> locations.parent_id       //Can be empty 
+rb -> locations.rb                  //Can be empty  
+flag -> locations.flag              //Can be empty  
+       so -> 'so'         //Coordinates of social object
+       cn -> 'cn'         //Connected node 
+       
+       
+       
+
+
+       

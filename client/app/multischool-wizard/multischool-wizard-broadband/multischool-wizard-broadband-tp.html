@@ -1,0 +1,211 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'mbroadband4'" progressbar="$ctrl.model.progress"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+				<table class="table traffic-profiles">
+					<tr>
+						<th colspan="2"></th>
+						<th colspan="3" class="align-middle text-center bg-dark" translate>broadband-traffic.sci</th>
+					</tr>
+					<tr class="align-middle text-center">
+						<td colspan="2"></td>
+						<td translate>
+							broadband-traffic.low
+						</td>
+						<td translate>
+							broadband-traffic.medium
+						</td>
+						<td translate>
+							broadband-traffic.high
+						</td>
+					</tr>
+					<tr class="align-middle text-center">
+						<td rowspan="3" class="rotated-parent">
+							<div class="rotated rotated-up" style="text-align: right"><strong translate>broadband-traffic.qos</strong></div>
+						</td>
+						<td class="verticaltext" translate>broadband-traffic.high</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(7)"  ng-class="{'active':$ctrl.model.tp_id===7}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[7][0]}}
+							</button>
+						</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(8)" ng-class="{'active':$ctrl.model.tp_id===8}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[8][0]}}
+							</button>
+						</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(9)" ng-class="{'active':$ctrl.model.tp_id===9}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[9][0]}}
+							</button>
+						</td>
+					</tr>
+					<tr class="align-middle text-center">
+						<td class="verticaltext" translate>broadband-traffic.medium</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(4)" ng-class="{'active':$ctrl.model.tp_id===4}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[4][0]}}
+							</button>
+						</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(5)" ng-class="{'active':$ctrl.model.tp_id===5}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[5][0]}}
+							</button>
+						</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(6)" ng-class="{'active':$ctrl.model.tp_id===6}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[6][0]}}
+							</button>
+						</td>
+					</tr>
+					<tr class="align-middle text-center">
+						<td class="verticaltext" translate>broadband-traffic.low</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(1)" ng-class="{'active':$ctrl.model.tp_id===1}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[1][0]}}
+							</button>
+						</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(2)" ng-class="{'active':$ctrl.model.tp_id===2}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[2][0]}}
+							</button>
+						</td>
+						<td>
+							<button ng-click="$ctrl.switchDefaultProfile(3)" ng-class="{'active':$ctrl.model.tp_id===3}" class="btn btn-default btn-lg btn-block">
+								{{$ctrl.profiles[3][0]}}
+							</button>
+						</td>
+					</tr>
+					<tr class="align-middle text-center">
+						<td colspan="2"></td>
+						<td colspan="3">
+							<button ng-click="$ctrl.showCustomProfiles()" ng-class="{active:show_custom}" class="btn btn-default btn-lg btn-block" translate="tp.userdefined"></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-sm-3">
+				<div ng-if="!show_custom" class="panel">
+					<div class="panel-body">
+						<div ng-if="$ctrl.model.tp_id === 7">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.advancedminus</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[7][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 8">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.advanced</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[8][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 9">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.advancedplus</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[9][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 4">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.intermediateminus</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[4][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 5">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.intermediate</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[5][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 6">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.intermediateplus</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[6][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 1">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.basicminus</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[1][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 2">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.basic</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[2][1]}}
+							</p>
+						</div>
+						<div ng-if="$ctrl.model.tp_id === 3">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6"><strong translate>broadband-traffic.basicplus</strong></div>
+								<!--								<div class="col-xs-6 col-sm-6"><a translate>broadband-traffic.preview</a></div>-->
+							</div>
+							<p>
+								{{$ctrl.profiles[3][1]}}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div ng-if="show_custom">
+					<strong translate="tp.userdefined"></strong>
+					<div class="panel padding-sm">
+						<div ng-repeat="profile in $ctrl.custom_profiles">
+							<button ng-click="$ctrl.switchCustomProfile(profile.id)" ng-class="{'active':$ctrl.model.tp_id===profile.id}" class="btn btn-default btn-lg btn-block">
+								{{profile.name}}
+							</button>
+						</div>
+					</div>
+					<div class="center">
+						<button class="btn btn-info btn-xs" ng-if="$ctrl.model.tp_id>10" ng-click="$ctrl.editCustomProfile($ctrl.model.tp_id)"><span class="glyphicon glyphicon-edit"></span>{{'tp.edit'|translate}}</button>
+						<button class="btn btn-danger btn-xs" ng-if="$ctrl.model.tp_id>10" ng-click="$ctrl.confirmCustomProfileDelete($ctrl.model.tp_name, $ctrl.model.tp_id)"><span class="glyphicon glyphicon-remove"></span>{{'tp.delete'|translate}}</button>
+					</div>
+					<div class="center padding-sm">
+						<button class="btn btn-success" ng-click="$ctrl.state.go('traffic-profile-form')" translate="tp.addprofile"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<bottom-buttons btn-left="$ctrl.back()" btn-right="$ctrl.continue()"></bottom-buttons>
+		</div>
+	</div>
+</div>

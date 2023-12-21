@@ -1,0 +1,386 @@
+<div class="page-header">
+	<h3 translate>admin-project.projectname</h3>
+	<h2><strong>{{$ctrl.project.name}}</strong></h2>
+</div>
+<div class="row admin-designers">
+	<div class="col-md-6">
+		<!--START: CALCULATIONS-->
+		<div class="panel panel-default">
+			<div class="panel-heading" translate>admin-project.calculations</div>
+			<div class="panel-footer text-left">
+				<admin-project-status showtext="true" status="$ctrl.project.status"
+									  progress="$ctrl.project.progress"></admin-project-status>
+			</div>
+			<div class="panel-footer text-left panel-danger text-danger" ng-if="$ctrl.project.status == 'partially-calculated' && $ctrl.status_data">
+				{{$ctrl.status_data.log}}
+			</div>
+			<div class="panel-body">
+				<div role="group">
+					<button ng-if="((!isSysadmin && $ctrl.project.status == 'not-calculated')
+										|| (isSysadmin && $ctrl.project.status == 'data-ready')) && $ctrl.validation_data.can_calculate"
+							type="button" class="btn btn-info btn-lg"
+							uib-tooltip="{{'admin-project.calculate_project'|translate}}" tooltip-placement="bottom"
+							ng-click="$ctrl.calculate($ctrl.project)"><span class="glyphicon glyphicon-play"></span>
+					</button>
+					<button ng-if="($ctrl.project.status == 'calculated' || $ctrl.project.status == 'partially-calculated') && $ctrl.validation_data.can_calculate"
+							type="button" class="btn btn-warning btn-lg"
+							uib-tooltip="{{'admin-project.recalculate_project'|translate}}" tooltip-placement="bottom"
+							ng-click="$ctrl.calculate($ctrl.project)"><span class="glyphicon glyphicon-refresh"></span>
+					</button>
+					<button ng-if="($ctrl.project.status == 'waiting' || (!isSysadmin && $ctrl.project.status == 'data-ready')) && $ctrl.validation_data.can_calculate"
+							type="button" class="btn btn-warning btn-lg"
+							uib-tooltip="{{'admin-project.stop_project'|translate}}"
+							tooltip-placement="bottom"
+							ng-click="$ctrl.stop($ctrl.project)"><span style="color: red"
+																			class="glyphicon glyphicon-stop"></span>
+					</button>
+					<a ng-disabled="$ctrl.project.status!='calculated' && $ctrl.project.status!='partially-calculated'"
+					   ng-show="isSchoolsMode"
+					   tooltip-placement="bottom"
+					   type="button" class="btn btn-default btn-lg"
+					   uib-tooltip="{{'admin-project.download_simple_report'|translate}}"
+					   target="_blank" href="/api/results/project/{{$ctrl.project.id}}/xlsx"><span
+							class="glyphicon glyphicon-file"></span>
+					</a>
+					<a ng-disabled="$ctrl.project.status!='calculated' && $ctrl.project.status!='partially-calculated'"
+					   tooltip-placement="bottom"
+					   ng-show="isSchoolsMode"
+					   type="button" class="btn btn-default btn-lg"
+					   uib-tooltip="{{'admin-project.download_smart_report'|translate}}"
+					   target="_blank" href="/api/results/project/{{$ctrl.project.id}}/smart_xlsx"><span
+							class="glyphicon glyphicon-file"></span>
+					</a>
+					<a ng-disabled="$ctrl.project.status!='calculated' && $ctrl.project.status!='partially-calculated'"
+					   tooltip-placement="bottom"
+					   type="button" class="btn btn-default btn-lg"
+					   uib-tooltip="{{'admin-project.download_log'|translate}}"
+					   target="_blank" href="/api/results/project/{{$ctrl.project.id}}/log"><span
+							class="glyphicon glyphicon-list"></span>
+					</a>
+					<a ng-disabled="$ctrl.project.status!='calculated' && $ctrl.project.status!='partially-calculated'"
+					   tooltip-placement="bottom"
+					   type="button" class="btn btn-default btn-lg"
+					   uib-tooltip="{{'admin-project.download_geojson'|translate}}"
+					   target="_blank" href="/api/results/project/{{$ctrl.project.id}}/geojson"><span
+							class="glyphicon glyphicon-map-marker"></span>
+					</a>
+					<button ng-if="($ctrl.project.status == 'not-calculated' || $ctrl.project.status == 'calculated' || $ctrl.project.status == 'partially-calculated') && $ctrl.settings.is_net_in_output && $ctrl.validation_data.can_calculate"
+							type="button" class="btn btn-warning btn-lg"
+							uib-tooltip="{{'admin-project.calculate_topology'|translate}}" tooltip-placement="bottom"
+							ng-click="$ctrl.calculateTopology($ctrl.project)"><span class="glyphicon glyphicon-map-marker"></span>
+					</button>
+					<button ng-disabled="$ctrl.project.status==='in-progress'"  ng-if="(!isSchoolsMode && !isSysadmin) || !isCountriesMode" type="button"
+							class="btn btn-danger btn-lg" uib-tooltip="{{'admin-project.delete_project'|translate}}"
+							tooltip-placement="bottom"
+							ng-click="$ctrl.confirmDelete($ctrl.project.name, $ctrl.project)"><span
+							class="glyphicon glyphicon-remove"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!--END: CALCULATIONS-->
+		<project-review project="$ctrl.project" settings="$ctrl.settings" countries="$ctrl.countries"></project-review>
+	</div>
+	<div class="col-md-6">
+		<!-- START: INPUT VALIDATION -->
+		<div class="panel" ng-if="$ctrl.validation_data.is_proper_template===true"
+			 ng-class="{'panel-success':$ctrl.validation_data.objects_validity_percent===100,'panel-warning':$ctrl.validation_data.objects_validity_percent>90&&$ctrl.validation_data.objects_validity_percent<100,'panel-danger':$ctrl.validation_data.objects_validity_percent<=90}"
+			 ng-if="$ctrl.validation_data !== false">
+			<div class="panel-heading" translate>admin-project.validation_results</div>
+			<div class="panel-body" ng-if="$ctrl.validation_data.objects_validity_percent===100" translate>
+				admin-project.no_invalid_objects
+			</div>
+			<div class="panel-body"
+				 ng-if="$ctrl.validation_data.objects_validity_percent>90 && $ctrl.validation_data.objects_validity_percent<100"
+				 translate>admin-project.some_invalid_objects
+			</div>
+			<div class="panel-body">
+				<p ng-if="!isSchoolsMode"><span translate>admin-results-overview.data_type</span>: {{$ctrl.validation_data.data_type}}</p>
+				<p><span translate>admin-results-overview.total_objects</span>: {{$ctrl.validation_data.total_objects}}</p>
+			</div>
+			<div class="panel-body" ng-if="$ctrl.validation_data.objects_validity_percent<=90">
+				<p>{{'admin-project.many_invalid_objects' | translate}}</p>
+				<p>{{'admin-project.first_10_broken_objects' | translate}}:
+				<ul>
+					<li ng-if="$ctrl.validation_data.objects_validity_percent<=90" ng-repeat="obj in $ctrl.validation_data.invalid_objects.slice(0, 10)">{{obj[1]}} (#{{obj[0]}})
+					</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+		<div class="panel panel-danger" ng-if="$ctrl.validation_data.is_proper_template === false">
+			<div class="panel-heading" translate>admin-project.validation_results</div>
+			<div class="panel-body" translate>admin-project.many_invalid_objects</div>
+		</div>
+		<!-- END: INPUT VALIDATION -->
+
+		<!--START: DATA ENTRY TEMPLATE-->
+		<div class="panel panel-default">
+			<div class="panel-heading" translate>admin-project.dataentrytemplate</div>
+			<!-- START: FILE UPLOAD -->
+			<div class="panel-body">
+				<div ng-if="$ctrl.project.templatedata_uploaded===1" class="form-group">
+					<p>Latest upload: {{$ctrl.project.templatedata_upload_time}}</p>
+					<p ng-if="!$ctrl.validation_data.is_proper_template"><strong translate>admin-project.invalid_file_uploaded</strong>
+					</p>
+					<a ng-if="isSchoolsMode" class="btn-link" target="_blank" href="/api/projects/templatedata/{{$ctrl.project.id}}"
+					   translate>admin-project.download_data_entry_template</a>
+					<a ng-if="!isSchoolsMode" class="btn-link" target="_blank" href="/api/projects/locationsdata/{{$ctrl.project.id}}"
+					   translate>admin-project.download_data_entry_template</a>
+				</div>
+				<div class="form-group">
+					<button type="file" ngf-select="$ctrl.uploadInputFile($file, $invalidFiles)"
+							ngf-max-height="1000" ngf-max-size="100MB">
+						Upload New File
+					</button>
+
+					<div>{{$ctrl.file.name}} {{$ctrl.errFile.name}} {{$ctrl.errFile.$error}} {{$ctrl.errFile.$errorParam}}
+						<span class="progress" ng-show="$ctrl.file.progress >= 0">
+								  <div class="progress-bar" style="width:{{$ctrl.file.progress}}%"
+									   ng-bind="$ctrl.file.progress + '%'"></div>
+							  </span>
+					</div>
+
+					<p class="help-block padding-sm" ng-if="!$ctrl.model.input_file">
+						{{'admin-project.supportedformats'|translate}} <span ng-if="isSchoolsMode">XLSX, </span><span>CSV</span></p>
+					<p class="help-block padding-sm alert-danger"
+					   ng-if="$ctrl.model.input_file && !$ctrl.model.input_file.isValid">
+						{{'admin-project.supportedformats'|translate}} <span ng-if="isSchoolsMode">XLSX, </span><span>CSV</span></p>
+					<p class="help block padding-sm alert-success"
+					   ng-if="$ctrl.model.input_file && $ctrl.model.input_file.isUploaded" translate>
+						admin-project.inputfileuploaded</p>
+				</div>
+				<input-templates type="'simple'" template="$ctrl.input_template"
+								 project="$ctrl.project"></input-templates>
+			</div>
+			<!-- END: FILE UPLOAD -->
+		</div>
+		<!--END: DATA ENTRY TEMPLATE-->
+
+	</div>
+
+	<!--START: PROJECT RESULTS OVERVIEW -->
+	<div class="col-md-12" ng-if="$ctrl.project.status == 'calculated' || $ctrl.project.status == 'partially-calculated'">
+		<uib-tabset >
+			<uib-tab active="active" ng-if="$ctrl.results_summary" index="0" heading="{{'admin-results-overview.overview'|translate}}">
+				<div class="panel panel-default summary-tab">
+					<!-- Table -->
+					<div class="panel-body">
+						<div class="overview-vars">
+
+							<table class="table">
+								<tr>
+									<th translate>admin-results-overview.parameter</th>
+									<th translate>admin-results-overview.value</th>
+									<th translate>admin-results-overview.units</th>
+								</tr>
+								<tr ng-repeat="(index,row) in $ctrl.results_summary.table">
+									<td>{{'admin-results-overview.' + row.name | translate}}</td>
+									<td>{{row.value}}</td>
+									<td>{{'admin-results-overview.' + row.units | translate}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<!-- Diagrams -->
+					<div ng-if="$ctrl.results_summary.diagram.nodiagrams!==true" class="panel-body">
+						<div class="overview-diags">
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_costofownership5">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_costofownership5"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_costofownership10">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_costofownership10"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_costofownership15">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_costofownership15"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_costofownership20">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_costofownership20"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_npv5">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_npv5" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_npv10">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_npv10" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_npv15">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_npv15" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.count_npv20">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.count_npv20" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.money_capex5">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.money_capex5" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.money_capex20">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.money_capex20" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.money_opex5">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.money_opex5" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.money_opex20">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.money_opex20" zc-width="500px"
+											   zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.money_costofown5">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.money_costofown5"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.money_costofown20">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.money_costofown20"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.income_costofown5">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.income_costofown5"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+								<div class="col-md-6" ng-if="$ctrl.results_diagrams.income_costofown20">
+									<zingchart zc-type="pie" zc-json="$ctrl.results_diagrams.income_costofown20"
+											   zc-width="500px" zc-height="500px"></zingchart>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</uib-tab>
+			<uib-tab select="refreshTopology()" ng-if="show_topology" index="1" heading="{{'admin-results-overview.topology_overview'|translate}}">
+				<div class="panel panel-default summary-tab">
+					<div class="panel-body">
+						<div class="overview-vars">
+							<table class="table">
+								<tr>
+									<th translate>admin-results-overview.parameter</th>
+									<th translate>admin-results-overview.value</th>
+									<th translate>admin-results-overview.units</th>
+								</tr>
+								<tr ng-repeat="(index,row) in $ctrl.topology_summary">
+									<td>{{'admin-topology-overview.' + row[0] | translate}}</td>
+									<td>{{row[1]}}</td>
+									<td>{{'admin-topology-overview.' + row[2] | translate}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<!-- START: TOPOLOGY -->
+					<a id="is_net_in_output_title"></a>
+							<div class="leaflet-bottom leaflet-left">
+								<div class="legend leaflet-control">
+									<div class="outline">
+										<i style="background:Tomato"></i></div>
+									<div class="info-label" translate>admin-project.bw_tech_rts</div>
+									<div class="outline"><i style="background:DodgerBlue"></i></div>
+									<div class="info-label" translate>admin-project.bw_tech_focl</div>
+									<div class="outline"><i style="background:MediumSeaGreen"></i></div>
+									<div class="info-label" translate>admin-project.bw_tech_cellular</div>
+									<div class="outline"><i style="background:Orange"></i></div>
+									<div class="info-label" translate>admin-project.bw_tech_satellite</div>
+								</div>
+							</div>
+							<div class="panel-body help-block" translate>admin-project.topology_info</div>
+								<div>
+									<leaflet id="topology" controls="$ctrl.topology_controls" event-broadcast="$ctrl.topology_events"
+											 bounds="$ctrl.topology_maxbounds" paths="$ctrl.topology_paths"
+											 markers="$ctrl.topology_markers" defaults="$ctrl.topology_defaults" height="700"
+											 watch-options="$ctrl.topology_watch_options"></leaflet>
+								</div>
+					<!-- END: TOPOLOGY -->
+				</div>
+			</uib-tab>
+
+		</uib-tabset>
+	</div>
+	<!--END: PROJECT RESULTS OVERVIEW -->
+
+	<!--START: VARS ENTRY -->
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading" translate>admin-project.projectvariables</div>
+			<!-- START: FILE UPLOAD -->
+			<div class="panel-body">
+				<div class="form-group">
+					<a class="btn btn-info" target="_blank" href="/api/variables/project/{{$ctrl.project.id}}/xlsx"
+					   translate>admin-project.download_projectvariables</a>
+					<button type="button" class="btn btn-warning"
+							ng-click="$ctrl.confirmRestoreDefaultVariables($ctrl.project.name, $ctrl.project)"><span
+							class="glyphicon glyphicon-refresh"></span> <span translate="admin-project.reset_projectvariables"></span>
+					</button>
+				</div>
+				<div class="form-group">
+					<button type="file" ngf-select="$ctrl.uploadVarsFile($file, $invalidFiles)"
+							ngf-max-height="1000" ngf-max-size="1MB">
+						Upload New File
+					</button>
+
+					<div>{{$ctrl.vars_file.name}} {{$ctrl.vars_errFile.name}} {{$ctrl.vars_errFile.$error}}
+						{{$ctrl.vars_errFile.$errorParam}}
+						<span class="progress" ng-show="$ctrl.vars_file.progress >= 0">
+								  <div class="progress-bar" style="width:{{$ctrl.vars_file.progress}}%"
+									   ng-bind="$ctrl.vars_file.progress + '%'"></div>
+							  </span>
+					</div>
+
+					<p class="help-block padding-sm" ng-if="!$ctrl.model.input_file">
+						{{'admin-project.supportedformats'|translate}} XLSX</p>
+					<p class="help-block padding-sm alert-danger"
+					   ng-if="$ctrl.model.input_file && !$ctrl.model.input_file.isValid">
+						{{'admin-project.supportedformats'|translate}} XLSX, CSV</p>
+					<p class="help block padding-sm alert-success"
+					   ng-if="$ctrl.model.input_file && $ctrl.model.input_file.isUploaded" translate>
+						admin-project.inputfileuploaded</p>
+				</div>
+			</div>
+			<!-- END: FILE UPLOAD -->
+			<!-- START: VARS PREVIEW -->
+			<div class="form-group padding-sm">
+				<div class="vars-table">
+					<table ng-repeat="(class,techs) in $ctrl.variables"
+						   class="table table-responsive table-condensed table-bordered table-hover">
+						<thead>
+						<tr class="info h4">
+							<td colspan="3">{{class}}</td>
+						</tr>
+						</thead>
+						<tbody ng-repeat="(tech, vars) in techs">
+						<tr class="active">
+							<td colspan="3">{{'admin-project-vars.tech_' + tech | translate}}</td>
+						</tr>
+						<tr ng-repeat="(key, var) in vars" ng-class="{'success':var.is_custom}">
+							<td>{{var.value}}</td>
+							<td>{{var.unit}}</td>
+							<td>{{var.description}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- END: VARS PREVIEW -->
+		</div>
+	</div>
+	<!--END: VARS ENTRY -->
+</div>

@@ -1,0 +1,49 @@
+<div class="body-content">
+	<div class="col-sm-12 col-xs-12">
+		<wizard-header step="'broadband1'"></wizard-header>
+		<!-- alert messages -->
+		<div>
+			<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+				<span class="{{alert.icone}}"></span>
+				{{alert.msg}}
+			</uib-alert>
+		</div>
+
+		<form class="form-horizontal form-container-initial"
+			  name="schoolWizardBroadbandForm1" ng-submit="$ctrl.submit()" novalidate>
+			<div class="form-group">
+				<div class="col-sm-8 col-xs-8 col-sm-offset-1">
+					<button class="btn btn-primary btn-lg btn-block" ng-click="$ctrl.calculate()"
+							ng-disabled="schoolWizardStep1Form1.$invalid || loading" translate>
+						buttons.calculate
+					</button>
+				</div>
+				<div class="col-xs-2 col-sm-2">
+					<button class="btn btn-primary btn-lg btn-block" ng-click="$ctrl.modalTest()">
+						<span class="glyphicon glyphicon glyphicon-info-sign"></span>
+					</button>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<img ng-src="/assets/images/n1.jpg" width="300px" alt=""
+							 class="img-responsive center-block"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-8 col-lg-offset-2">
+					<button type="submit" class="btn btn-primary btn-lg btn-block"
+							ng-disabled="schoolWizardStep1Form1.$invalid || loading" translate>
+						buttons.skip-broadband
+					</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<bottom-buttons btn-right="$ctrl.continue()" btn-left="$ctrl.back()"></bottom-buttons>
+			</div>
+		</form>
+	</div>
+</div>
