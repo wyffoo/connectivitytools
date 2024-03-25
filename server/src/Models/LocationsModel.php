@@ -184,26 +184,32 @@ class LocationsModel {
 	public function importLocations($filename, $country_id, $type) {
 		try {
 			$country_id = (int)$country_id;
-			$type = in_array($type,['city','social_point','hexagon_6','hexagon_7','hexagon_8','hexagon_9']) ? $type : 'city';
-			$this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES,true);
+			$type = in_array($type, ['city', 'social_point', 'hexagon_6', 'hexagon_7', 'hexagon_8', 'hexagon_9']) ? $type : 'city';
+			$this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
 			$this->db->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
-			$query = $this->db->prepare("SET GLOBAL local_infile=1");
-
+	
+			if ($type === 'city') {
+				// The fields for 'city' type
+				$fields = '`identifier`, `name`, `alt_name`, `lat`, `long`, `admin_name`, `admin_code`, `population`, `flag`, `area`';
 			} elseif ($type == 'social_point') {
-				$fields = '`identifier`,`name`,`alt_name`,`lat`,`long`,`admin_name`,`admin_code`,`population`,`flag`,`area`';
+				// The fields for 'social_point' type
+				$fields = '`identifier`, `name`, `alt_name`, `lat`, `long`, `admin_name`, `admin_code`, `population`, `flag`, `area`';
 			} else {
-				$fields = '`identifier`,`lat`,`long`,`population`,`area`,`parent_identifier`,`rb`,`flag`';
+				// The fields for other types
+				$fields = '`identifier`, `lat`, `long`, `population`, `area`, `parent_identifier`, `rb`, `flag`';
 			}
+	
 			$query = $this->db->prepare("LOAD DATA LOW_PRIORITY LOCAL INFILE '{$filename}'
 					INTO TABLE locations
 					CHARACTER SET utf8
 					FIELDS TERMINATED BY ';' OPTIONALLY ENCLOSED BY '\"' ESCAPED BY '\"'
-					IGNORE 1 LINES ({$fields}) SET `type`='{$type}',`country_id`='{$country_id}'");
+					IGNORE 1 LINES ({$fields}) SET `type`='{$type}', `country_id`='{$country_id}'");
 			$query->execute();
 		} catch (\Exception $e) {
 			throw new \Exception('Database error: ' . $e->getMessage());
 		}
 	}
+	
 
 
 }

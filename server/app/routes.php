@@ -22,6 +22,7 @@ return function (App $app) {
 	$app->post('/api/auth/local', UserController::class . ':signInAPI');
 
 	$app->group('/api/users', function (Group $group) {
+		#$group->post('/forgetpassword', UserController::class . ':forgetPasswordAPI');
 		$group->get('', UserController::class . ':getAllUsersAPI');
 		$group->get('/me', UserController::class . ':authenticatedAPI');
 		$group->post('/setLanguage', UserController::class . ':setLanguage');

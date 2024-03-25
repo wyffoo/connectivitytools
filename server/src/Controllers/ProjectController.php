@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Models\CalculationsModel;
 use App\Models\LocationsModel;
 use App\Models\OutputTemplates\GlobalOutputTemplate;
@@ -378,12 +377,18 @@ class ProjectController extends Controller
 			$sanitizer  = new Sanitizer($data, $filters);
 			$data = $sanitizer->sanitize();
 
-			if (isset($data['isCountriesMode'])  && $data['isCountriesMode'] === true) {
+			#if (isset($data['isCountriesMode'])  && $data['isCountriesMode'] === true) {
+			#	$app_mode = 'countries';
+			#} else if (isset($data['isSchoolsMode'])  && $data['isSchoolsMode'] === true) {
+			#	$app_mode = 'schools';
+			#} else {
+			#	$app_mode = 'global';
+			#}
+			$app_mode = 'global'; // Default value
+			if (strpos($_SERVER['HTTP_HOST'], 'countries') !== false) {
 				$app_mode = 'countries';
-			} else if (isset($data['isSchoolsMode'])  && $data['isSchoolsMode'] === true) {
+			} elseif (strpos($_SERVER['HTTP_HOST'], 'schools') !== false) {
 				$app_mode = 'schools';
-			} else {
-				$app_mode = 'global';
 			}
 			$project = array(
 				'name' => substr(remove_emoji($data['name']),0,240),

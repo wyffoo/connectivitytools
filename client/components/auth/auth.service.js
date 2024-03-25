@@ -44,6 +44,18 @@
 						return $q.reject(err.data);
 					});
 			},
+			
+			forgetPassword(email, callback) {
+                return $http.post('/api/users/forgetpassword', { email: email })
+                    .then(res => {
+                        safeCb(callback)(null, res.data);
+                        return res.data;
+                    })
+                    .catch(err => {
+                        safeCb(callback)(err.data);
+                        return $q.reject(err.data);
+                    });
+            },
 
 			/**
 			 * Delete access token and user info

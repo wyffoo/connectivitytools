@@ -37,6 +37,7 @@ RUN R -e "install.packages('leafpop', repos='http://cran.rstudio.com/')"
 
 RUN echo 'memory_limit = 4G' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
 RUN echo 'max_execution_time = 0' >> /usr/local/etc/php/conf.d/docker-php-maxexectime.ini;
+#RUN npm install -g gulp-cli
 
 #Prepare application
 COPY . /opt/calculations

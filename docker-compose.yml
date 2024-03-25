@@ -1,18 +1,68 @@
 version: '2'
 
 services:
-  api-frontend:
+  mysql:
+    image: mysql:5.7.42
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: giga
+      MYSQL_USER: giga
+      MYSQL_PASSWORD: LbceQM0NE6ZuhW57MExFl6N6b32BCvbG
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+  nginx:
+    build:
+      context: ./dist
+      dockerfile: Dockerfile 
+    depends_on:
+      - api-frontend2
+    ports:
+      - "8000:8000"  
+    networks:
+      - app-network
+
+  api-frontend2:
     build:
       context: ./server/
-      dockerfile: docker/frontend/Dockerfile
+      dockerfile: Dockerfile.web
+   # image: api-frontend2
     ports:
-      - 8080:80
+      - "8080:80"
     depends_on:
       - api-backend
-
+    networks:
+      - app-network
 
   api-backend:
     build:
       context: ./server/
-      dockerfile: docker/backend/Dockerfile
+      dockerfile: Dockerfile.calc
+    depends_on:
+      - rabbitmq
+    networks:
+      - app-network
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq_data:/var/lib/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql-data:

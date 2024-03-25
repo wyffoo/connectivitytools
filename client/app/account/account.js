@@ -21,6 +21,12 @@ angular.module('gigaApp')
 					$state.go(referrer);
 				}
 			})
+			.state('forgetpassword', {
+				url: '/forgetpassword',
+				templateUrl: 'app/account/forgetpassword/forgetpassword.html',
+				controller: 'ForgetPasswordController',
+				controllerAs: 'vm'
+			})		
 			.state('signup', {
 				url: '/signup/:role',
 				templateUrl: 'app/account/signup/signup.html',

@@ -23,6 +23,7 @@
   },
   "signup": {
     "regisration": "Registration",
+    "forgetpassword":"Forget Password",
 	"code": "Sign-Up Code",
 	"requestcode": "Request code",
     "name": "Name",

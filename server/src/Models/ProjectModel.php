@@ -613,7 +613,7 @@ class ProjectModel {
 			if ($userId === '*') {
 				$getData = $this->db->prepare("SELECT p.id,p.name,p.country_id,p.description,p.status,p.created,p.updated,p.settings,p.progress,concat(u.firstname,' ',u.lastname) as owner
 					FROM projects p JOIN users u on (p.user_id=u.id)
-					WHERE p.mode=:mode");
+					WHERE p.mode = :mode");
 			} else {
 				$getData = $this->db->prepare("SELECT p.id,p.name,p.country_id,p.description,p.status,p.created,p.updated,p.settings,p.progress,concat(u.firstname,' ',u.lastname) as owner
 					FROM projects p JOIN users u on (p.user_id=u.id)

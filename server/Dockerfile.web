@@ -17,4 +17,3 @@ RUN echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/www.conf;
 
 RUN rm -rf /var/www/html/logs/* \
     && chown -R www-data:www-data /var/www/html
-

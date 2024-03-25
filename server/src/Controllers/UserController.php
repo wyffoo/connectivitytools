@@ -8,7 +8,8 @@ use App\Models\UsersModel;
 use PDO;
 use Psr\Http\Message\ResponseInterface as Response;
 use ReCaptcha\ReCaptcha;
-
+use Aws\Lambda\LambdaClient;
+use Exception;
 class UserController extends Controller {
 
 	/**
@@ -31,14 +32,30 @@ class UserController extends Controller {
 		if (empty($data['email'])) {
 			return $this->response->withStatus(400);
 		}
-
-		// email is already registered
-		if ($this->validateUserAlreadyRegistered($data['email'])) {
-			return $this->respondWithData(['status' => 'taken']);
+	
+		// Determine app_mode from request or domain
+		$app_mode = 'global'; // Default value
+		if (isset($data['app_mode'])) {
+			$app_mode = $data['app_mode'];
+		} else {
+			if (strpos($_SERVER['HTTP_HOST'], 'countries') !== false) {
+				$app_mode = 'countries';
+			} elseif (strpos($_SERVER['HTTP_HOST'], 'schools') !== false) {
+				$app_mode = 'schools';
+			}
+			// Add more conditions as needed
 		}
-
+	
+		$users = $this->getUserByEmail($data['email']);
+		foreach ($users as $user) {
+			if ($user['app_mode'] === $app_mode) {
+				return $this->respondWithData(['status' => 'taken']);
+			}
+		}
+	
 		return $this->respondWithData(['status' => 'available']);
 	}
+	
 
 	/**
 	 * @return Response
@@ -107,7 +124,7 @@ class UserController extends Controller {
 		session_destroy();
 		return $this->respondWithData(['data' => "success"]);
 	}
-
+	
 	/**
 	 * @return Response
 	 */
@@ -145,55 +162,72 @@ class UserController extends Controller {
 	 * @return Response
 	 */
 	public function action_passwordResetAPI() {
+		session_start();
 		$data = $this->request->getParsedBody();
-		if (empty($data['email'])) {
-			return $this->response->withStatus(400, "Wrong parameters");
+	
+		$action = $data['action'] ?? '';
+	
+		switch ($action) {
+			case 'sendCode':
+				return $this->sendVerificationCode($data);
+			case 'verifyCode':
+				return $this->verifyCodeAndUpdatePassword($data);
+			default:
+				return $this->response->withStatus(400, "Invalid action");
 		}
-
-		if ($this->validateUserAlreadyRegistered($data['email']) === false) {
-			throw new \Exception("Sorry, this email is not registered.", 500);
-		}
-
-		// Generate new password
-		$newpass = $this->generateRandomPassword(16);
-
-		// Update password in db
-		if($this->updatePassword($data['email'], $newpass) === true) {
-			return $this->respondWithData(['status' => 'success']);
-		}
-
-		// send password to e-mail
-		try {
-
-			$mail = new PHPMailer;
-
-			$settings = $this->container->get('settings')['mail'];
-
-			$mail->setFrom($settings['mailFrom'], $settings['nameFrom']);
-	        $mail->addAddress($data['email']);
-	        $mail->addReplyTo($settings['mailReplyTo'], $settings['nameReplyTo']);
-
-	        $mail->isHTML(true);     // Set email format to HTML
-
-	        $mail->Subject = 'Password reset for your account';
-	        $mail->Body    = "
-		        <p>Hi,</p>
-		        <p>
-		        Your new password: ".$newpass."</p>";
-
-		    $mail->send();
-
-		} catch (phpmailerException $e) {
-
-  			throw new \Exception('Mailer Error: '.$e->errorMessage(), 500);
-
-		} catch (\Exception $e) {
-
-  			throw new \Exception($e->getMessage(), 500);
-		}
-
-		return $this->respondWithData(['status' => "success"]);
 	}
+	
+	private function sendVerificationCode($data) {
+		if (empty($data['email'])) {
+			return $this->response->withStatus(400, "Email is required");
+		}
+	
+		if (!$this->validateUserAlreadyRegistered($data['email'])) {
+			return $this->response->withStatus(400, "Email is not registered");
+		}
+	
+		$verificationCode = rand(100000, 999999);
+		$_SESSION['verificationCode'] = $verificationCode;
+		$_SESSION['emailForVerification'] = $data['email'];
+	
+		// Sending the verification code via an AWS Lambda function
+		$ch = curl_init('https://r6vdavnnld.execute-api.eu-central-1.amazonaws.com/beta2');
+		$payload = json_encode([
+			'email' => $data['email'],
+			'verificationcode' => $verificationCode,
+		]);
+	
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, [
+			'Content-Type: application/json',
+			'Content-Length: ' . strlen($payload)
+		]);
+	
+		$result = curl_exec($ch);
+		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close($ch);
+	
+		if ($httpCode == 200) {
+			return $this->respondWithData(['message' => 'Verification code sent. Please check your email.']);
+		} else {
+			return $this->response->withStatus(500, "Failed to send verification code");
+		}
+	}
+	
+	private function verifyCodeAndUpdatePassword($data) {
+		if ($_SESSION['verificationCode'] == $data['code'] && $_SESSION['emailForVerification'] == $data['email']) {
+			if ($this->updatePassword($data['email'], $data['newPassword'])) {
+				return $this->respondWithData(['message' => 'Password has been reset successfully.']);
+			} else {
+				return $this->response->withStatus(500, "Failed to reset password");
+			}
+		} else {
+			return $this->response->withStatus(400, "Invalid verification code");
+		}
+	}
+	
 
 	public function action_passwordUpdateAPI() {
 		$user = $this->authorize();
@@ -406,29 +440,59 @@ class UserController extends Controller {
 		return true;
 	}
 
+	private function getUserByEmail($email) {
+		try {
+			$getUserData = $this->db->prepare("SELECT * FROM users WHERE email=:email");
+			$getUserData->bindParam(':email', $email, PDO::PARAM_STR);
+			$getUserData->execute();
+	
+			$resultData = $getUserData->fetchAll(PDO::FETCH_ASSOC);
+	
+			return $resultData; 
+		} catch (Exception $e) {
+			throw new Exception($e->getMessage());
+		}
+	}
+	
+
 	/**
 	 * @param string $email
 	 * @return bool
 	 * @throws Exception
 	 */
 	private function validateUserAlreadyRegistered($email) {
-
-		try {
-			$getUserData = $this->db->prepare("SELECT email FROM users WHERE email=:email");
-			$getUserData->bindParam(':email', $email, PDO::PARAM_STR);
-			$getUserData->execute();
-
-			$resultData = $getUserData->fetch(PDO::FETCH_ASSOC);
-
-			if (empty($resultData)) {
-				return false;
+		$app_mode = 'global'; // Default value
+			if (strpos($_SERVER['HTTP_HOST'], 'countries') !== false) {
+				$app_mode = 'countries';
+			} elseif (strpos($_SERVER['HTTP_HOST'], 'schools') !== false) {
+				$app_mode = 'schools';
 			}
+			try {
+				// add a condition to check app_mode
+				$query = "SELECT email FROM users WHERE email = :email AND app_mode = :app_mode";
+				$getUserData = $this->db->prepare($query);
+				$getUserData->bindParam(':email', $email, PDO::PARAM_STR);
+				$getUserData->bindParam(':app_mode', $app_mode, PDO::PARAM_STR);
+				$getUserData->execute();
+		
+				$resultData = $getUserData->fetch(PDO::FETCH_ASSOC);
+		
+				return !empty($resultData); 
+			} catch (Exception $e) {
+				throw new Exception($e->getMessage());
+			}
+	}
 
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage());
+	private function updateUserPassword($email, $hashedPassword) {
+		try {
+			$query = "UPDATE users SET password = :password WHERE email = :email";
+			$stmt = $this->db->prepare($query);
+			$stmt->bindParam(':email', $email, PDO::PARAM_STR);
+			$stmt->bindParam(':password', $hashedPassword, PDO::PARAM_STR);
+			return $stmt->execute();
+		} catch (\PDOException $e) {
+			throw new Exception("Database error: " . $e->getMessage());
 		}
-
-		return true;
 	}
 
 	/**
@@ -533,20 +597,5 @@ class UserController extends Controller {
 			throw new Exception($e->getMessage());
 		}
 	}
-
-	/**
-	 * @param $length
-	 * @return string
-	 */
-	private function generateRandomPassword($length = 10) {
-    	$chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charsLength = strlen($chars);
-    	$pass = '';
-        for ($i = 0; $i < $length; $i++) {
-        	$pass .= $chars[rand(0, $charsLength - 1)];
-    	}
-    	return $pass;
-	}
-
 
 }
