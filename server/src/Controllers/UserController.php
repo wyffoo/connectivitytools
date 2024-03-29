@@ -179,11 +179,11 @@ class UserController extends Controller {
 	
 	private function sendVerificationCode($data) {
 		if (empty($data['email'])) {
-			return $this->response->withStatus(400, "Email is required");
+			return $this->respondWithData(['message' => 'Email is required'], 400);
 		}
 	
 		if (!$this->validateUserAlreadyRegistered($data['email'])) {
-			return $this->response->withStatus(400, "Email is not registered");
+	        return $this->respondWithData(['message' => 'Email is not registered'], 400);
 		}
 	
 		$verificationCode = rand(100000, 999999);
@@ -210,21 +210,21 @@ class UserController extends Controller {
 		curl_close($ch);
 	
 		if ($httpCode == 200) {
-			return $this->respondWithData(['message' => 'Verification code sent. Please check your email.']);
+			return $this->respondWithData(['message' => 'Verification code sent. Please check your email.'],200);
 		} else {
-			return $this->response->withStatus(500, "Failed to send verification code");
+            return $this->respondWithData(['message' =>  "Failed to send verification code."],500);
 		}
 	}
 	
 	private function verifyCodeAndUpdatePassword($data) {
 		if ($_SESSION['verificationCode'] == $data['code'] && $_SESSION['emailForVerification'] == $data['email']) {
 			if ($this->updatePassword($data['email'], $data['newPassword'])) {
-				return $this->respondWithData(['message' => 'Password has been reset successfully.']);
+				return $this->respondWithData(['message' => 'Password has been reset successfully.'],200);
 			} else {
-				return $this->response->withStatus(500, "Failed to reset password");
+				return $this->respondWithData(['message' => 'Failed to reset password.'],500);
 			}
 		} else {
-			return $this->response->withStatus(400, "Invalid verification code");
+			return $this->respondWithData(['message' => 'Invalid verification code.'],400);
 		}
 	}
 	
@@ -420,6 +420,7 @@ class UserController extends Controller {
 			$insert = $this->db->prepare("INSERT INTO users
 				( email, `password`, firstname, lastname, role, app_mode, registration_date ) VALUES ( ?, ?, ?, ?, ?, ?, UTC_TIMESTAMP())");
 
+            // Set default role to admin
 			$data['role'] = UserModel::ROLE_ADMIN;
 
 			$insert->bindParam(1, $data['email']);

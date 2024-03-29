@@ -8,61 +8,68 @@
             newPassword: ''
         };
         $scope.loading = false;
-        $scope.alertMessage = '';
-        $scope.alertType = '';
+        $scope.alerts = [];
 
-        // Function to send the verification code
+        // Updated handleResponse to process response directly from $http.then
+        function handleResponse(response) {
+            $scope.loading = false;
+            let data;
+
+            try {
+                // Attempt to manually parse the JSON to fix malformed response
+                data = JSON.parse(response.data.replace(/null$/, ''));
+            } catch (e) {
+                console.error('Failed to parse response data:', e);
+                // Fallback to the response data if parsing fails
+                data = response.data ? response.data : {};
+            }
+
+            if (response.status >= 200 && response.status < 300) {
+                $scope.alerts.push({ type: 'success', msg: data.message || 'Operation successful.' });
+            } else {
+                let errorMsg = data && data.message ? data.message : 'An unexpected error occurred. Please try again.';
+                $scope.alerts.push({ type: 'danger', msg: errorMsg });
+            }
+        }
+
         $scope.submitSendCodeForm = function() {
             $scope.loading = true;
+            $scope.alerts = [];
             $http.post('/api/users/passwordreset', {
                 email: $scope.user.email,
                 action: 'sendCode'
             }, {
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                transformResponse: function(data) {
+                    return data.replace(/null$/, '');
+                }
             }).then(function(response) {
-                // Handle success directly
-                handleResponse(response, false);
-            }).catch(function(error) {
-                // Handle potential success disguised as error
-                handleResponse(error, true);
+                handleResponse(response);
+            }, function(response) {
+                handleResponse(response);
             });
         };
 
-        // Function to verify the code and reset the password
         $scope.submitResetPasswordForm = function() {
             $scope.loading = true;
+            $scope.alerts = [];
             $http.post('/api/users/passwordreset', {
                 email: $scope.user.email,
                 code: $scope.user.code,
                 newPassword: $scope.user.newPassword,
                 action: 'verifyCode'
             }, {
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                transformResponse: function(data) {
+                    return data.replace(/null$/, '');
+                }
             }).then(function(response) {
-                // Handle success directly
-                handleResponse(response, false);
-            }).catch(function(error) {
-                // Handle potential success disguised as error
-                handleResponse(error, true);
+                handleResponse(response);
+            }, function(response) {
+                handleResponse(response);
             });
         };
 
-        // Function to handle responses, both successful and errors
-        function handleResponse(response, isError) {
-            var data = isError ? response.data : response.data;
-            var status = isError ? response.status : response.status;
-
-            if (status === 200) {
-                $scope.alertMessage = data.message;
-                $scope.alertType = 'success';
-            } else {
-                $scope.alertMessage = data && data.message ? data.message : 'An unexpected error occurred. Please try again.';
-                $scope.alertType = 'danger';
-            }
-            $scope.loading = false;
-        }
-
-        // Function to go back to the previous page
         $scope.goBack = function() {
             window.history.back();
         };
