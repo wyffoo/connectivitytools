@@ -1,0 +1,1013 @@
+{
+  "languages":["en"],
+  "translation": [
+    {
+      "en": " ; Bitrate per session, Mbps:"
+    },
+    {
+      "en": " ; Expected duration of one session, seconds:"
+    },
+    {
+      "en": " ; Expected load by the group, Erl:"
+    },
+    {
+      "en": " ; Expected number of simultaneous sessions, sessions:"
+    },
+    {
+      "en": " ; Intensity per device, request/hour:"
+    },
+    {
+      "en": " ; Required bandwidth for the Group, Mbps:"
+    },
+    {
+      "en": " ; Volume of data per one session, MB:"
+    },
+    {
+      "en": ": Number of devices:"
+    },
+    {
+      "en": "APs maintenance cost, currency units per year"
+    },
+    {
+      "en": "Annual cash flow, currency units/year"
+    },
+    {
+      "en": "Annual cost of RTS maintenance, currency units/year"
+    },
+    {
+      "en": "Annual cost of maintenance of the Cellular channel, currency units/year"
+    },
+    {
+      "en": "Annual cost of maintenance of the cellular channel , currency units/year"
+    },
+    {
+      "en": "Annual cost of maintenance of the satellite channel , currency units/year"
+    },
+    {
+      "en": "Annual cost of maintenance of the satellite channel, currency units/year"
+    },
+    {
+      "en": "Annual cost of operation of LAN WES, currency units per year"
+    },
+    {
+      "en": "Annual cost of operation of a wired LAN, currency units per year"
+    },
+    {
+      "en": "Annual cost of operation of the STC, currency units per year"
+    },
+    {
+      "en": "Annual cost of operation of the public wireless segment (HOTSPOT)"
+    },
+    {
+      "en": "Annual operation cost of solar panels and school power station, currency units/year"
+    },
+    {
+      "en": "Antenna feeder devices total cost , currency units"
+    },
+    {
+      "en": "Anual Cost for FOCL maintenance, currency units/year"
+    },
+    {
+      "en": "Average length of a section of one cable from the STC to the point of entry of cables into the classroom, meters"
+    },
+    {
+      "en": "Average number of students in one class, students"
+    },
+    {
+      "en": "Base number of solvent population in this object, people"
+    },
+    {
+      "en": "Base population for calculating the potential subscriber base, people"
+    },
+    {
+      "en": "Building area, sq km"
+    },
+    {
+      "en": "Building entrance facilities maintenance cost, currency units/year"
+    },
+    {
+      "en": "Cable duct maintenance cost, currency units/year"
+    },
+    {
+      "en": "Cable maintenance cost in areas from STC to HOTSPOT routers, currency units per year"
+    },
+    {
+      "en": "Cable maintenance cost in areas from STC to WIFI AP, currency units per year"
+    },
+    {
+      "en": "Cellular"
+    },
+    {
+      "en": "Cellular (NPV)"
+    },
+    {
+      "en": "Cellular (cost of ownership)"
+    },
+    {
+      "en": "Cellular - Net Present Value (10 years)"
+    },
+    {
+      "en": "Cellular - Net Present Value (15 years)"
+    },
+    {
+      "en": "Cellular - Net Present Value (20 years)"
+    },
+    {
+      "en": "Cellular - Net Present Value, currency units"
+    },
+    {
+      "en": "Cellular CAPEX Caclulation"
+    },
+    {
+      "en": "Cellular Net Present Value Caclulation"
+    },
+    {
+      "en": "Cellular OPEX Caclulation"
+    },
+    {
+      "en": "Construction of the network is impossible without choosing FOCL or Microwave"
+    },
+    {
+      "en": "Copper"
+    },
+    {
+      "en": "Copper or Fiber"
+    },
+    {
+      "en": "Corporate Tax, currency units/year"
+    },
+    {
+      "en": "Cost of LAN cable maintenance, currency units per year"
+    },
+    {
+      "en": "Cost of access switches maintenance for APs connection, currency units per year"
+    },
+    {
+      "en": "Cost of all AOEs, currency units"
+    },
+    {
+      "en": "Cost of all distribution TAOEs, currency units"
+    },
+    {
+      "en": "Cost of equipment and materials  to supply power to active network equipment in the school, currency units"
+    },
+    {
+      "en": "Cost of installation and commissioning of LAN WES, currency units"
+    },
+    {
+      "en": "Cost of installation and commissioning of a wired LAN, currency units"
+    },
+    {
+      "en": "Cost of installation and commissioning of the STC, currency units"
+    },
+    {
+      "en": "Cost of installation and commissioning of the public wireless segment (HOTSPOT)"
+    },
+    {
+      "en": "Cost of installation and configuration of AOEs, currency units"
+    },
+    {
+      "en": "Cost of installation and configuration of TAOEs, currency units"
+    },
+    {
+      "en": "Cost of installation of cable ducts inside buildings, currency units"
+    },
+    {
+      "en": "Cost of installation of external hanged-up lines, currency units"
+    },
+    {
+      "en": "Cost of installation of external lines in the duct, currency units"
+    },
+    {
+      "en": "Cost of installation of subscriber lines inside buildings, currency units"
+    },
+    {
+      "en": "Cost of installation work on the arrangement of places for AOEs, currency units"
+    },
+    {
+      "en": "Cost of installation work on the arrangement of places for TAOEs, currency units"
+    },
+    {
+      "en": "Cost of materials for arranging placements for distribution TAOEs, currency units"
+    },
+    {
+      "en": "Cost of materials for the arrangement of placements of AOEs, currency units"
+    },
+    {
+      "en": "Cost of operating access organization equipment, currency units/year"
+    },
+    {
+      "en": "Cost of operating technical access organization equipment, currency units/year"
+    },
+    {
+      "en": "Cost of ownership (Internet channel only)"
+    },
+    {
+      "en": "Cost of purchasing WIFI access points for installation in classrooms, currency units"
+    },
+    {
+      "en": "Cost of purchasing cables for LAN installation with a margin of 10% of the length for laying cables, currency units"
+    },
+    {
+      "en": "Cost of purchasing cables to connect WIFI access points, currency units"
+    },
+    {
+      "en": "Cost of purchasing of TOs, currency units"
+    },
+    {
+      "en": "Cost of purchasing switching equipment with ports backup, currency units"
+    },
+    {
+      "en": "Cost of rent of place in the external cable duct for the cable, currency units/year"
+    },
+    {
+      "en": "Cost of servicing hanged-up lines, currency units/year"
+    },
+    {
+      "en": "Cost of servicing lines in cable duct, currency units/year"
+    },
+    {
+      "en": "Cost of servicing new infrastructure for hanging-up cables (pillars)"
+    },
+    {
+      "en": "Cost of servicing subscriber lines inside buildings, currency units/year"
+    },
+    {
+      "en": "Cost of spectrum license for whole RTS, currency unit"
+    },
+    {
+      "en": "Cost of switches maintenance, currency units per year"
+    },
+    {
+      "en": "Cost of the annual operation of an access network , currency units/year"
+    },
+    {
+      "en": "Cost of the construction of new infrastructure for hanging-up cables, currency units"
+    },
+    {
+      "en": "Cost of the rent of place on the pillars for the hanged-up cable, currency units/year"
+    },
+    {
+      "en": "Costs of operating communication lines and new infrastructure for hanging-up cables, currency units/year"
+    },
+    {
+      "en": "Costs of the annual operation of an access network , currency units/year"
+    },
+    {
+      "en": "Daily need of school for electrical energy to power network equipment, Watt*hour"
+    },
+    {
+      "en": "Design and licensing cost, currency units"
+    },
+    {
+      "en": "Design cost, currency units"
+    },
+    {
+      "en": "Detailed Calculation Log:"
+    },
+    {
+      "en": "Determination of cost of installation and configuration of active equipment, currency units"
+    },
+    {
+      "en": "Determination of cost of installation work on the arrangement of places for equipment, currency units"
+    },
+    {
+      "en": "Determination of the total cost of PWS LAN maintenance during the maintenance period, cyrrency units"
+    },
+    {
+      "en": "Determining the cost of HOTSPOT routers maintenance, currency units per year"
+    },
+    {
+      "en": "Determining the cost of access switches maintenance to connect HOTSPOT routers, currency units per year"
+    },
+    {
+      "en": "Determining the length of aggregated cables for aggregate segment connecting lines, km"
+    },
+    {
+      "en": "Determining the length of aggregated cables for external lines "
+    },
+    {
+      "en": "Determining the length of aggregated cables for internal lines "
+    },
+    {
+      "en": "Determining the length of the aggregated cables of the connecting lines of the distribution segment, km"
+    },
+    {
+      "en": "Determining the total power to supply power to active network equipment in the school, Watt"
+    },
+    {
+      "en": "Determining the volume of annual labor costs for servicing new infrastructure for hanging-up cables (pillars)"
+    },
+    {
+      "en": "Discounted cash flow, currency units/year"
+    },
+    {
+      "en": "Distance (line of sight)"
+    },
+    {
+      "en": "Distance by roads (assumed)"
+    },
+    {
+      "en": "Duration of installation and configuration of AOEs, hours"
+    },
+    {
+      "en": "Duration of installation and configuration of TAOEs, hours"
+    },
+    {
+      "en": "Duration of installation of cable ducts inside buildings, hours"
+    },
+    {
+      "en": "Duration of installation of external hanged-up lines, hours"
+    },
+    {
+      "en": "Duration of installation of external lines in the duct, hours"
+    },
+    {
+      "en": "Duration of installation of subscriber lines inside buildings, hours"
+    },
+    {
+      "en": "Duration of installation work on arrangement of places for AOEs, hours"
+    },
+    {
+      "en": "Duration of installation works on arrangement of places for TAOEs, hours"
+    },
+    {
+      "en": "Duration of the construction of new infrastructure for hanging-up cables, hours"
+    },
+    {
+      "en": "Duration of the one session, second"
+    },
+    {
+      "en": "Electricity consumption by access organization equipment, kWt*hour/year"
+    },
+    {
+      "en": "Electricity consumption by technical access organization equipment, kWt*hour/year"
+    },
+    {
+      "en": "Equipment operating costs, currency units/year"
+    },
+    {
+      "en": "Expected request intensity by users, requests/hour"
+    },
+    {
+      "en": "External channel load by users, Erlang"
+    },
+    {
+      "en": "Extra bandwidth of channel (without Internet)"
+    },
+    {
+      "en": "FOCL - Net Present Value (10 years)"
+    },
+    {
+      "en": "FOCL - Net Present Value (15 years)"
+    },
+    {
+      "en": "FOCL - Net Present Value (20 years)"
+    },
+    {
+      "en": "FOCL - Net Present Value, currency units"
+    },
+    {
+      "en": "FOCL CAPEX Caclulation"
+    },
+    {
+      "en": "FOCL Net Present Value Caclulation"
+    },
+    {
+      "en": "FOCL OPEX Caclulation"
+    },
+    {
+      "en": "FOCL Potential Income Caclulation"
+    },
+    {
+      "en": "FOCL maintenance cost along the route, currency units/year"
+    },
+    {
+      "en": "Fiber"
+    },
+    {
+      "en": "Fiber (NPV)"
+    },
+    {
+      "en": "Fiber (cost of ownership)"
+    },
+    {
+      "en": "Fiber-Optic"
+    },
+    {
+      "en": "Fiber-optic"
+    },
+    {
+      "en": "Fiber: not allowed"
+    },
+    {
+      "en": "Geodesic distance between two objects, meters"
+    },
+    {
+      "en": "Group (User devices - Service)"
+    },
+    {
+      "en": "Identified as a basenode. Distance to the fiber, km"
+    },
+    {
+      "en": "Independent power supply"
+    },
+    {
+      "en": "Internal RTS devices total cost, currency units"
+    },
+    {
+      "en": "Length of LAN cables from STC to classrooms"
+    },
+    {
+      "en": "Length of LAN cables from STC to classrooms, meters"
+    },
+    {
+      "en": "Length of LAN cables within the classroom to the telecommunication outlets (to connect all the necessary educating places to the designed network)"
+    },
+    {
+      "en": "Length of aggregate segment trunk cable, km"
+    },
+    {
+      "en": "Length of aggregated lines in the building, km"
+    },
+    {
+      "en": "Length of aggregated lines outside the buildings, km"
+    },
+    {
+      "en": "Length of distribution & aggregate segment in the external cable ducts, km"
+    },
+    {
+      "en": "Length of distribution segment trunk cable, km"
+    },
+    {
+      "en": "Length of subscriber lines in the external cable ducts, km"
+    },
+    {
+      "en": "Length of subscriber lines outside of the buildings, km"
+    },
+    {
+      "en": "Length of subscriber lines outside the buildings to cover subscribers located in the near, middle and far zones from the AOEs"
+    },
+    {
+      "en": "Length of subscriber lines within buildings, km"
+    },
+    {
+      "en": "Length of subscriber lines within the buildings and outside the buildings to cover subscribers located in the far (100% of the distance)"
+    },
+    {
+      "en": "Length of subscriber lines within the buildings and outside the buildings to cover subscribers located in the middle (60% of the maximum distance)"
+    },
+    {
+      "en": "Length of subscriber lines within the buildings and outside the buildings to cover subscribers located in the near (30% of the maximum distance)"
+    },
+    {
+      "en": "Length of subscriber lines within the buildings to cover subscribers located in the near, middle and far zones from the AOEs"
+    },
+    {
+      "en": "Length of subscriber lines within the buildings, km"
+    },
+    {
+      "en": "Length of the external connecting lines of the aggregate segment, km"
+    },
+    {
+      "en": "Length of the external connecting lines of the distribution segment, km"
+    },
+    {
+      "en": "Length of the hanged-up cables of distribution & aggregate segment, km"
+    },
+    {
+      "en": "Length of the hanged-up cables of subscriber lines, km"
+    },
+    {
+      "en": "Length of the house cable duct that must be built for laying subscriber lines, km"
+    },
+    {
+      "en": "Length of the new infrastructure for hanging-up cables of subscriber lines, km"
+    },
+    {
+      "en": "Main material total cost for RTS pylon construction, currency units"
+    },
+    {
+      "en": "Mean bitrate per session, Mbit/s"
+    },
+    {
+      "en": "Mean duration of one session, second"
+    },
+    {
+      "en": "Mean intensity per device, requests/hour"
+    },
+    {
+      "en": "Mean number of devices, devices"
+    },
+    {
+      "en": "Mean number of simultaneous sessions, sessions"
+    },
+    {
+      "en": "Mean volume of data per one session, MB"
+    },
+    {
+      "en": "Medium Type for Subscriber Lines"
+    },
+    {
+      "en": "Medium Type of Destribution Segment"
+    },
+    {
+      "en": "Medium for aggregation line segment"
+    },
+    {
+      "en": "Medium for subscriber's line segment"
+    },
+    {
+      "en": "Microwave"
+    },
+    {
+      "en": "Microwave (NPV)"
+    },
+    {
+      "en": "Microwave (RTS)"
+    },
+    {
+      "en": "Microwave (Radio Transmission System - RTS)"
+    },
+    {
+      "en": "Microwave (cost of ownership)"
+    },
+    {
+      "en": "Microwave: not allowed"
+    },
+    {
+      "en": "N/a"
+    },
+    {
+      "en": "NPV (Internet channel only)"
+    },
+    {
+      "en": "Necessary (sufficient)"
+    },
+    {
+      "en": "Net Income, currency units/year"
+    },
+    {
+      "en": "Net Present Value, currency units"
+    },
+    {
+      "en": "Network Area, sq km"
+    },
+    {
+      "en": "Network Radius, km"
+    },
+    {
+      "en": "Number of AOE units enough to cover the required number of subscribers, units"
+    },
+    {
+      "en": "Number of AOE units, units"
+    },
+    {
+      "en": "Number of TAOEs units required to connect a given number of AOEs throughout the object, units"
+    },
+    {
+      "en": "Number of TAOEs units required to the object, units"
+    },
+    {
+      "en": "Number of buildings in the built-up part of the object, buildings"
+    },
+    {
+      "en": "Number of cable couplings, units"
+    },
+    {
+      "en": "Number of cable manholes (CMh)"
+    },
+    {
+      "en": "Number of classrooms, classrooms"
+    },
+    {
+      "en": "Number of fibers used to connect school, fibers"
+    },
+    {
+      "en": "Number of parallel sessions, sessions"
+    },
+    {
+      "en": "Number of places for placement of AOEs to cover the area of an object built up in multi-apartment buildings, places"
+    },
+    {
+      "en": "Number of places for placement of TAOEs to cover all AOEs, uniformly located throughout the object, places"
+    },
+    {
+      "en": "Number of places to place AOEs to cover the area of an object built up with private sector (low-rise)"
+    },
+    {
+      "en": "Number of places to place AOEs to cover the undeveloped area of the object, places"
+    },
+    {
+      "en": "Number of places to place AOEs, determined by the building area, places"
+    },
+    {
+      "en": "Number of repeaters by selected technology calculation, units"
+    },
+    {
+      "en": "Number of retransmission sites calculation, units"
+    },
+    {
+      "en": "Number of solvent population not covered by competitors (number of potential subscribers)"
+    },
+    {
+      "en": "Number of subscribers located in the far (100% of the distance)"
+    },
+    {
+      "en": "Number of subscribers located in the middle (60% of the maximum distance)"
+    },
+    {
+      "en": "Number of subscribers located in the near (30% of the maximum distance)"
+    },
+    {
+      "en": "Number of switches of the selected model for connection of HOTSPOT routers, units"
+    },
+    {
+      "en": "Number of switches to connect WIFI AP of selected model, units"
+    },
+    {
+      "en": "ODF maintenance cost, currency units/year"
+    },
+    {
+      "en": "Overall cost for FOCL section construction requiring the cable duct, currency units"
+    },
+    {
+      "en": "Overall cost for FOCL section construction requiring the cable laying machine, currency units"
+    },
+    {
+      "en": "Overall cost for FOCL sections construction of horizontal directional drilling, located at the crossings of roads, currency units"
+    },
+    {
+      "en": "Overall cost for FOCL signaling test, currency units"
+    },
+    {
+      "en": "Overall cost for ODF including organization of cable glands, currency unists"
+    },
+    {
+      "en": "Overall cost for cable coupling installation along the route, currency units"
+    },
+    {
+      "en": "Overall cost for cable manhole construction along the route, currency units"
+    },
+    {
+      "en": "Overall cost of FOCL installation, currency units"
+    },
+    {
+      "en": "Overall geodetic work cost along the object route, currency units"
+    },
+    {
+      "en": "Overall length of the FOCL construction site, km"
+    },
+    {
+      "en": "Overall network channel capacity, Mbit/s"
+    },
+    {
+      "en": "Payback period, years"
+    },
+    {
+      "en": "Potential rental income for additional bandwidth (extra capacity)"
+    },
+    {
+      "en": "Potential rental income for additional fibers, cable duct and bandwidth (extra capacity)"
+    },
+    {
+      "en": "Potential rental income for extra bandwidth (extra capacity)"
+    },
+    {
+      "en": "QoE degradation probability"
+    },
+    {
+      "en": "RTS - Net Present Value (10 years)"
+    },
+    {
+      "en": "RTS - Net Present Value (15 years)"
+    },
+    {
+      "en": "RTS - Net Present Value (20 years)"
+    },
+    {
+      "en": "RTS - Net Present Value, currency units"
+    },
+    {
+      "en": "RTS construction total cost, currency units"
+    },
+    {
+      "en": "Removed as not optimal"
+    },
+    {
+      "en": "Rent cost for communication channels, currency units/year"
+    },
+    {
+      "en": "Required Bandwidth"
+    },
+    {
+      "en": "Required number of Cellular sets, units"
+    },
+    {
+      "en": "Required number of VSAT sets, units"
+    },
+    {
+      "en": "Required number of solar panels, units"
+    },
+    {
+      "en": "Required power of school power station (Watt)"
+    },
+    {
+      "en": "Satellite"
+    },
+    {
+      "en": "Satellite (NPV)"
+    },
+    {
+      "en": "Satellite (cost of ownership)"
+    },
+    {
+      "en": "Satellite - Net Present Value (10 years)"
+    },
+    {
+      "en": "Satellite - Net Present Value (15 years)"
+    },
+    {
+      "en": "Satellite - Net Present Value (20 years)"
+    },
+    {
+      "en": "Satellite - Net Present Value, currency units"
+    },
+    {
+      "en": "Satellite CAPEX Caclulation"
+    },
+    {
+      "en": "Satellite Net Present Value Caclulation"
+    },
+    {
+      "en": "Satellite OPEX Caclulation"
+    },
+    {
+      "en": "School Telecommunications Center CAPEX & OPEX Calculation"
+    },
+    {
+      "en": "The average FOCL sections length requiring cable-laying machine, km"
+    },
+    {
+      "en": "The average FOCL sections length requiring the construction of cable ducts, km"
+    },
+    {
+      "en": "The average length of the cable section from the classroom entry point up to the STC, meters"
+    },
+    {
+      "en": "The cost of purchasing HOTSPOT (taking into account the materials required to install and obtain permission to use radio frequencies in regions where necessary)"
+    },
+    {
+      "en": "The cost of purchasing cables to connect HOTSPOT routers with a margin of 10% of the length for laying cables, currency units"
+    },
+    {
+      "en": "The number of access points for the organization of WES, units"
+    },
+    {
+      "en": "The number of switches of the selected model (Kres_port is usually assumed by default that  0.6)"
+    },
+    {
+      "en": "The number of wireless routers for the organization of PWS, units"
+    },
+    {
+      "en": "The operational cost of STC (currency units per year)"
+    },
+    {
+      "en": "The total area of classrooms in EI, square meters"
+    },
+    {
+      "en": "The total cost of acquisition and installation of equipment and materials for the construction of a STC (currency units)"
+    },
+    {
+      "en": "The total cost of installation, commissioning and operation of the STC (currency units)"
+    },
+    {
+      "en": "The total cost of purchasing and installation of HOTSPOT routers, currency units"
+    },
+    {
+      "en": "The total cost of service of  Cellular, currency units/year"
+    },
+    {
+      "en": "The total cost of service of  VSAT, currency units/year"
+    },
+    {
+      "en": "The total telecommunication outlets (TO)"
+    },
+    {
+      "en": "Total FOCL cost along route, currency units"
+    },
+    {
+      "en": "Total TOs number to be installed for related educational equipment, units"
+    },
+    {
+      "en": "Total cable length of the wired segment LAN, meters"
+    },
+    {
+      "en": "Total cost for FOCL maintenance for the entire period of operation, currency units/year"
+    },
+    {
+      "en": "Total cost for RTS internal devices maintenance, currency units/year"
+    },
+    {
+      "en": "Total cost for all RTS antenna feeder devices maintenance, currency units/year"
+    },
+    {
+      "en": "Total cost for all RTS pylon maintenance, currency units/year"
+    },
+    {
+      "en": "Total cost for all antenna feeder devices installation and commissioning for along RTS route, currency units"
+    },
+    {
+      "en": "Total cost for design solutions coordination on RTS construction, currency units"
+    },
+    {
+      "en": "Total cost for geodetic work at RTS pylon location, currency units"
+    },
+    {
+      "en": "Total cost for internal devices installation and commissioning for RTS, currency units"
+    },
+    {
+      "en": "Total cost for pylon construction of RTS antenna feeder devices, currency units"
+    },
+    {
+      "en": "Total cost of Cellular equipment and installation materials, currency units"
+    },
+    {
+      "en": "Total cost of RTS maintenance, currency units/year"
+    },
+    {
+      "en": "Total cost of VSAT equipment and installation materials, currency units"
+    },
+    {
+      "en": "Total cost of design solutions coordination, currency unists"
+    },
+    {
+      "en": "Total cost of equipment and materials for the construction of the RTS, currency units"
+    },
+    {
+      "en": "Total cost of equipment and materials, currency units"
+    },
+    {
+      "en": "Total cost of equipment, currency units"
+    },
+    {
+      "en": "Total cost of establishing a Cellular communication channel, currency units"
+    },
+    {
+      "en": "Total cost of establishing a cellular communication channel, currency units"
+    },
+    {
+      "en": "Total cost of establishing a satellite communication channel, currency units"
+    },
+    {
+      "en": "Total cost of installation and commissioning of access switch equipment, currency units"
+    },
+    {
+      "en": "Total cost of installation and commissioning of access switches, currency units"
+    },
+    {
+      "en": "Total cost of installation and commissioning of switches, currency units"
+    },
+    {
+      "en": "Total cost of installation and configuration of all Cellular sets, currency units"
+    },
+    {
+      "en": "Total cost of installation and configuration of all VSAT sets, currency units"
+    },
+    {
+      "en": "Total cost of labor for solar panels and school power station installation and commissioning, currency units"
+    },
+    {
+      "en": "Total cost of laying cables for LAN installation, currency units"
+    },
+    {
+      "en": "Total cost of laying cables to connect HOTSPOT routers, currency units"
+    },
+    {
+      "en": "Total cost of laying cables to connect WIFI access points, currency units"
+    },
+    {
+      "en": "Total cost of materials for arranging equipment locations, currency units"
+    },
+    {
+      "en": "Total cost of materials for laying (or hanging-up)"
+    },
+    {
+      "en": "Total cost of materials for the construction of cable channels in residential buildings, currency units"
+    },
+    {
+      "en": "Total cost of materials for the construction of new infrastructure, which should be built for the hanging-up of external connecting lines & subscriber cables, currency units"
+    },
+    {
+      "en": "Total cost of materials, currency units"
+    },
+    {
+      "en": "Total cost of organization of PWS LAN, currency units"
+    },
+    {
+      "en": "Total cost of organizing a wired LAN segment, currency units"
+    },
+    {
+      "en": "Total cost of purchasing access switches for the PWS organization, currency units"
+    },
+    {
+      "en": "Total cost of purchasing and installation of WIFI AP, currency units"
+    },
+    {
+      "en": "Total cost of purchasing of access switches for connecting APs with ports backups, currency units"
+    },
+    {
+      "en": "Total cost of purchasing, installation and TOs commissioning, currency units"
+    },
+    {
+      "en": "Total cost of solar panels and school power station installation and commissioning, currency units"
+    },
+    {
+      "en": "Total cost of technical specifications design, currency units"
+    },
+    {
+      "en": "Total cost of the LAN WES organization, currency units"
+    },
+    {
+      "en": "Total cost of the construction of cable ducts and the installation of cable infrastructure, currency units"
+    },
+    {
+      "en": "Total cost of the construction of the access network, currency units"
+    },
+    {
+      "en": "Total cost of the public wireless segment (PWS)"
+    },
+    {
+      "en": "Total investment, currency units"
+    },
+    {
+      "en": "Total length of LAN cables from STC to HOTSPOT routers, meters"
+    },
+    {
+      "en": "Total length of LAN cables from STC to WIFI AP, meters"
+    },
+    {
+      "en": "Total length of additional fibers that could be provided to rent, km"
+    },
+    {
+      "en": "Total length of cable duct that could be provided to rent, km"
+    },
+    {
+      "en": "Total length of the new infrastructure for hanging-up cables of distribution & aggregate segment, km"
+    },
+    {
+      "en": "Total maintenance cost of LAN WES for the entire maintenance period, currency units"
+    },
+    {
+      "en": "Total maintenance cost of a wired LAN for the entire maintenance period, currency units"
+    },
+    {
+      "en": "Total maintenance cost of the public wireless segment (PWS)"
+    },
+    {
+      "en": "Total number of places for placement of AOEs, places"
+    },
+    {
+      "en": "Total rent cost for communication channels, currency units/year"
+    },
+    {
+      "en": "Unknown"
+    },
+    {
+      "en": "Via large size of school building average lenght of one cable from switch to TO is limited by 95 meters (should be organized by desctribution switches in the different places of building)"
+    },
+    {
+      "en": "Volume of annual labor costs for servicing hanged-up lines, hours/year"
+    },
+    {
+      "en": "Volume of annual labor costs for servicing lines in cable duct, hours/year"
+    },
+    {
+      "en": "Volume of annual labor costs for servicing subscriber lines inside buildings, hours/year"
+    },
+    {
+      "en": "Volume of annual labor costs for the operation of AOEs, hours/year"
+    },
+    {
+      "en": "Volume of annual labor costs for the operation of the TAOEs, hours/year"
+    },
+    {
+      "en": "WiFi HotSpot CAPEX & OPEX Calculation"
+    },
+    {
+      "en": "Winner:"
+    },
+    {
+      "en": "Wired LAN CAPEX & OPEX Calculation"
+    },
+    {
+      "en": "Wireless"
+    },
+    {
+      "en": "Wireless LAN CAPEX & OPEX Calculation"
+    },
+    {
+      "en": "Cost of equipment and materials for the construction of fiber optic lines, currency units"
+    }
+  ]   
+}

@@ -1,0 +1,197 @@
+METHODOLOGY;ALGORITHM;FORMULA;PNAME;PDESC;UNIT;RSTART;REND;STEP;DVALUE;TYPE;TYPE2;SORTA;SORTM
+METHOD2;ALL;;;;;;;;;;;;
+METHOD2;ALGORITHM2_0;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_0;FORMULA_2_0_1;InitialDataTraffic.InformationVolume;Information volume by one standard session for a particular service;Mbyte;0.00;10000.00;1.00;20.00;ID;ID;1;1
+METHOD2;ALGORITHM2_0;FORMULA_2_0_1;InitialDataTraffic.BitrateOfService;Sufficient bitrate for service usage with a given level of quality;Mbit/s;1.00;1000.00;1.00;5.00;ID;ID;2;2
+METHOD2;ALGORITHM2_0;FORMULA_2_0_2;InitialDataTraffic.IntensivityPerUser;Service usage intensity by one subscriber (the number of requests) ;request/hour;0.00;100.00;1.00;3.00;ID;ID;3;3
+METHOD2;ALGORITHM2_0;FORMULA_2_0_2;InitialDataTraffic.NumberOfSubscribers;Number of subscribers ;people;0.00;20000.00;1.00;100.00;ID;ID;4;4
+METHOD2;ALGORITHM2_0;FORMULA_2_0_3;Intermediate.OveralIntensivity;Expected request intensity;request/hour;0.00;1000.00;1.00;3.00;IM;IM;;
+METHOD2;ALGORITHM2_0;FORMULA_2_0_3;Intermediate.DurationOfOneSession;Duration of the one session;sec;0.00;5000.00;100.00;10.00;IM;IM;;
+METHOD2;ALGORITHM2_0;FORMULA_2_0_4;Intermediate.ExternalLoad;External channel load;Erlang;0.00;100.00;1.00;10.00;IM;IM;;
+METHOD2;ALGORITHM2_0;FORMULA_2_0_4;InitialDataTraffic.LevelOfQuality;Level of quality (probablity of packet looses) ;coeff;0.00;1.00;0.00;0.00;ID;ID;5;5
+METHOD2;ALGORITHM2_0;FORMULA_2_0_5;Intermediate.NumberOfSessions;Number of parallel sessions;sessions;0.00;1000.00;1.00;10.00;IM;IM;;
+METHOD2;ALGORITHM2_0;FORMULA_2_0_5;InitialDataTraffic.BitrateOfService;Sufficient bitrate for service usage with a given level of quality;Mbit/s;1.00;1000.00;1.00;5.00;IM;IM;;
+METHOD2;ALGORITHM2_0;FORMULA_2_0_6;Intermediate.OveralNetworkCapacity;Overall network channel capacity, required for parallel sessions;Mbit/s;1.00;10000.00;5.00;5.00;IM;IM;;
+METHOD2;ALGORITHM2_1;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_1;InitialDataFOCL.Length;The distance between the localities along intended FOCL route;km;0.10;40.00;0.10;20.00;ID;ID;2;9
+METHOD2;ALGORITHM2_1;FORMULA_2_1_2;Intermediate.FOCLLenghtTotal;Overall length of the FOCL construction site;km;1.00;50.00;1.00;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_3;Intermediate.FOCLLenghtTotal;Overall length of the FOCL construction site;km;1.00;50.00;1.00;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_4;Intermediate.FOCLLenghtTotal;Overall length of the FOCL construction site;km;1.00;50.00;1.00;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_5;Intermediate.FOCLLenghtTotal;Overall length of the FOCL construction site;km;1.00;50.00;1.00;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_6;InitialDataFOCL.Length;The distance between the localities along intended FOCL route;km;0.10;40.00;0.10;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_6;InitialDataFOCL.LaborCostNormGeo;Labor cost norms for geodetic work along FOCL route between localities (communities);hour/km;1.00;5.00;1.00;20.00;ID;ID;3;10
+METHOD2;ALGORITHM2_1;FORMULA_2_1_6;InitialDataFOCL.CostNormGeo;Cost norms for  geodetic work along object route;currency unit/hour;10.00;500.00;10.00;100.00;ID;ID;4;11
+METHOD2;ALGORITHM2_1;FORMULA_2_1_7;InitialDataFOCL.CostNormFOCLinst;Cost of one km FOCL installation;currency unit/km;50.00;100000.00;50.00;100.00;ID;ID;5;12
+METHOD2;ALGORITHM2_1;FORMULA_2_1_7;InitialDataFOCL.Length;The distance between the localities along intended FOCL route;km;0.10;40.00;0.10;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_7;Intermediate.FOCLLenghtHDD;The average FOCL sections length of horizontal directional drilling, located at the crossings of roads;km;0.00;1000.00;1.00;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_8;InitialDataFOCL.LaborCostNormHDD;Labor cost norms for roads crossings construction by horizontal directional drilling;hour/km;500.00;10000.00;500.00;20.00;ID;ID;6;13
+METHOD2;ALGORITHM2_1;FORMULA_2_1_8;InitialDataFOCL.CostNormHDD;Cost norms for roads crossings construction by horizontal directional drilling;currency unit/hour;2.00;50.00;2.00;50.00;ID;ID;7;14
+METHOD2;ALGORITHM2_1;FORMULA_2_1_9;Intermediate.FOCLSectionLengthCD;The average FOCL sections length requiring the construction of cable ducts;km;0.00;1000.00;1.00;20.00;ID;ID;8;15
+METHOD2;ALGORITHM2_1;FORMULA_2_1_9;InitialDataFOCL.LaborCostNormCDC;Labor cost norms for cable duct construction;hour/km;2.00;100.00;1.00;20.00;ID;ID;9;16
+METHOD2;ALGORITHM2_1;FORMULA_2_1_9;InitialDataFOCL.CostNormCDC;Cost norms for cable duct construction;currency unit/hour;5.00;50.00;2.00;100.00;ID;ID;10;17
+METHOD2;ALGORITHM2_1;FORMULA_2_1_9;InitialDataFOCL.CostNormMaterialsCD;Cost of basic materials for one km cable duct (pipe) construction;currency unit/km;2000.00;50000.00;50.00;100.00;ID;ID;11;18
+METHOD2;ALGORITHM2_1;FORMULA_2_1_10;Intermediate.FOCLSectionLengthCLM;The average FOCL sections length requiring cable-laying machine;km;0.00;100.00;0.10;20.00;ID;ID;1;19
+METHOD2;ALGORITHM2_1;FORMULA_2_1_10;InitialDataFOCL.LaborCostNormLC;Labor cost norms for FOCL laying by cable layer ;hour/km;4.00;24.00;4.00;20.00;ID;ID;12;20
+METHOD2;ALGORITHM2_1;FORMULA_2_1_10;InitialDataFOCL.CostNormLC;Cost norms for FOCL laying by cable layer;currency unit/hour;0.00;1000.00;10.00;100.00;ID;ID;13;21
+METHOD2;ALGORITHM2_1;FORMULA_2_1_11;InitialDataFOCL.CostNormMaterialsCMh;Cost of basic materials for one km cable manhole;current unit/unit;500.00;50000.00;50.00;200.00;ID;ID;14;22
+METHOD2;ALGORITHM2_1;FORMULA_2_1_11;InitialDataFOCL.LaborCostNormCMh;"Labor cost norms for cable manhole construction 
+including FOC installation";hour/unit;10.00;100.00;10.00;100.00;ID;ID;15;23
+METHOD2;ALGORITHM2_1;FORMULA_2_1_11;InitialDataFOCL.CostNormCMh;Cost norms for cable manhole construction;currency unit/hour;0.00;1000.00;10.00;100.00;ID;ID;16;24
+METHOD2;ALGORITHM2_1;FORMULA_2_1_11;Intermediate.NumberCMh;Number of cable manholes (CMh) ;unit (pcs);0.00;100.00;1.00;5.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_12;InitialDataFOCL.CostNormCC1km;Cost of cable coupling;current unit/unit;10.00;100.00;10.00;200.00;ID;ID;17;25
+METHOD2;ALGORITHM2_1;FORMULA_2_1_12;InitialDataFOCL.LaborCostNormCCI;Labor cost norms for cable couplings installation;hour/unit;2.00;40.00;2.00;100.00;ID;ID;18;26
+METHOD2;ALGORITHM2_1;FORMULA_2_1_12;InitialDataFOCL.CostNormCCI;Cost norms for cable couplings installation;currency unit/hour;1.00;10.00;1.00;100.00;ID;ID;19;27
+METHOD2;ALGORITHM2_1;FORMULA_2_1_12;Intermediate.NumberCC;Number of cable couplings ;unit (pcs);0.00;100.00;1.00;5.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_13;Intermediate.FOCLLenghtTotal;Overall length of the FOCL construction site;km;1.00;50.00;1.00;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_13;InitialDataFOCL.LaborCostNormST;Labor cost norms for signaling test along the route ;hour/km;4.00;160.00;2.00;20.00;ID;ID;20;28
+METHOD2;ALGORITHM2_1;FORMULA_2_1_13;InitialDataFOCL.CostNormST;Cost norms for signaling test along the route;currency unit/hour;2.00;50.00;2.00;50.00;ID;ID;21;29
+METHOD2;ALGORITHM2_1;FORMULA_2_1_14;InitialDataFOCL.LaborCostNormTS;Labor cost norms for technical specifications design;hours;4.00;80.00;4.00;10.00;ID;ID;22;30
+METHOD2;ALGORITHM2_1;FORMULA_2_1_14;InitialDataFOCL.CostNormTS;Cost norms for technical specifications design;currency unit/hour;2.00;50.00;2.00;50.00;ID;ID;23;31
+METHOD2;ALGORITHM2_1;FORMULA_2_1_15;InitialDataFOCL.LaborCostNormSC;Labor cost norms for design solutions coordination;hours;8.00;80.00;8.00;10.00;ID;ID;24;32
+METHOD2;ALGORITHM2_1;FORMULA_2_1_15;InitialDataFOCL.CostNormSC;Cost norms for design solutions coordination;currency unit/hour;1.00;100.00;2.00;100.00;ID;ID;25;33
+METHOD2;ALGORITHM2_1;FORMULA_2_1_16;InitialDataFOCL.CostMatCableGlands;Cost of ODF including materials for the organization of cable glands;currency unit per piece;10.00;1000.00;10.00;100.00;ID;ID;26;34
+METHOD2;ALGORITHM2_1;FORMULA_2_1_16;InitialDataFOCL.LaborCostNormODF;Labor cost norms ODF installation, including materials for the organization of cable glands;hour/unit;4.00;80.00;4.00;100.00;ID;ID;27;35
+METHOD2;ALGORITHM2_1;FORMULA_2_1_16;InitialDataFOCL.CostNormODFinst;Cost norms ODF installation, including   organization of cable glands;currency unit/hour;2.00;50.00;2.00;50.00;ID;ID;28;36
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.TotalFOCLcost;Total FOCL cost along route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.OverllCostFOCLSC;Overall cost for FOCL sections construction of horizontal directional drilling, located at the crossings of roads;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.OverllCostFOCLCD;Overall cost for FOCL section construction requiring the cable duct ;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.OverllCostFOCLCLM;Overall cost for FOCL section construction requiring the cable laying machine ;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.OverllCostODF;Overall cost for ODF including organization of cable glands;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.OverllCostFOCLCMh;Overall cost for cable manhole construction along the route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_17;Intermediate.OverllCostFOCLCC;Overall cost for cable coupling installation along the route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLGeo;Overall geodetic work along the locality route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.TotalFOCLcost;Total FOCL cost along route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLSC;Overall cost for FOCL sections construction of horizontal directional drilling, located at the crossings of roads;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLCD;Overall cost for FOCL section construction requiring the cable duct ;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLCLM;Overall cost for FOCL section construction requiring the cable laying machine ;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostODF;Overall cost for ODF including organization of cable glands;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLCMh;Overall cost for cable manhole construction along the route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLCC;Overall cost for cable coupling installation along the route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLTS;Total cost of technical specifications design;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLSC;Total cost of design solutions coordination;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLST;Overall cost for FOCL signaling test;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_18;Intermediate.OverllCostFOCLDesign;Design cost;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;InitialDataFOCL.CostNormCC1km;Cost of cable coupling;current unit/unit;0.00;10.00;100.00;10.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;Intermediate.NumberCC;Number of cable couplings ;unit (pcs);0.00;100.00;1.00;5.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;InitialDataFOCL.CostNormMaterialsCMh;Cost of basic materials for one km cable manhole;current unit/unit;500.00;50000.00;50.00;200.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;Intermediate.NumberCMh;Number of cable manholes (CMh) ;unit (pcs);0.00;100.00;1.00;5.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;InitialDataFOCL.CostNormMaterialsCD;Cost of basic materials for one km cable duct (pipe) construction;currency unit/km;2000.00;50000.00;50.00;100.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;Intermediate.FOCLSectionLengthCLM;The average FOCL sections length requiring cable-laying machine;km;0.00;100.00;0.10;20.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;Intermediate.TotalFOCLcost;Total FOCL cost along route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_1;FORMULA_2_1_19;InitialDataFOCL.CostMatCableGlands;Cost of ODF including materials for the organization of cable glands;currency unit per piece;10.00;1000.00;10.00;100.00;IM;IM;;
+METHOD2;ALGORITHM2_2;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_2;FORMULA_2_2_1;Intermediate.FOCLLenghtTotal;Overall length of the FOCL construction site;km;1.00;50.00;1.00;20.00;ID;IM;1;
+METHOD2;ALGORITHM2_2;FORMULA_2_2_1;InitialDataFOCL.AnnualLaborNormFOCLm;Typical annual labor cost for FOCL maintenance along route ;hour/km;20.00;500.00;10.00;20.00;ID;ID;3;34
+METHOD2;ALGORITHM2_2;FORMULA_2_2_1;InitialDataFOCL.CostNormFOCLm;Typical cost for FOCL maintenance;currency unit/hour;0.00;1000.00;10.00;100.00;ID;ID;4;35
+METHOD2;ALGORITHM2_2;FORMULA_2_2_2;Intermediate.FOCLSectionLengthCD;The average FOCL sections length requiring the construction of cable ducts;km;0.00;1000.00;1.00;20.00;ID;IM;2;
+METHOD2;ALGORITHM2_2;FORMULA_2_2_2;InitialDataFOCL.AnnualLaborNormCDm;Typical annual labor cost for cable duct maintenance;hour/km;20.00;500.00;10.00;20.00;ID;ID;5;36
+METHOD2;ALGORITHM2_2;FORMULA_2_2_2;InitialDataFOCL.CostNormCDm;Typical cost for cable duct maintenance;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;6;37
+METHOD2;ALGORITHM2_2;FORMULA_2_2_3;InitialDataFOCL.NumberBEF;Number of building entrance facilities;unit (pcs);1.00;5.00;1.00;2.00;ID;ID;7;38
+METHOD2;ALGORITHM2_2;FORMULA_2_2_3;InitialDataFOCL.AnnualLaborNormBEFm;Typical annual labor cost for maintenance of building entrance facilities ;hour/unit;20.00;200.00;20.00;100.00;ID;ID;8;39
+METHOD2;ALGORITHM2_2;FORMULA_2_2_3;InitialDataFOCL.CostNormBEFm;Typical cost for maintenance of building entrance facilities ;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;9;40
+METHOD2;ALGORITHM2_2;FORMULA_2_2_4;InitialDataFOCL.NumberODF;Number of Fiber optic patch panels  (ODF);unit (pcs);0.00;10.00;1.00;2.00;ID;ID;10;41
+METHOD2;ALGORITHM2_2;FORMULA_2_2_4;InitialDataFOCL.AnnualLaborNormODFm;Typical annual labor cost for ODF maintenance;hour/unit;20.00;200.00;20.00;100.00;ID;ID;11;42
+METHOD2;ALGORITHM2_2;FORMULA_2_2_4;InitialDataFOCL.CostNormODFm;Typical cost for ODF maintenance;currency unit/hour;0.50;50.00;1.00;100.00;ID;ID;12;43
+METHOD2;ALGORITHM2_2;FORMULA_2_2_5;Intermediate.AnnualCostFOCLmaintenance;FOCL maintenance cost along the route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_2;FORMULA_2_2_5;Intermediate.AnnualCostCDmaintenance;Cable duct maintenance cost;currency unit;10.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_2;FORMULA_2_2_5;Intermediate.AnnualCostBEFmaintenance;Building entrance facilities maintenance cost;currency unit;20.00;1000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_2;FORMULA_2_2_5;Intermediate.AnnualCostODFmaintenance;ODF maintenance cost;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_1;InitialDataRadio.DistanceRoute;The distance between the localities along intended line of sight wireless route;km;0.00;1000.00;1.00;20.00;ID;ID;1;44
+METHOD2;ALGORITHM2_3;FORMULA_2_3_1;InitialDataRadio.ReliefCoef;Evolution coefficient of retransmission path length depending on the relief ;-;0.00;1.00;0.10;0.60;ID;ID;2;45
+METHOD2;ALGORITHM2_3;FORMULA_2_3_1;InitialDataRadio.RetransmissionLength;Retransmission path length by selected technology;km;0.00;1000.00;1.00;20.00;ID;ID;3;46
+METHOD2;ALGORITHM2_3;FORMULA_2_3_2;Intermediate.NumberOfRetransmissionSites;Number of retransmission sites calculation;unit;1.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_3;InitialDataRadio.RTSDevicesCost;Internal RTS devices subassembly cost ;currency unit/unit;5.00;10000.00;50.00;1000.00;ID;ID;4;47
+METHOD2;ALGORITHM2_3;FORMULA_2_3_3;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_3;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;ID;ID;5;48
+METHOD2;ALGORITHM2_3;FORMULA_2_3_4;InitialDataRadio.AFDCost;Internal RTS antenna feeder devices subassembly cost;currency unit/unit;0.00;10000.00;100.00;1000.00;ID;ID;6;49
+METHOD2;ALGORITHM2_3;FORMULA_2_3_4;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_4;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_5;InitialDataRadio.PylonCost;Main material cost for one RTS pylon construction ;currency unit/unit;300.00;100000.00;300.00;1000.00;ID;ID;7;50
+METHOD2;ALGORITHM2_3;FORMULA_2_3_5;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_5;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_6;InitialDataRadio.GeoPylonCost;Cost norms for geodetic work at RTS pylon location;currency unit/hour;1.00;100.00;2.00;100.00;ID;ID;8;51
+METHOD2;ALGORITHM2_3;FORMULA_2_3_6;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_6;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_6;InitialDataRadio.LaborNormsGeoPylon;Labor cost norms for geodetic work at RTS pylon location ;hour/unit;1.00;5.00;1.00;100.00;ID;ID;9;52
+METHOD2;ALGORITHM2_3;FORMULA_2_3_7;InitialDataRadio.PylonConstractionCost;Cost norms for one pylon construction of RTS antenna feeder devices;currency unit/hour;2.00;50.00;2.00;50.00;ID;ID;10;53
+METHOD2;ALGORITHM2_3;FORMULA_2_3_7;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_7;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_7;InitialDataRadio.LaborNormsPylon;Labor cost norms for pylon construction of RTS antenna feeder devices;hour/unit;4.00;80.00;2.00;100.00;ID;ID;11;54
+METHOD2;ALGORITHM2_3;FORMULA_2_3_8;InitialDataRadio.CostNormsAFD;Cost norms for antenna feeder devices installation and commissioning for one RTS;currency unit/hour;5.00;100.00;5.00;100.00;ID;ID;12;55
+METHOD2;ALGORITHM2_3;FORMULA_2_3_8;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_8;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_8;InitialDataRadio.LaborNormsAFDinst;Labor cost norms for antenna feeder devices installation and commissioning ;hour/unit;2.00;40.00;2.00;100.00;ID;ID;13;56
+METHOD2;ALGORITHM2_3;FORMULA_2_3_9;InitialDataRadio.CostAFDinst;Cost norms for internal devices installation and commissioning for one RTS;currency unit/hour;2.00;50.00;2.00;50.00;ID;ID;14;57
+METHOD2;ALGORITHM2_3;FORMULA_2_3_9;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_9;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_9;InitialDataRadio.LaborNormsInternalRTS;Labor cost norms for internal RTS devices installation and commissioning ;hour/unit;4.00;80.00;2.00;100.00;ID;ID;15;58
+METHOD2;ALGORITHM2_3;FORMULA_2_3_10;InitialDataRadio.CostDesing;Cost norms for design solutions coordination on one RTS construction;currency unit/hour;1.00;100.00;2.00;100.00;ID;ID;16;59
+METHOD2;ALGORITHM2_3;FORMULA_2_3_10;InitialDataRadio.LaborNormsDesign;Labor cost norms for design solutions coordination on RTS construction;hour/unit;8.00;80.00;8.00;100.00;ID;ID;17;60
+METHOD2;ALGORITHM2_3;FORMULA_2_3_11;Intermediate.CostOfAllAFDInstall;Total cost for all antenna feeder devices installation and commissioning for along RTS route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_11;Intermediate.CostOfAllDevicesInstall;Total cost for internal devices installation and commissioning for RTS;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_11;Intermediate.CostOfAllPylonsInstall;Total cost for pylon construction of RTS antenna feeder devices;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfAllAFDInstall;Total cost for all antenna feeder devices installation and commissioning for along RTS route;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfAllDevicesInstall;Total cost for internal devices installation and commissioning for RTS;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfAllPylonsInstall;Total cost for pylon construction of RTS antenna feeder devices;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfInternalDevices;Internal RTS devices total cost ;currency unit;5.00;10000.00;50.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfAFDUnits;Antenna feeder devices total cost ;currency unit;0.00;500.00;50.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfPylonsMaterials;Main material total cost for RTS pylon construction;currency unit;300.00;100000.00;300.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfDesign;Design cost;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_12;Intermediate.CostOfDesignSolutions;Total cost for design solutions coordination on RTS construction;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_13;Intermediate.CostOfPylonsMaterials;Main material total cost for RTS pylon construction;currency unit;300.00;100000.00;300.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_13;Intermediate.CostOfInternalDevices;Internal RTS devices total cost ;currency unit;5.00;10000.00;50.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_3;FORMULA_2_3_13;Intermediate.CostOfAFDUnits;Antenna feeder devices total cost ;currency unit;0.00;500.00;50.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_4;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_1;InitialDataRadio.AnnualLaborPylon;Typical annual labor cost for RTS pylon maintenance;hour/unit;100.00;400.00;10.00;100.00;ID;ID;2;61
+METHOD2;ALGORITHM2_4;FORMULA_2_4_1;InitialDataRadio.CostLaborPylonm;Typical cost for one RTS pylon maintenance;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;3;62
+METHOD2;ALGORITHM2_4;FORMULA_2_4_1;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;ID;IM;1;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_1;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;ID;IM;4;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_2;InitialDataRadio.AnnualLaborAFD;Typical annual labor cost for antenna feeder devices maintenance ;hour/unit;20.00;200.00;50.00;100.00;ID;ID;5;63
+METHOD2;ALGORITHM2_4;FORMULA_2_4_2;InitialDataRadio.CostLaborAFDm;Typical cost for antenna feeder devices maintenance for one RTS ;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;6;64
+METHOD2;ALGORITHM2_4;FORMULA_2_4_2;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_2;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_3;InitialDataRadio.AnnualLaborRTS;Typical annual labor cost for internal RTS devices maintenance;hour/unit;20.00;200.00;20.00;100.00;ID;ID;7;65
+METHOD2;ALGORITHM2_4;FORMULA_2_4_3;InitialDataRadio.CostLaborRTSm;Typical cost for internal RTS devices maintenance;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;8;66
+METHOD2;ALGORITHM2_4;FORMULA_2_4_3;Intermediate.NumberOfRepeaters;Number of repeaters by selected technology;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_3;InitialDataRadio.NumberOfTerminals;Number of terminal RTS by selected technology;unit;0.00;50.00;2.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_4;Intermediate.TotalCostAllRTSm;Total cost for all RTS pylon maintenance;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_4;Intermediate.TotalCostAllAFDm;Total cost for all RTS antenna feeder devices maintenance;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_4;FORMULA_2_4_4;Intermediate.TotalCostAllInternalDm;Total cost for RTS internal devices maintenance;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_5;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_1;Intermediate.RequiredCapacity;Required capacity to meet object (locality) requirements;Mbit/s;0.00;1000.00;1.00;100.00;ID;IM;1;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_1;InitialDataSatelite.ChannelCapacity;Communication channel capacity per single satellite Internet channel;Mbit/s;0.64;10.00;0.20;5.00;ID;ID;2;67
+METHOD2;ALGORITHM2_5;FORMULA_2_5_2;Intermediate.NumberVSATsets;Required number of VSAT sets;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_2;InitialDataSatelite.CostOfOneVSAT;Cost of VSAT set;currency unit/unit;1000.00;10000.00;100.00;1000.00;ID;ID;3;68
+METHOD2;ALGORITHM2_5;FORMULA_2_5_2;InitialDataSatelite.CostOfOneVSATmat;Cost of basic materials for VSAT installation;currency unit/unit;100.00;5000.00;50.00;1000.00;ID;ID;4;69
+METHOD2;ALGORITHM2_5;FORMULA_2_5_3;Intermediate.NumberVSATsets;Required number of VSAT sets;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_3;InitialDataSatelite.CostOfInstallVSAT;Typical cost of installation and configuration of one VSAT set;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;5;70
+METHOD2;ALGORITHM2_5;FORMULA_2_5_3;InitialDataSatelite.LaborOfInstallVSAT;Labor cost for installation and configuration of VSAT sets;hour/unit;4.00;40.00;4.00;40.00;ID;ID;6;71
+METHOD2;ALGORITHM2_5;FORMULA_2_5_4;Intermediate.CostOfVSATEqAndMat;Total cost of VSAT equipment and installation materials;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_4;Intermediate.CostOfVSATInstallProcess;Total cost of installation and configuration of all VSAT sets;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_5;Intermediate.DesignVSATCost;Design cost;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_5;Intermediate.CostOfVSATEqAndMat;Total cost of VSAT equipment and installation materials;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_5;FORMULA_2_5_5;Intermediate.CostOfVSATInstallProcess;Total cost of installation and configuration of all VSAT sets;currency unit;0.00;100000.00;10.00;1000.00;IM;IM;;
+METHOD2;ALGORITHM2_6;ALL;;;;;;;;IM;;;
+METHOD2;ALGORITHM2_6;FORMULA_2_6_1;Intermediate.NumberVSATsets;Required number of VSAT sets;unit;0.00;10.00;1.00;2.00;ID;IM;1;
+METHOD2;ALGORITHM2_6;FORMULA_2_6_1;InitialDataSatelite.AnnualLaborOfServiceVSAT;Typical annual labor costs for the service of antenna-feeder devices;hour/unit;10.00;1000.00;10.00;100.00;ID;ID;2;72
+METHOD2;ALGORITHM2_6;FORMULA_2_6_1;InitialDataSatelite.CostOfServiceVSAT;Typical cost of one VSAT set maintenance;currency unit/hour;0.50;50.00;1.00;50.00;ID;ID;3;73
+METHOD2;ALGORITHM2_6;FORMULA_2_6_2;Intermediate.NumberVSATsets;Required number of VSAT sets;unit;0.00;10.00;1.00;2.00;IM;IM;;
+METHOD2;ALGORITHM2_6;FORMULA_2_6_2;Intermediate.RequiredCapacity;Required capacity to meet object (locality) requirements;Mbit/s;0.00;1000.00;1.00;100.00;ID;IM;4;
+METHOD2;ALGORITHM2_6;FORMULA_2_6_2;InitialDataSatelite.AnnualRentBand;Annual rent cost of 1 Mbit/s channel ;currency unit/year;30.00;3000.00;20.00;100.00;ID;ID;5;74
+METHOD2;ALGORITHM2_6;FORMULA_2_6_3;Intermediate.CostOfVSATm;Total cost of VSAT sets maintenance;currency unit/year;0.00;1000.00;1.00;100.00;IM;IM;;
+METHOD2;ALGORITHM2_6;FORMULA_2_6_3;Intermediate.CostOfVSATr;Total rent cost;currency unit/year;10.00;50000.00;50.00;100.00;IM;IM;;
+METHOD2;ALGORITHM2_7;ALL;;;;;;;;;;;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_1;Intermediate.NetIncome;Net Income;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_1;Intermediate.CostOfOperation;Cost of the annual operation of middle-mile channel (Cost of the annual operation);currency unit/year;0.00;1000000000.00;1000.00;1000000.00;ID;;2;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_1;PVOptionSet.ProfitTax;Corporate tax rate;%;0.00;50.00;5.00;17.00;ID;ID;5;6
+METHOD2;ALGORITHM2_7;FORMULA_2_7_1;Intermediate.CostOfEquipmentAndMaterials;Total cost of equipment, components and materials;currency unit;0.00;1000000000.00;1000.00;1000000.00;ID;;6;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_1;AccessTechnologyOptionSet.AvrLifeTimeOfEqAndMat;Average lifetime of the equipment and materials;yer;5.00;15.00;5.00;5.00;ID;ID;8;58
+METHOD2;ALGORITHM2_7;FORMULA_2_7_2;Intermediate.NetIncome;Net Income;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_2;Intermediate.CostOfOperation;Cost of the annual operation of middle-mile channel (Cost of the annual operation);currency unit/year;0.00;1000000000.00;1000.00;1000000.00;ID;;2;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_2;Intermediate.CorporateTax;Corporate tax;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_3;PVOptionSet.DiscountRate;Discount Rate;%;1.00;100.00;1.00;11.00;ID;ID;6;7
+METHOD2;ALGORITHM2_7;FORMULA_2_7_3;PVOptionSet.PaybackPeriod;Period of Investment Payback;year;1.00;50.00;1.00;2.00;ID;ID;7;8
+METHOD2;ALGORITHM2_7;FORMULA_2_7_3;Intermediate.CashFlow;Cash Flow;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_4;Intermediate.DiscountedCF;Discounted cash flow;currency unit/year;0.00;1000000000.00;1000.00;1000000.00;IM;;;
+METHOD2;ALGORITHM2_7;FORMULA_2_7_4;Intermediate.TotalInvest;Total investment costs for construction of middle-mile channel (Total investment costs for the construction of access networks);currency unit;0.00;1000000000.00;1000.00;1000000.00;ID;;1;

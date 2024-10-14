@@ -1,0 +1,13 @@
+name: InvestigationTool
+title: InvestigationTool
+username:
+account: broadband
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2254185
+bundleId: 4464055
+url: https://broadband.shinyapps.io/InvestigationTool/
+when: 1618292531.9174
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: translation

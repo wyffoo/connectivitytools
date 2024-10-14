@@ -1,0 +1,12 @@
+PARAM;VALUE;DESCRIPTION
+IntParam.CC_C;list(0, 0, 1, 1);Construction cost coef
+IntParam.B_C;list(2, 1, 1, 1);Bandwidth coefficient to take into account additional expenditures for very extensive bandwidth requirements
+IntParam.B_C_T;list(40 * 1024, 1, 1, 1);Threshold depends from tech, Mb/s
+IntParam.LC1;list(0, 1, 0, 0);License requirement coefficient for one time regulation license fee
+IntParam.LC2;list(0, 1, 0, 0);License requirement coefficient for recurring license fee
+IntParam.LC3;list(0, 0, 0, 0);License requirement coefficient for one time ISP/mainantance license fee
+IntParam.ISP_C;list(1, 0, 1, 1);Binary coefficient for enabling annual ISP fee
+IntParam.INC_C;list(50, 0, 0, 0);Income coefficient for NPV calculations ( in % of annual ISP fee)
+IntParam.BPB;8;Bits per baud coef
+IntParam.RoadTC;0.02;Road topography coef
+IntParam.PopUnits;1;Scale factor for input pop data
